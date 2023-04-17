@@ -1,0 +1,635 @@
+                                                                
+version 3
+run Default-0-20230320-21:14:53-11607
+attr configname Default
+attr datetime 20230320-21:14:53
+attr datetimef 20230320-211453
+attr experiment Default
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network highWayScenario
+attr processid 11607
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+config image-path ../../../../../inet4.4/images:../../../../../veins-veins-5.2/images
+config cmdenv-express-mode true
+config cmdenv-autoflush true
+config cmdenv-status-frequency 1s
+config **.cmdenv-log-level info
+config image-path ../../images
+config network highWayScenario
+config debug-on-errors true
+config print-undisposed true
+config sim-time-limit 200s
+config **.scalar-recording true
+config **.vector-recording true
+config *.playgroundSizeX 14935m
+config *.playgroundSizeY 8039m
+config *.playgroundSizeZ 50m
+config *.annotations.draw true
+config *.obstacles.obstacles "xmldoc(\"config.xml\", \"//AnalogueModel[@type='SimpleObstacleShadowing']/obstacles\")"
+config *.manager.updateInterval 1s
+config *.manager.host "\"localhost\""
+config *.manager.port 9999
+config *.manager.autoShutdown true
+config *.manager.launchConfig "xmldoc(\"caotoc.launchd.xml\")"
+config *.rsu[0].mobility.x 7509
+config *.rsu[0].mobility.y 3830
+config *.rsu[0].mobility.z 3
+config *.rsu[1].mobility.x 8075
+config *.rsu[1].mobility.y 4030
+config *.rsu[1].mobility.z 3
+config *.rsu[2].mobility.x 9110
+config *.rsu[2].mobility.y 4300
+config *.rsu[2].mobility.z 3
+config *.rsu[3].mobility.x 10000
+config *.rsu[3].mobility.y 4500
+config *.rsu[3].mobility.z 3
+config *.rsu[4].mobility.x 11000
+config *.rsu[4].mobility.y 4700
+config *.rsu[4].mobility.z 3
+config *.rsu[5].mobility.x 12100
+config *.rsu[5].mobility.y 4900
+config *.rsu[5].mobility.z 3
+config *.rsu[*].applType "\"TraCIDemoRSU11p\""
+config *.rsu[*].appl.headerLength "80 bit"
+config *.rsu[*].appl.sendBeacons false
+config *.rsu[*].appl.dataOnSch false
+config *.rsu[*].appl.beaconInterval 1s
+config *.rsu[*].appl.beaconUserPriority 7
+config *.rsu[*].appl.dataUserPriority 5
+config *.rsu[*].nic.phy80211p.antennaOffsetZ "0 m"
+config *.connectionManager.sendDirect true
+config *.connectionManager.maxInterfDist 2600m
+config *.connectionManager.drawMaxIntfDist false
+config *.**.nic.mac1609_4.useServiceChannel false
+config *.**.nic.mac1609_4.txPower 20mW
+config *.**.nic.mac1609_4.bitrate 6Mbps
+config *.**.nic.phy80211p.minPowerLevel -110dBm
+config *.**.nic.phy80211p.useNoiseFloor true
+config *.**.nic.phy80211p.noiseFloor -98dBm
+config *.**.nic.phy80211p.decider "xmldoc(\"config.xml\")"
+config *.**.nic.phy80211p.analogueModels "xmldoc(\"config.xml\")"
+config *.**.nic.phy80211p.usePropagationDelay true
+config *.**.nic.phy80211p.antenna "xmldoc(\"antenna.xml\", \"/root/Antenna[@id='monopole']\")"
+config *.node[*].nic.phy80211p.antennaOffsetY "0 m"
+config *.node[*].nic.phy80211p.antennaOffsetZ "1.895 m"
+config *.node[*].applType "\"TraCIDemo11p\""
+config *.node[*].appl.headerLength "80 bit"
+config *.node[*].appl.sendBeacons false
+config *.node[*].appl.dataOnSch false
+config *.node[*].appl.beaconInterval 1s
+config *.node[*].veinsmobility.x 0
+config *.node[*].veinsmobility.y 0
+config *.node[*].veinsmobility.z 0
+config *.node[*].veinsmobility.setHostSpeed false
+config *.node[*0].veinsmobility.accidentCount 1
+config *.node[*0].veinsmobility.accidentStart 73s
+config *.node[*0].veinsmobility.accidentDuration 50s
+
+vector 0 highWayScenario.node[0].veinsmobility posx ETV
+vector 1 highWayScenario.node[0].veinsmobility posy ETV
+vector 2 highWayScenario.node[1].veinsmobility posx ETV
+vector 3 highWayScenario.node[1].veinsmobility posy ETV
+vector 4 highWayScenario.node[2].veinsmobility posx ETV
+vector 5 highWayScenario.node[2].veinsmobility posy ETV
+vector 6 highWayScenario.node[3].veinsmobility posx ETV
+vector 7 highWayScenario.node[3].veinsmobility posy ETV
+vector 8 highWayScenario.node[4].veinsmobility posx ETV
+vector 9 highWayScenario.node[4].veinsmobility posy ETV
+vector 10 highWayScenario.node[5].veinsmobility posx ETV
+vector 11 highWayScenario.node[5].veinsmobility posy ETV
+vector 12 highWayScenario.node[6].veinsmobility posx ETV
+vector 13 highWayScenario.node[6].veinsmobility posy ETV
+vector 14 highWayScenario.node[7].veinsmobility posx ETV
+vector 15 highWayScenario.node[7].veinsmobility posy ETV
+vector 16 highWayScenario.node[8].veinsmobility posx ETV
+vector 17 highWayScenario.node[8].veinsmobility posy ETV
+vector 18 highWayScenario.node[9].veinsmobility posx ETV
+vector 19 highWayScenario.node[9].veinsmobility posy ETV
+vector 20 highWayScenario.node[10].veinsmobility posx ETV
+vector 21 highWayScenario.node[10].veinsmobility posy ETV
+vector 22 highWayScenario.node[11].veinsmobility posx ETV
+vector 23 highWayScenario.node[11].veinsmobility posy ETV
+vector 24 highWayScenario.node[12].veinsmobility posx ETV
+vector 25 highWayScenario.node[12].veinsmobility posy ETV
+vector 26 highWayScenario.node[13].veinsmobility posx ETV
+vector 27 highWayScenario.node[13].veinsmobility posy ETV
+vector 28 highWayScenario.node[14].veinsmobility posx ETV
+vector 29 highWayScenario.node[14].veinsmobility posy ETV
+vector 30 highWayScenario.node[15].veinsmobility posx ETV
+vector 31 highWayScenario.node[15].veinsmobility posy ETV
+vector 32 highWayScenario.node[16].veinsmobility posx ETV
+vector 33 highWayScenario.node[16].veinsmobility posy ETV
+vector 34 highWayScenario.node[17].veinsmobility posx ETV
+vector 35 highWayScenario.node[17].veinsmobility posy ETV
+vector 36 highWayScenario.node[18].veinsmobility posx ETV
+vector 37 highWayScenario.node[18].veinsmobility posy ETV
+vector 38 highWayScenario.node[19].veinsmobility posx ETV
+vector 39 highWayScenario.node[19].veinsmobility posy ETV
+vector 40 highWayScenario.node[20].veinsmobility posx ETV
+vector 41 highWayScenario.node[20].veinsmobility posy ETV
+vector 42 highWayScenario.node[21].veinsmobility posx ETV
+vector 43 highWayScenario.node[21].veinsmobility posy ETV
+vector 44 highWayScenario.node[22].veinsmobility posx ETV
+vector 45 highWayScenario.node[22].veinsmobility posy ETV
+vector 46 highWayScenario.node[23].veinsmobility posx ETV
+vector 47 highWayScenario.node[23].veinsmobility posy ETV
+vector 48 highWayScenario.node[24].veinsmobility posx ETV
+vector 49 highWayScenario.node[24].veinsmobility posy ETV
+vector 50 highWayScenario.node[25].veinsmobility posx ETV
+vector 51 highWayScenario.node[25].veinsmobility posy ETV
+vector 52 highWayScenario.node[26].veinsmobility posx ETV
+vector 53 highWayScenario.node[26].veinsmobility posy ETV
+vector 54 highWayScenario.node[27].veinsmobility posx ETV
+vector 55 highWayScenario.node[27].veinsmobility posy ETV
+vector 56 highWayScenario.node[28].veinsmobility posx ETV
+vector 57 highWayScenario.node[28].veinsmobility posy ETV
+vector 58 highWayScenario.node[29].veinsmobility posx ETV
+vector 59 highWayScenario.node[29].veinsmobility posy ETV
+vector 60 highWayScenario.node[30].veinsmobility posx ETV
+vector 61 highWayScenario.node[30].veinsmobility posy ETV
+vector 62 highWayScenario.node[31].veinsmobility posx ETV
+vector 63 highWayScenario.node[31].veinsmobility posy ETV
+vector 64 highWayScenario.node[32].veinsmobility posx ETV
+vector 65 highWayScenario.node[32].veinsmobility posy ETV
+vector 66 highWayScenario.node[33].veinsmobility posx ETV
+vector 67 highWayScenario.node[33].veinsmobility posy ETV
+vector 68 highWayScenario.node[34].veinsmobility posx ETV
+vector 69 highWayScenario.node[34].veinsmobility posy ETV
+vector 70 highWayScenario.node[35].veinsmobility posx ETV
+vector 71 highWayScenario.node[35].veinsmobility posy ETV
+vector 72 highWayScenario.node[36].veinsmobility posx ETV
+vector 73 highWayScenario.node[36].veinsmobility posy ETV
+vector 74 highWayScenario.node[37].veinsmobility posx ETV
+vector 75 highWayScenario.node[37].veinsmobility posy ETV
+vector 76 highWayScenario.node[38].veinsmobility posx ETV
+vector 77 highWayScenario.node[38].veinsmobility posy ETV
+vector 78 highWayScenario.node[39].veinsmobility posx ETV
+vector 79 highWayScenario.node[39].veinsmobility posy ETV
+vector 80 highWayScenario.node[40].veinsmobility posx ETV
+vector 81 highWayScenario.node[40].veinsmobility posy ETV
+vector 82 highWayScenario.node[41].veinsmobility posx ETV
+vector 83 highWayScenario.node[41].veinsmobility posy ETV
+vector 84 highWayScenario.node[42].veinsmobility posx ETV
+vector 85 highWayScenario.node[42].veinsmobility posy ETV
+vector 86 highWayScenario.node[43].veinsmobility posx ETV
+vector 87 highWayScenario.node[43].veinsmobility posy ETV
+vector 88 highWayScenario.node[44].veinsmobility posx ETV
+vector 89 highWayScenario.node[44].veinsmobility posy ETV
+vector 90 highWayScenario.node[45].veinsmobility posx ETV
+vector 91 highWayScenario.node[45].veinsmobility posy ETV
+vector 92 highWayScenario.node[46].veinsmobility posx ETV
+vector 93 highWayScenario.node[46].veinsmobility posy ETV
+vector 94 highWayScenario.node[47].veinsmobility posx ETV
+vector 95 highWayScenario.node[47].veinsmobility posy ETV
+vector 96 highWayScenario.node[48].veinsmobility posx ETV
+vector 97 highWayScenario.node[48].veinsmobility posy ETV
+vector 98 highWayScenario.node[49].veinsmobility posx ETV
+vector 99 highWayScenario.node[49].veinsmobility posy ETV
+vector 100 highWayScenario.node[50].veinsmobility posx ETV
+vector 101 highWayScenario.node[50].veinsmobility posy ETV
+vector 102 highWayScenario.node[51].veinsmobility posx ETV
+vector 103 highWayScenario.node[51].veinsmobility posy ETV
+vector 104 highWayScenario.node[52].veinsmobility posx ETV
+vector 105 highWayScenario.node[52].veinsmobility posy ETV
+vector 106 highWayScenario.node[53].veinsmobility posx ETV
+vector 107 highWayScenario.node[53].veinsmobility posy ETV
+vector 108 highWayScenario.node[54].veinsmobility posx ETV
+vector 109 highWayScenario.node[54].veinsmobility posy ETV
+vector 110 highWayScenario.node[55].veinsmobility posx ETV
+vector 111 highWayScenario.node[55].veinsmobility posy ETV
+vector 112 highWayScenario.node[56].veinsmobility posx ETV
+vector 113 highWayScenario.node[56].veinsmobility posy ETV
+vector 114 highWayScenario.node[57].veinsmobility posx ETV
+vector 115 highWayScenario.node[57].veinsmobility posy ETV
+vector 116 highWayScenario.node[58].veinsmobility posx ETV
+vector 117 highWayScenario.node[58].veinsmobility posy ETV
+vector 118 highWayScenario.node[59].veinsmobility posx ETV
+vector 119 highWayScenario.node[59].veinsmobility posy ETV
+vector 120 highWayScenario.node[60].veinsmobility posx ETV
+vector 121 highWayScenario.node[60].veinsmobility posy ETV
+vector 122 highWayScenario.node[61].veinsmobility posx ETV
+vector 123 highWayScenario.node[61].veinsmobility posy ETV
+vector 124 highWayScenario.node[62].veinsmobility posx ETV
+vector 125 highWayScenario.node[62].veinsmobility posy ETV
+vector 126 highWayScenario.node[63].veinsmobility posx ETV
+vector 127 highWayScenario.node[63].veinsmobility posy ETV
+vector 128 highWayScenario.node[64].veinsmobility posx ETV
+vector 129 highWayScenario.node[64].veinsmobility posy ETV
+vector 130 highWayScenario.node[65].veinsmobility posx ETV
+vector 131 highWayScenario.node[65].veinsmobility posy ETV
+vector 132 highWayScenario.node[66].veinsmobility posx ETV
+vector 133 highWayScenario.node[66].veinsmobility posy ETV
+vector 134 highWayScenario.node[67].veinsmobility posx ETV
+vector 135 highWayScenario.node[67].veinsmobility posy ETV
+vector 136 highWayScenario.node[68].veinsmobility posx ETV
+vector 137 highWayScenario.node[68].veinsmobility posy ETV
+vector 138 highWayScenario.node[69].veinsmobility posx ETV
+vector 139 highWayScenario.node[69].veinsmobility posy ETV
+vector 140 highWayScenario.node[70].veinsmobility posx ETV
+vector 141 highWayScenario.node[70].veinsmobility posy ETV
+vector 142 highWayScenario.node[71].veinsmobility posx ETV
+vector 143 highWayScenario.node[71].veinsmobility posy ETV
+vector 144 highWayScenario.node[72].veinsmobility posx ETV
+vector 145 highWayScenario.node[72].veinsmobility posy ETV
+vector 146 highWayScenario.node[73].veinsmobility posx ETV
+vector 147 highWayScenario.node[73].veinsmobility posy ETV
+vector 148 highWayScenario.node[74].veinsmobility posx ETV
+vector 149 highWayScenario.node[74].veinsmobility posy ETV
+vector 150 highWayScenario.node[75].veinsmobility posx ETV
+vector 151 highWayScenario.node[75].veinsmobility posy ETV
+vector 152 highWayScenario.node[76].veinsmobility posx ETV
+vector 153 highWayScenario.node[76].veinsmobility posy ETV
+vector 154 highWayScenario.node[77].veinsmobility posx ETV
+vector 155 highWayScenario.node[77].veinsmobility posy ETV
+vector 156 highWayScenario.node[78].veinsmobility posx ETV
+vector 157 highWayScenario.node[78].veinsmobility posy ETV
+vector 158 highWayScenario.node[79].veinsmobility posx ETV
+vector 159 highWayScenario.node[79].veinsmobility posy ETV
+vector 160 highWayScenario.node[80].veinsmobility posx ETV
+vector 161 highWayScenario.node[80].veinsmobility posy ETV
+vector 162 highWayScenario.node[81].veinsmobility posx ETV
+vector 163 highWayScenario.node[81].veinsmobility posy ETV
+vector 164 highWayScenario.node[82].veinsmobility posx ETV
+vector 165 highWayScenario.node[82].veinsmobility posy ETV
+vector 166 highWayScenario.node[83].veinsmobility posx ETV
+vector 167 highWayScenario.node[83].veinsmobility posy ETV
+vector 168 highWayScenario.node[84].veinsmobility posx ETV
+vector 169 highWayScenario.node[84].veinsmobility posy ETV
+vector 170 highWayScenario.node[85].veinsmobility posx ETV
+vector 171 highWayScenario.node[85].veinsmobility posy ETV
+vector 172 highWayScenario.node[86].veinsmobility posx ETV
+vector 173 highWayScenario.node[86].veinsmobility posy ETV
+vector 174 highWayScenario.node[87].veinsmobility posx ETV
+vector 175 highWayScenario.node[87].veinsmobility posy ETV
+vector 176 highWayScenario.node[88].veinsmobility posx ETV
+vector 177 highWayScenario.node[88].veinsmobility posy ETV
+vector 178 highWayScenario.node[89].veinsmobility posx ETV
+vector 179 highWayScenario.node[89].veinsmobility posy ETV
+vector 180 highWayScenario.node[90].veinsmobility posx ETV
+vector 181 highWayScenario.node[90].veinsmobility posy ETV
+vector 182 highWayScenario.node[91].veinsmobility posx ETV
+vector 183 highWayScenario.node[91].veinsmobility posy ETV
+vector 184 highWayScenario.node[92].veinsmobility posx ETV
+vector 185 highWayScenario.node[92].veinsmobility posy ETV
+vector 186 highWayScenario.node[93].veinsmobility posx ETV
+vector 187 highWayScenario.node[93].veinsmobility posy ETV
+vector 188 highWayScenario.node[94].veinsmobility posx ETV
+vector 189 highWayScenario.node[94].veinsmobility posy ETV
+vector 190 highWayScenario.node[95].veinsmobility posx ETV
+vector 191 highWayScenario.node[95].veinsmobility posy ETV
+vector 192 highWayScenario.node[96].veinsmobility posx ETV
+vector 193 highWayScenario.node[96].veinsmobility posy ETV
+vector 194 highWayScenario.node[97].veinsmobility posx ETV
+vector 195 highWayScenario.node[97].veinsmobility posy ETV
+vector 196 highWayScenario.node[0].veinsmobility speed ETV
+vector 197 highWayScenario.node[1].veinsmobility speed ETV
+vector 198 highWayScenario.node[2].veinsmobility speed ETV
+vector 199 highWayScenario.node[3].veinsmobility speed ETV
+vector 200 highWayScenario.node[4].veinsmobility speed ETV
+vector 201 highWayScenario.node[5].veinsmobility speed ETV
+vector 202 highWayScenario.node[6].veinsmobility speed ETV
+vector 203 highWayScenario.node[7].veinsmobility speed ETV
+vector 204 highWayScenario.node[8].veinsmobility speed ETV
+vector 205 highWayScenario.node[9].veinsmobility speed ETV
+vector 206 highWayScenario.node[10].veinsmobility speed ETV
+vector 207 highWayScenario.node[11].veinsmobility speed ETV
+vector 208 highWayScenario.node[12].veinsmobility speed ETV
+vector 209 highWayScenario.node[13].veinsmobility speed ETV
+vector 210 highWayScenario.node[14].veinsmobility speed ETV
+vector 211 highWayScenario.node[15].veinsmobility speed ETV
+vector 212 highWayScenario.node[16].veinsmobility speed ETV
+vector 213 highWayScenario.node[17].veinsmobility speed ETV
+vector 214 highWayScenario.node[18].veinsmobility speed ETV
+vector 215 highWayScenario.node[19].veinsmobility speed ETV
+vector 216 highWayScenario.node[20].veinsmobility speed ETV
+vector 217 highWayScenario.node[21].veinsmobility speed ETV
+vector 218 highWayScenario.node[22].veinsmobility speed ETV
+vector 219 highWayScenario.node[23].veinsmobility speed ETV
+vector 220 highWayScenario.node[24].veinsmobility speed ETV
+vector 221 highWayScenario.node[25].veinsmobility speed ETV
+vector 222 highWayScenario.node[26].veinsmobility speed ETV
+vector 223 highWayScenario.node[27].veinsmobility speed ETV
+vector 224 highWayScenario.node[28].veinsmobility speed ETV
+vector 225 highWayScenario.node[29].veinsmobility speed ETV
+vector 226 highWayScenario.node[30].veinsmobility speed ETV
+vector 227 highWayScenario.node[31].veinsmobility speed ETV
+vector 228 highWayScenario.node[32].veinsmobility speed ETV
+vector 229 highWayScenario.node[33].veinsmobility speed ETV
+vector 230 highWayScenario.node[34].veinsmobility speed ETV
+vector 231 highWayScenario.node[35].veinsmobility speed ETV
+vector 232 highWayScenario.node[36].veinsmobility speed ETV
+vector 233 highWayScenario.node[37].veinsmobility speed ETV
+vector 234 highWayScenario.node[38].veinsmobility speed ETV
+vector 235 highWayScenario.node[39].veinsmobility speed ETV
+vector 236 highWayScenario.node[40].veinsmobility speed ETV
+vector 237 highWayScenario.node[41].veinsmobility speed ETV
+vector 238 highWayScenario.node[42].veinsmobility speed ETV
+vector 239 highWayScenario.node[43].veinsmobility speed ETV
+vector 240 highWayScenario.node[44].veinsmobility speed ETV
+vector 241 highWayScenario.node[45].veinsmobility speed ETV
+vector 242 highWayScenario.node[46].veinsmobility speed ETV
+vector 243 highWayScenario.node[47].veinsmobility speed ETV
+vector 244 highWayScenario.node[48].veinsmobility speed ETV
+vector 245 highWayScenario.node[49].veinsmobility speed ETV
+vector 246 highWayScenario.node[50].veinsmobility speed ETV
+vector 247 highWayScenario.node[51].veinsmobility speed ETV
+vector 248 highWayScenario.node[52].veinsmobility speed ETV
+vector 249 highWayScenario.node[53].veinsmobility speed ETV
+vector 250 highWayScenario.node[54].veinsmobility speed ETV
+vector 251 highWayScenario.node[55].veinsmobility speed ETV
+vector 252 highWayScenario.node[56].veinsmobility speed ETV
+vector 253 highWayScenario.node[57].veinsmobility speed ETV
+vector 254 highWayScenario.node[58].veinsmobility speed ETV
+vector 255 highWayScenario.node[59].veinsmobility speed ETV
+vector 256 highWayScenario.node[60].veinsmobility speed ETV
+vector 257 highWayScenario.node[61].veinsmobility speed ETV
+vector 258 highWayScenario.node[62].veinsmobility speed ETV
+vector 259 highWayScenario.node[63].veinsmobility speed ETV
+vector 260 highWayScenario.node[64].veinsmobility speed ETV
+vector 261 highWayScenario.node[65].veinsmobility speed ETV
+vector 262 highWayScenario.node[66].veinsmobility speed ETV
+vector 263 highWayScenario.node[67].veinsmobility speed ETV
+vector 264 highWayScenario.node[68].veinsmobility speed ETV
+vector 265 highWayScenario.node[69].veinsmobility speed ETV
+vector 266 highWayScenario.node[70].veinsmobility speed ETV
+vector 267 highWayScenario.node[71].veinsmobility speed ETV
+vector 268 highWayScenario.node[72].veinsmobility speed ETV
+vector 269 highWayScenario.node[73].veinsmobility speed ETV
+vector 270 highWayScenario.node[74].veinsmobility speed ETV
+vector 271 highWayScenario.node[75].veinsmobility speed ETV
+vector 272 highWayScenario.node[76].veinsmobility speed ETV
+vector 273 highWayScenario.node[77].veinsmobility speed ETV
+vector 274 highWayScenario.node[78].veinsmobility speed ETV
+vector 275 highWayScenario.node[79].veinsmobility speed ETV
+vector 276 highWayScenario.node[80].veinsmobility speed ETV
+vector 277 highWayScenario.node[81].veinsmobility speed ETV
+vector 278 highWayScenario.node[82].veinsmobility speed ETV
+vector 279 highWayScenario.node[83].veinsmobility speed ETV
+vector 280 highWayScenario.node[84].veinsmobility speed ETV
+vector 281 highWayScenario.node[85].veinsmobility speed ETV
+vector 282 highWayScenario.node[86].veinsmobility speed ETV
+vector 283 highWayScenario.node[87].veinsmobility speed ETV
+vector 284 highWayScenario.node[88].veinsmobility speed ETV
+vector 285 highWayScenario.node[98].veinsmobility posx ETV
+vector 286 highWayScenario.node[98].veinsmobility posy ETV
+vector 287 highWayScenario.node[99].veinsmobility posx ETV
+vector 288 highWayScenario.node[99].veinsmobility posy ETV
+vector 289 highWayScenario.node[0].veinsmobility acceleration ETV
+vector 290 highWayScenario.node[0].veinsmobility co2emission ETV
+vector 291 highWayScenario.node[1].veinsmobility acceleration ETV
+vector 292 highWayScenario.node[1].veinsmobility co2emission ETV
+vector 293 highWayScenario.node[2].veinsmobility acceleration ETV
+vector 294 highWayScenario.node[2].veinsmobility co2emission ETV
+vector 295 highWayScenario.node[3].veinsmobility acceleration ETV
+vector 296 highWayScenario.node[3].veinsmobility co2emission ETV
+vector 297 highWayScenario.node[4].veinsmobility acceleration ETV
+vector 298 highWayScenario.node[4].veinsmobility co2emission ETV
+vector 299 highWayScenario.node[5].veinsmobility acceleration ETV
+vector 300 highWayScenario.node[5].veinsmobility co2emission ETV
+vector 301 highWayScenario.node[6].veinsmobility acceleration ETV
+vector 302 highWayScenario.node[6].veinsmobility co2emission ETV
+vector 303 highWayScenario.node[7].veinsmobility acceleration ETV
+vector 304 highWayScenario.node[7].veinsmobility co2emission ETV
+vector 305 highWayScenario.node[8].veinsmobility acceleration ETV
+vector 306 highWayScenario.node[8].veinsmobility co2emission ETV
+vector 307 highWayScenario.node[9].veinsmobility acceleration ETV
+vector 308 highWayScenario.node[9].veinsmobility co2emission ETV
+vector 309 highWayScenario.node[10].veinsmobility acceleration ETV
+vector 310 highWayScenario.node[10].veinsmobility co2emission ETV
+vector 311 highWayScenario.node[11].veinsmobility acceleration ETV
+vector 312 highWayScenario.node[11].veinsmobility co2emission ETV
+vector 313 highWayScenario.node[12].veinsmobility acceleration ETV
+vector 314 highWayScenario.node[12].veinsmobility co2emission ETV
+vector 315 highWayScenario.node[13].veinsmobility acceleration ETV
+vector 316 highWayScenario.node[13].veinsmobility co2emission ETV
+vector 317 highWayScenario.node[14].veinsmobility acceleration ETV
+vector 318 highWayScenario.node[14].veinsmobility co2emission ETV
+vector 319 highWayScenario.node[15].veinsmobility acceleration ETV
+vector 320 highWayScenario.node[15].veinsmobility co2emission ETV
+vector 321 highWayScenario.node[16].veinsmobility acceleration ETV
+vector 322 highWayScenario.node[16].veinsmobility co2emission ETV
+vector 323 highWayScenario.node[17].veinsmobility acceleration ETV
+vector 324 highWayScenario.node[17].veinsmobility co2emission ETV
+vector 325 highWayScenario.node[18].veinsmobility acceleration ETV
+vector 326 highWayScenario.node[18].veinsmobility co2emission ETV
+vector 327 highWayScenario.node[19].veinsmobility acceleration ETV
+vector 328 highWayScenario.node[19].veinsmobility co2emission ETV
+vector 329 highWayScenario.node[20].veinsmobility acceleration ETV
+vector 330 highWayScenario.node[20].veinsmobility co2emission ETV
+vector 331 highWayScenario.node[21].veinsmobility acceleration ETV
+vector 332 highWayScenario.node[21].veinsmobility co2emission ETV
+vector 333 highWayScenario.node[22].veinsmobility acceleration ETV
+vector 334 highWayScenario.node[22].veinsmobility co2emission ETV
+vector 335 highWayScenario.node[23].veinsmobility acceleration ETV
+vector 336 highWayScenario.node[23].veinsmobility co2emission ETV
+vector 337 highWayScenario.node[24].veinsmobility acceleration ETV
+vector 338 highWayScenario.node[24].veinsmobility co2emission ETV
+vector 339 highWayScenario.node[25].veinsmobility acceleration ETV
+vector 340 highWayScenario.node[25].veinsmobility co2emission ETV
+vector 341 highWayScenario.node[26].veinsmobility acceleration ETV
+vector 342 highWayScenario.node[26].veinsmobility co2emission ETV
+vector 343 highWayScenario.node[27].veinsmobility acceleration ETV
+vector 344 highWayScenario.node[27].veinsmobility co2emission ETV
+vector 345 highWayScenario.node[28].veinsmobility acceleration ETV
+vector 346 highWayScenario.node[28].veinsmobility co2emission ETV
+vector 347 highWayScenario.node[29].veinsmobility acceleration ETV
+vector 348 highWayScenario.node[29].veinsmobility co2emission ETV
+vector 349 highWayScenario.node[30].veinsmobility acceleration ETV
+vector 350 highWayScenario.node[30].veinsmobility co2emission ETV
+vector 351 highWayScenario.node[31].veinsmobility acceleration ETV
+vector 352 highWayScenario.node[31].veinsmobility co2emission ETV
+vector 353 highWayScenario.node[32].veinsmobility acceleration ETV
+vector 354 highWayScenario.node[32].veinsmobility co2emission ETV
+vector 355 highWayScenario.node[33].veinsmobility acceleration ETV
+vector 356 highWayScenario.node[33].veinsmobility co2emission ETV
+vector 357 highWayScenario.node[34].veinsmobility acceleration ETV
+vector 358 highWayScenario.node[34].veinsmobility co2emission ETV
+vector 359 highWayScenario.node[35].veinsmobility acceleration ETV
+vector 360 highWayScenario.node[35].veinsmobility co2emission ETV
+vector 361 highWayScenario.node[36].veinsmobility acceleration ETV
+vector 362 highWayScenario.node[36].veinsmobility co2emission ETV
+vector 363 highWayScenario.node[37].veinsmobility acceleration ETV
+vector 364 highWayScenario.node[37].veinsmobility co2emission ETV
+vector 365 highWayScenario.node[38].veinsmobility acceleration ETV
+vector 366 highWayScenario.node[38].veinsmobility co2emission ETV
+vector 367 highWayScenario.node[39].veinsmobility acceleration ETV
+vector 368 highWayScenario.node[39].veinsmobility co2emission ETV
+vector 369 highWayScenario.node[40].veinsmobility acceleration ETV
+vector 370 highWayScenario.node[40].veinsmobility co2emission ETV
+vector 371 highWayScenario.node[41].veinsmobility acceleration ETV
+vector 372 highWayScenario.node[41].veinsmobility co2emission ETV
+vector 373 highWayScenario.node[42].veinsmobility acceleration ETV
+vector 374 highWayScenario.node[42].veinsmobility co2emission ETV
+vector 375 highWayScenario.node[43].veinsmobility acceleration ETV
+vector 376 highWayScenario.node[43].veinsmobility co2emission ETV
+vector 377 highWayScenario.node[44].veinsmobility acceleration ETV
+vector 378 highWayScenario.node[44].veinsmobility co2emission ETV
+vector 379 highWayScenario.node[45].veinsmobility acceleration ETV
+vector 380 highWayScenario.node[45].veinsmobility co2emission ETV
+vector 381 highWayScenario.node[46].veinsmobility acceleration ETV
+vector 382 highWayScenario.node[46].veinsmobility co2emission ETV
+vector 383 highWayScenario.node[47].veinsmobility acceleration ETV
+vector 384 highWayScenario.node[47].veinsmobility co2emission ETV
+vector 385 highWayScenario.node[48].veinsmobility acceleration ETV
+vector 386 highWayScenario.node[48].veinsmobility co2emission ETV
+vector 387 highWayScenario.node[49].veinsmobility acceleration ETV
+vector 388 highWayScenario.node[49].veinsmobility co2emission ETV
+vector 389 highWayScenario.node[50].veinsmobility acceleration ETV
+vector 390 highWayScenario.node[50].veinsmobility co2emission ETV
+vector 391 highWayScenario.node[51].veinsmobility acceleration ETV
+vector 392 highWayScenario.node[51].veinsmobility co2emission ETV
+vector 393 highWayScenario.node[52].veinsmobility acceleration ETV
+vector 394 highWayScenario.node[52].veinsmobility co2emission ETV
+vector 395 highWayScenario.node[53].veinsmobility acceleration ETV
+vector 396 highWayScenario.node[53].veinsmobility co2emission ETV
+vector 397 highWayScenario.node[54].veinsmobility acceleration ETV
+vector 398 highWayScenario.node[54].veinsmobility co2emission ETV
+vector 399 highWayScenario.node[55].veinsmobility acceleration ETV
+vector 400 highWayScenario.node[55].veinsmobility co2emission ETV
+vector 401 highWayScenario.node[56].veinsmobility acceleration ETV
+vector 402 highWayScenario.node[56].veinsmobility co2emission ETV
+vector 403 highWayScenario.node[57].veinsmobility acceleration ETV
+vector 404 highWayScenario.node[57].veinsmobility co2emission ETV
+vector 405 highWayScenario.node[58].veinsmobility acceleration ETV
+vector 406 highWayScenario.node[58].veinsmobility co2emission ETV
+vector 407 highWayScenario.node[59].veinsmobility acceleration ETV
+vector 408 highWayScenario.node[59].veinsmobility co2emission ETV
+vector 409 highWayScenario.node[60].veinsmobility acceleration ETV
+vector 410 highWayScenario.node[60].veinsmobility co2emission ETV
+vector 411 highWayScenario.node[61].veinsmobility acceleration ETV
+vector 412 highWayScenario.node[61].veinsmobility co2emission ETV
+vector 413 highWayScenario.node[62].veinsmobility acceleration ETV
+vector 414 highWayScenario.node[62].veinsmobility co2emission ETV
+vector 415 highWayScenario.node[63].veinsmobility acceleration ETV
+vector 416 highWayScenario.node[63].veinsmobility co2emission ETV
+vector 417 highWayScenario.node[64].veinsmobility acceleration ETV
+vector 418 highWayScenario.node[64].veinsmobility co2emission ETV
+vector 419 highWayScenario.node[65].veinsmobility acceleration ETV
+vector 420 highWayScenario.node[65].veinsmobility co2emission ETV
+vector 421 highWayScenario.node[66].veinsmobility acceleration ETV
+vector 422 highWayScenario.node[66].veinsmobility co2emission ETV
+vector 423 highWayScenario.node[67].veinsmobility acceleration ETV
+vector 424 highWayScenario.node[67].veinsmobility co2emission ETV
+vector 425 highWayScenario.node[68].veinsmobility acceleration ETV
+vector 426 highWayScenario.node[68].veinsmobility co2emission ETV
+vector 427 highWayScenario.node[69].veinsmobility acceleration ETV
+vector 428 highWayScenario.node[69].veinsmobility co2emission ETV
+vector 429 highWayScenario.node[70].veinsmobility acceleration ETV
+vector 430 highWayScenario.node[70].veinsmobility co2emission ETV
+vector 431 highWayScenario.node[71].veinsmobility acceleration ETV
+vector 432 highWayScenario.node[71].veinsmobility co2emission ETV
+vector 433 highWayScenario.node[72].veinsmobility acceleration ETV
+vector 434 highWayScenario.node[72].veinsmobility co2emission ETV
+vector 435 highWayScenario.node[73].veinsmobility acceleration ETV
+vector 436 highWayScenario.node[73].veinsmobility co2emission ETV
+vector 437 highWayScenario.node[74].veinsmobility acceleration ETV
+vector 438 highWayScenario.node[74].veinsmobility co2emission ETV
+vector 439 highWayScenario.node[75].veinsmobility acceleration ETV
+vector 440 highWayScenario.node[75].veinsmobility co2emission ETV
+vector 441 highWayScenario.node[76].veinsmobility acceleration ETV
+vector 442 highWayScenario.node[76].veinsmobility co2emission ETV
+vector 443 highWayScenario.node[77].veinsmobility acceleration ETV
+vector 444 highWayScenario.node[77].veinsmobility co2emission ETV
+vector 445 highWayScenario.node[78].veinsmobility acceleration ETV
+vector 446 highWayScenario.node[78].veinsmobility co2emission ETV
+vector 447 highWayScenario.node[79].veinsmobility acceleration ETV
+vector 448 highWayScenario.node[79].veinsmobility co2emission ETV
+vector 449 highWayScenario.node[80].veinsmobility acceleration ETV
+vector 450 highWayScenario.node[80].veinsmobility co2emission ETV
+vector 451 highWayScenario.node[81].veinsmobility acceleration ETV
+vector 452 highWayScenario.node[81].veinsmobility co2emission ETV
+vector 453 highWayScenario.node[82].veinsmobility acceleration ETV
+vector 454 highWayScenario.node[82].veinsmobility co2emission ETV
+vector 455 highWayScenario.node[83].veinsmobility acceleration ETV
+vector 456 highWayScenario.node[83].veinsmobility co2emission ETV
+vector 457 highWayScenario.node[84].veinsmobility acceleration ETV
+vector 458 highWayScenario.node[84].veinsmobility co2emission ETV
+vector 459 highWayScenario.node[85].veinsmobility acceleration ETV
+vector 460 highWayScenario.node[85].veinsmobility co2emission ETV
+vector 461 highWayScenario.node[86].veinsmobility acceleration ETV
+vector 462 highWayScenario.node[86].veinsmobility co2emission ETV
+vector 463 highWayScenario.node[87].veinsmobility acceleration ETV
+vector 464 highWayScenario.node[87].veinsmobility co2emission ETV
+vector 465 highWayScenario.node[88].veinsmobility acceleration ETV
+vector 466 highWayScenario.node[88].veinsmobility co2emission ETV
+vector 467 highWayScenario.node[89].veinsmobility speed ETV
+vector 468 highWayScenario.node[90].veinsmobility speed ETV
+vector 469 highWayScenario.node[91].veinsmobility speed ETV
+vector 470 highWayScenario.node[92].veinsmobility speed ETV
+vector 471 highWayScenario.node[93].veinsmobility speed ETV
+vector 472 highWayScenario.node[94].veinsmobility speed ETV
+vector 473 highWayScenario.node[95].veinsmobility speed ETV
+vector 474 highWayScenario.node[96].veinsmobility speed ETV
+vector 475 highWayScenario.node[97].veinsmobility speed ETV
+vector 476 highWayScenario.node[89].veinsmobility acceleration ETV
+vector 477 highWayScenario.node[89].veinsmobility co2emission ETV
+vector 478 highWayScenario.node[90].veinsmobility acceleration ETV
+vector 479 highWayScenario.node[90].veinsmobility co2emission ETV
+vector 480 highWayScenario.node[91].veinsmobility acceleration ETV
+vector 481 highWayScenario.node[91].veinsmobility co2emission ETV
+vector 482 highWayScenario.node[92].veinsmobility acceleration ETV
+vector 483 highWayScenario.node[92].veinsmobility co2emission ETV
+vector 484 highWayScenario.node[93].veinsmobility acceleration ETV
+vector 485 highWayScenario.node[93].veinsmobility co2emission ETV
+vector 486 highWayScenario.node[94].veinsmobility acceleration ETV
+vector 487 highWayScenario.node[94].veinsmobility co2emission ETV
+vector 488 highWayScenario.node[95].veinsmobility acceleration ETV
+vector 489 highWayScenario.node[95].veinsmobility co2emission ETV
+vector 490 highWayScenario.node[96].veinsmobility acceleration ETV
+vector 491 highWayScenario.node[96].veinsmobility co2emission ETV
+vector 492 highWayScenario.node[97].veinsmobility acceleration ETV
+vector 493 highWayScenario.node[97].veinsmobility co2emission ETV
+vector 494 highWayScenario.node[98].veinsmobility speed ETV
+vector 495 highWayScenario.node[99].veinsmobility speed ETV
+vector 496 highWayScenario.node[98].veinsmobility acceleration ETV
+vector 497 highWayScenario.node[98].veinsmobility co2emission ETV
+vector 498 highWayScenario.node[99].veinsmobility acceleration ETV
+vector 499 highWayScenario.node[99].veinsmobility co2emission ETV
+458	34414 1317 4 15803 3 51 49 1.4418111887517 5.8765871673176 101.44700631481 257.34119937863
+457	35731 1424 4 15803 3 51 49 -0.12113307835767 2.1282776414487 8.8175659893446 16.257330908102
+280	37155 1338 3 15803 2 51 50 2.1740871836206 11.10903626102 527.28262836527 5715.4687218266
+169	38493 1360 2 15803 1 51 51 3939.7584530813 4103.2411489951 203331.87287962 810790949.74367
+168	39853 1362 2 15803 1 51 51 11778.239791773 12216.954318306 611643.6025744 7336455298.5958
+485	41215 2170 5 16565 4 86 83 0.973 14.907861855909 336.63982417315 2275.6682739627
+484	43385 2374 5 16565 4 86 83 -4.5 2.400176063166 11.780951877841 268.57053154712
+471	45759 2329 4 16565 3 86 84 3.8405729058904 24.992543666643 1180.6162974427 18021.962945147
+187	48088 2348 3 16565 2 86 85 3054.5039784476 3428.018132402 282176.53627463 937819311.10048
+186	50436 2347 3 16565 2 86 85 10615.545782501 11162.473703359 924843.00086464 10065114439.909
+404	52783 2274 4 19917 3 88 86 0.973 11.555196547981 294.11690429185 1519.0304050861
+403	55057 2540 4 19917 3 88 86 -4.4800306828508 2.2269274147879 10.593832504047 176.21215058408
+253	57597 2401 3 19917 2 88 87 2.785107756544 21.423815531656 1266.6682827539 20662.783716274
+115	59998 2430 2 19917 1 88 88 3062.2622650726 3500.2969844753 294777.24659213 988982604.99645
+114	62428 2431 2 19917 1 88 88 10452.013858408 11176.64226073 944553.57303844 10144826330.116
+306	64859 2320 4 19917 3 88 86 0.973 18.361650680205 502.33302954801 3730.9043731179
+305	67179 2504 4 19917 3 88 86 -4.5 2.2881402945076 25.710520230227 158.43005075046
+204	69683 2406 3 19917 2 88 87 3.5807854174662 29.363307701382 2096.9940553646 56326.801656791
+17	72089 2346 2 19917 1 88 88 2503.9500665024 3086.181385761 249536.70749333 710422153.4434
+16	74435 2342 2 19917 1 88 88 9934.2149225414 11738.672915321 934706.27351735 9958805257.012
+454	76777 2369 4 24334 3 91 89 0.973 17.124537864874 410.13717470341 3137.9057889961
+453	79146 2554 4 24334 3 91 89 -4.5 2.141817731224 19.300860554147 258.13471075535
+278	81700 2487 3 24334 2 91 90 2.2672872919004 26.041275556471 1482.1769965958 27007.477136387
+165	84187 2524 2 24334 1 91 91 3082.0583596504 3902.9589412374 318170.71355426 1118920347.0669
+164	86711 2520 2 24334 1 91 91 12110.23129658 12600.853310599 1126381.523854 13944504343.397
+356	89231 2793 4 28035 3 105 103 0.973 15.148685928253 389.11135617369 2378.2395113746
+355	92024 3042 4 28035 3 105 103 -4.5 2.3048899863497 9.1550569081413 228.12459845246
+229	95066 2901 3 28035 2 105 104 3.1760241928889 24.694545285193 1693.4057413013 31021.325071146
+67	97967 2824 2 28035 1 105 105 4102.1747592553 4639.2913084003 458039.37819263 2001229166.1834
+66	100791 2824 2 28035 1 105 105 6147.096276693 6962.6367662684 675331.77278948 4352183487.8938
+358	103615 2785 4 28035 3 105 103 0.973 8.2799989699893 285.19488544462 1152.5802886719
+357	106400 3096 4 28035 3 105 103 -4.4971605043562 2.2764031052845 10.891277290684 152.07080013683
+230	109496 2905 3 28035 2 105 104 3.0825815873761 13.999175443993 1310.9191592784 17171.856449712
+69	112401 2820 2 28035 1 105 105 3072.555551005 3818.9864090331 372156.10841467 1324852987.6013
+68	115221 2815 2 28035 1 105 105 11098.121124205 11568.438094261 1185205.4765378 13380977229.353
+302	118036 3408 4 28065 3 125 123 0.973 17.911562134751 500.68179176241 3174.4797687546
+301	121444 3745 4 28065 3 125 123 -4.4883694017626 2.1692074408312 10.661569044871 142.83810141596
+202	125189 3496 3 28065 2 125 124 3.6569751139134 28.8264801002 2491.5221272801 57065.432142286
+13	128685 3402 2 28065 1 125 125 4102.0247639233 5032.2448991246 561284.22387222 2529129624.9134
+12	132087 3400 2 28065 1 125 125 5557.6880129517 6994.1828021152 758535.25096723 4639712554.9451

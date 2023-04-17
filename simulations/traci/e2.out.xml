@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2023-04-17 17:11:29 by Eclipse SUMO GUI Version 1.16.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="/home/mike/Documents/dsrc_cv2x/omnetpp-6.0/samples/test/simulations/traci/net.net.xml"/>
+        <route-files value="/home/mike/Documents/dsrc_cv2x/omnetpp-6.0/samples/test/simulations/traci/routes.rou.xml"/>
+        <additional-files value="/home/mike/Documents/dsrc_cv2x/omnetpp-6.0/samples/test/simulations/traci/polys.poly.xml,/home/mike/Documents/dsrc_cv2x/omnetpp-6.0/samples/test/simulations/traci/tls.tls.xml,/home/mike/Documents/dsrc_cv2x/omnetpp-6.0/samples/test/simulations/traci/additional.xml"/>
+    </input>
+
+    <time>
+        <begin value="0"/>
+        <end value="86400"/>
+    </time>
+
+    <report>
+        <xml-validation value="never"/>
+        <xml-validation.net value="never"/>
+        <no-step-log value="true"/>
+    </report>
+
+    <gui_only>
+        <start value="true"/>
+    </gui_only>
+
+</configuration>
+-->
+
+<detector xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/det_e2_file.xsd">
+   <interval begin="0.00" end="1596.00" id="e2" sampledSeconds="7.14" nVehEntered="2" nVehLeft="2" nVehSeen="2" meanSpeed="27.97" meanTimeLoss="0.10" meanOccupancy="0.01" maxOccupancy="2.50" meanMaxJamLengthInVehicles="0.00" meanMaxJamLengthInMeters="0.00" maxJamLengthInVehicles="0" maxJamLengthInMeters="0.00" jamLengthInVehiclesSum="0" jamLengthInMetersSum="0.00" meanHaltingDuration="0.00" maxHaltingDuration="0.00" haltingDurationSum="0.00" meanIntervalHaltingDuration="0.00" maxIntervalHaltingDuration="0.00" intervalHaltingDurationSum="0.00" startedHalts="0.00" meanVehicleNumber="0.01" maxVehicleNumber="1" />
+</detector>

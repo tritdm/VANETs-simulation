@@ -1,0 +1,4244 @@
+version 3
+run Default-0-20230320-21:14:53-11607
+attr configname Default
+attr datetime 20230320-21:14:53
+attr datetimef 20230320-211453
+attr experiment Default
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network highWayScenario
+attr processid 11607
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+config image-path ../../../../../inet4.4/images:../../../../../veins-veins-5.2/images
+config cmdenv-express-mode true
+config cmdenv-autoflush true
+config cmdenv-status-frequency 1s
+config **.cmdenv-log-level info
+config image-path ../../images
+config network highWayScenario
+config debug-on-errors true
+config print-undisposed true
+config sim-time-limit 200s
+config **.scalar-recording true
+config **.vector-recording true
+config *.playgroundSizeX 14935m
+config *.playgroundSizeY 8039m
+config *.playgroundSizeZ 50m
+config *.annotations.draw true
+config *.obstacles.obstacles "xmldoc(\"config.xml\", \"//AnalogueModel[@type='SimpleObstacleShadowing']/obstacles\")"
+config *.manager.updateInterval 1s
+config *.manager.host "\"localhost\""
+config *.manager.port 9999
+config *.manager.autoShutdown true
+config *.manager.launchConfig "xmldoc(\"caotoc.launchd.xml\")"
+config *.rsu[0].mobility.x 7509
+config *.rsu[0].mobility.y 3830
+config *.rsu[0].mobility.z 3
+config *.rsu[1].mobility.x 8075
+config *.rsu[1].mobility.y 4030
+config *.rsu[1].mobility.z 3
+config *.rsu[2].mobility.x 9110
+config *.rsu[2].mobility.y 4300
+config *.rsu[2].mobility.z 3
+config *.rsu[3].mobility.x 10000
+config *.rsu[3].mobility.y 4500
+config *.rsu[3].mobility.z 3
+config *.rsu[4].mobility.x 11000
+config *.rsu[4].mobility.y 4700
+config *.rsu[4].mobility.z 3
+config *.rsu[5].mobility.x 12100
+config *.rsu[5].mobility.y 4900
+config *.rsu[5].mobility.z 3
+config *.rsu[*].applType "\"TraCIDemoRSU11p\""
+config *.rsu[*].appl.headerLength "80 bit"
+config *.rsu[*].appl.sendBeacons false
+config *.rsu[*].appl.dataOnSch false
+config *.rsu[*].appl.beaconInterval 1s
+config *.rsu[*].appl.beaconUserPriority 7
+config *.rsu[*].appl.dataUserPriority 5
+config *.rsu[*].nic.phy80211p.antennaOffsetZ "0 m"
+config *.connectionManager.sendDirect true
+config *.connectionManager.maxInterfDist 2600m
+config *.connectionManager.drawMaxIntfDist false
+config *.**.nic.mac1609_4.useServiceChannel false
+config *.**.nic.mac1609_4.txPower 20mW
+config *.**.nic.mac1609_4.bitrate 6Mbps
+config *.**.nic.phy80211p.minPowerLevel -110dBm
+config *.**.nic.phy80211p.useNoiseFloor true
+config *.**.nic.phy80211p.noiseFloor -98dBm
+config *.**.nic.phy80211p.decider "xmldoc(\"config.xml\")"
+config *.**.nic.phy80211p.analogueModels "xmldoc(\"config.xml\")"
+config *.**.nic.phy80211p.usePropagationDelay true
+config *.**.nic.phy80211p.antenna "xmldoc(\"antenna.xml\", \"/root/Antenna[@id='monopole']\")"
+config *.node[*].nic.phy80211p.antennaOffsetY "0 m"
+config *.node[*].nic.phy80211p.antennaOffsetZ "1.895 m"
+config *.node[*].applType "\"TraCIDemo11p\""
+config *.node[*].appl.headerLength "80 bit"
+config *.node[*].appl.sendBeacons false
+config *.node[*].appl.dataOnSch false
+config *.node[*].appl.beaconInterval 1s
+config *.node[*].veinsmobility.x 0
+config *.node[*].veinsmobility.y 0
+config *.node[*].veinsmobility.z 0
+config *.node[*].veinsmobility.setHostSpeed false
+config *.node[*0].veinsmobility.accidentCount 1
+config *.node[*0].veinsmobility.accidentStart 73s
+config *.node[*0].veinsmobility.accidentDuration 50s
+
+vector 0 highWayScenario.node[0].veinsmobility posx ETV
+vector 1 highWayScenario.node[0].veinsmobility posy ETV
+vector 2 highWayScenario.node[1].veinsmobility posx ETV
+vector 3 highWayScenario.node[1].veinsmobility posy ETV
+vector 4 highWayScenario.node[2].veinsmobility posx ETV
+vector 5 highWayScenario.node[2].veinsmobility posy ETV
+vector 6 highWayScenario.node[3].veinsmobility posx ETV
+vector 7 highWayScenario.node[3].veinsmobility posy ETV
+vector 8 highWayScenario.node[4].veinsmobility posx ETV
+vector 9 highWayScenario.node[4].veinsmobility posy ETV
+vector 10 highWayScenario.node[5].veinsmobility posx ETV
+vector 11 highWayScenario.node[5].veinsmobility posy ETV
+vector 12 highWayScenario.node[6].veinsmobility posx ETV
+vector 13 highWayScenario.node[6].veinsmobility posy ETV
+vector 14 highWayScenario.node[7].veinsmobility posx ETV
+vector 15 highWayScenario.node[7].veinsmobility posy ETV
+vector 16 highWayScenario.node[8].veinsmobility posx ETV
+vector 17 highWayScenario.node[8].veinsmobility posy ETV
+vector 18 highWayScenario.node[9].veinsmobility posx ETV
+vector 19 highWayScenario.node[9].veinsmobility posy ETV
+vector 20 highWayScenario.node[10].veinsmobility posx ETV
+vector 21 highWayScenario.node[10].veinsmobility posy ETV
+vector 22 highWayScenario.node[11].veinsmobility posx ETV
+vector 23 highWayScenario.node[11].veinsmobility posy ETV
+vector 24 highWayScenario.node[12].veinsmobility posx ETV
+vector 25 highWayScenario.node[12].veinsmobility posy ETV
+vector 26 highWayScenario.node[13].veinsmobility posx ETV
+vector 27 highWayScenario.node[13].veinsmobility posy ETV
+vector 28 highWayScenario.node[14].veinsmobility posx ETV
+vector 29 highWayScenario.node[14].veinsmobility posy ETV
+vector 30 highWayScenario.node[15].veinsmobility posx ETV
+vector 31 highWayScenario.node[15].veinsmobility posy ETV
+vector 32 highWayScenario.node[16].veinsmobility posx ETV
+vector 33 highWayScenario.node[16].veinsmobility posy ETV
+vector 34 highWayScenario.node[17].veinsmobility posx ETV
+vector 35 highWayScenario.node[17].veinsmobility posy ETV
+vector 36 highWayScenario.node[18].veinsmobility posx ETV
+vector 37 highWayScenario.node[18].veinsmobility posy ETV
+vector 38 highWayScenario.node[19].veinsmobility posx ETV
+vector 39 highWayScenario.node[19].veinsmobility posy ETV
+vector 40 highWayScenario.node[20].veinsmobility posx ETV
+vector 41 highWayScenario.node[20].veinsmobility posy ETV
+vector 42 highWayScenario.node[21].veinsmobility posx ETV
+vector 43 highWayScenario.node[21].veinsmobility posy ETV
+vector 44 highWayScenario.node[22].veinsmobility posx ETV
+vector 45 highWayScenario.node[22].veinsmobility posy ETV
+vector 46 highWayScenario.node[23].veinsmobility posx ETV
+vector 47 highWayScenario.node[23].veinsmobility posy ETV
+vector 48 highWayScenario.node[24].veinsmobility posx ETV
+vector 49 highWayScenario.node[24].veinsmobility posy ETV
+vector 50 highWayScenario.node[25].veinsmobility posx ETV
+vector 51 highWayScenario.node[25].veinsmobility posy ETV
+vector 52 highWayScenario.node[26].veinsmobility posx ETV
+vector 53 highWayScenario.node[26].veinsmobility posy ETV
+vector 54 highWayScenario.node[27].veinsmobility posx ETV
+vector 55 highWayScenario.node[27].veinsmobility posy ETV
+vector 56 highWayScenario.node[28].veinsmobility posx ETV
+vector 57 highWayScenario.node[28].veinsmobility posy ETV
+vector 58 highWayScenario.node[29].veinsmobility posx ETV
+vector 59 highWayScenario.node[29].veinsmobility posy ETV
+vector 60 highWayScenario.node[30].veinsmobility posx ETV
+vector 61 highWayScenario.node[30].veinsmobility posy ETV
+vector 62 highWayScenario.node[31].veinsmobility posx ETV
+vector 63 highWayScenario.node[31].veinsmobility posy ETV
+vector 64 highWayScenario.node[32].veinsmobility posx ETV
+vector 65 highWayScenario.node[32].veinsmobility posy ETV
+vector 66 highWayScenario.node[33].veinsmobility posx ETV
+vector 67 highWayScenario.node[33].veinsmobility posy ETV
+vector 68 highWayScenario.node[34].veinsmobility posx ETV
+vector 69 highWayScenario.node[34].veinsmobility posy ETV
+vector 70 highWayScenario.node[35].veinsmobility posx ETV
+vector 71 highWayScenario.node[35].veinsmobility posy ETV
+vector 72 highWayScenario.node[36].veinsmobility posx ETV
+vector 73 highWayScenario.node[36].veinsmobility posy ETV
+vector 74 highWayScenario.node[37].veinsmobility posx ETV
+vector 75 highWayScenario.node[37].veinsmobility posy ETV
+vector 76 highWayScenario.node[38].veinsmobility posx ETV
+vector 77 highWayScenario.node[38].veinsmobility posy ETV
+vector 78 highWayScenario.node[39].veinsmobility posx ETV
+vector 79 highWayScenario.node[39].veinsmobility posy ETV
+vector 80 highWayScenario.node[40].veinsmobility posx ETV
+vector 81 highWayScenario.node[40].veinsmobility posy ETV
+vector 82 highWayScenario.node[41].veinsmobility posx ETV
+vector 83 highWayScenario.node[41].veinsmobility posy ETV
+vector 84 highWayScenario.node[42].veinsmobility posx ETV
+vector 85 highWayScenario.node[42].veinsmobility posy ETV
+vector 86 highWayScenario.node[43].veinsmobility posx ETV
+vector 87 highWayScenario.node[43].veinsmobility posy ETV
+vector 88 highWayScenario.node[44].veinsmobility posx ETV
+vector 89 highWayScenario.node[44].veinsmobility posy ETV
+vector 90 highWayScenario.node[45].veinsmobility posx ETV
+vector 91 highWayScenario.node[45].veinsmobility posy ETV
+vector 92 highWayScenario.node[46].veinsmobility posx ETV
+vector 93 highWayScenario.node[46].veinsmobility posy ETV
+vector 94 highWayScenario.node[47].veinsmobility posx ETV
+vector 95 highWayScenario.node[47].veinsmobility posy ETV
+vector 96 highWayScenario.node[48].veinsmobility posx ETV
+vector 97 highWayScenario.node[48].veinsmobility posy ETV
+vector 98 highWayScenario.node[49].veinsmobility posx ETV
+vector 99 highWayScenario.node[49].veinsmobility posy ETV
+vector 100 highWayScenario.node[50].veinsmobility posx ETV
+vector 101 highWayScenario.node[50].veinsmobility posy ETV
+vector 102 highWayScenario.node[51].veinsmobility posx ETV
+vector 103 highWayScenario.node[51].veinsmobility posy ETV
+vector 104 highWayScenario.node[52].veinsmobility posx ETV
+vector 105 highWayScenario.node[52].veinsmobility posy ETV
+vector 106 highWayScenario.node[53].veinsmobility posx ETV
+vector 107 highWayScenario.node[53].veinsmobility posy ETV
+vector 108 highWayScenario.node[54].veinsmobility posx ETV
+vector 109 highWayScenario.node[54].veinsmobility posy ETV
+vector 110 highWayScenario.node[55].veinsmobility posx ETV
+vector 111 highWayScenario.node[55].veinsmobility posy ETV
+vector 112 highWayScenario.node[56].veinsmobility posx ETV
+vector 113 highWayScenario.node[56].veinsmobility posy ETV
+vector 114 highWayScenario.node[57].veinsmobility posx ETV
+vector 115 highWayScenario.node[57].veinsmobility posy ETV
+vector 116 highWayScenario.node[58].veinsmobility posx ETV
+vector 117 highWayScenario.node[58].veinsmobility posy ETV
+vector 118 highWayScenario.node[59].veinsmobility posx ETV
+vector 119 highWayScenario.node[59].veinsmobility posy ETV
+vector 120 highWayScenario.node[60].veinsmobility posx ETV
+vector 121 highWayScenario.node[60].veinsmobility posy ETV
+vector 122 highWayScenario.node[61].veinsmobility posx ETV
+vector 123 highWayScenario.node[61].veinsmobility posy ETV
+vector 124 highWayScenario.node[62].veinsmobility posx ETV
+vector 125 highWayScenario.node[62].veinsmobility posy ETV
+vector 126 highWayScenario.node[63].veinsmobility posx ETV
+vector 127 highWayScenario.node[63].veinsmobility posy ETV
+vector 128 highWayScenario.node[64].veinsmobility posx ETV
+vector 129 highWayScenario.node[64].veinsmobility posy ETV
+vector 130 highWayScenario.node[65].veinsmobility posx ETV
+vector 131 highWayScenario.node[65].veinsmobility posy ETV
+vector 132 highWayScenario.node[66].veinsmobility posx ETV
+vector 133 highWayScenario.node[66].veinsmobility posy ETV
+vector 134 highWayScenario.node[67].veinsmobility posx ETV
+vector 135 highWayScenario.node[67].veinsmobility posy ETV
+vector 136 highWayScenario.node[68].veinsmobility posx ETV
+vector 137 highWayScenario.node[68].veinsmobility posy ETV
+vector 138 highWayScenario.node[69].veinsmobility posx ETV
+vector 139 highWayScenario.node[69].veinsmobility posy ETV
+vector 140 highWayScenario.node[70].veinsmobility posx ETV
+vector 141 highWayScenario.node[70].veinsmobility posy ETV
+vector 142 highWayScenario.node[71].veinsmobility posx ETV
+vector 143 highWayScenario.node[71].veinsmobility posy ETV
+vector 144 highWayScenario.node[72].veinsmobility posx ETV
+vector 145 highWayScenario.node[72].veinsmobility posy ETV
+vector 146 highWayScenario.node[73].veinsmobility posx ETV
+vector 147 highWayScenario.node[73].veinsmobility posy ETV
+vector 148 highWayScenario.node[74].veinsmobility posx ETV
+vector 149 highWayScenario.node[74].veinsmobility posy ETV
+vector 150 highWayScenario.node[75].veinsmobility posx ETV
+vector 151 highWayScenario.node[75].veinsmobility posy ETV
+vector 152 highWayScenario.node[76].veinsmobility posx ETV
+vector 153 highWayScenario.node[76].veinsmobility posy ETV
+vector 154 highWayScenario.node[77].veinsmobility posx ETV
+vector 155 highWayScenario.node[77].veinsmobility posy ETV
+vector 156 highWayScenario.node[78].veinsmobility posx ETV
+vector 157 highWayScenario.node[78].veinsmobility posy ETV
+vector 158 highWayScenario.node[79].veinsmobility posx ETV
+vector 159 highWayScenario.node[79].veinsmobility posy ETV
+vector 160 highWayScenario.node[80].veinsmobility posx ETV
+vector 161 highWayScenario.node[80].veinsmobility posy ETV
+vector 162 highWayScenario.node[81].veinsmobility posx ETV
+vector 163 highWayScenario.node[81].veinsmobility posy ETV
+vector 164 highWayScenario.node[82].veinsmobility posx ETV
+vector 165 highWayScenario.node[82].veinsmobility posy ETV
+vector 166 highWayScenario.node[83].veinsmobility posx ETV
+vector 167 highWayScenario.node[83].veinsmobility posy ETV
+vector 168 highWayScenario.node[84].veinsmobility posx ETV
+vector 169 highWayScenario.node[84].veinsmobility posy ETV
+vector 170 highWayScenario.node[85].veinsmobility posx ETV
+vector 171 highWayScenario.node[85].veinsmobility posy ETV
+vector 172 highWayScenario.node[86].veinsmobility posx ETV
+vector 173 highWayScenario.node[86].veinsmobility posy ETV
+vector 174 highWayScenario.node[87].veinsmobility posx ETV
+vector 175 highWayScenario.node[87].veinsmobility posy ETV
+vector 176 highWayScenario.node[88].veinsmobility posx ETV
+vector 177 highWayScenario.node[88].veinsmobility posy ETV
+vector 178 highWayScenario.node[89].veinsmobility posx ETV
+vector 179 highWayScenario.node[89].veinsmobility posy ETV
+vector 180 highWayScenario.node[90].veinsmobility posx ETV
+vector 181 highWayScenario.node[90].veinsmobility posy ETV
+vector 182 highWayScenario.node[91].veinsmobility posx ETV
+vector 183 highWayScenario.node[91].veinsmobility posy ETV
+vector 184 highWayScenario.node[92].veinsmobility posx ETV
+vector 185 highWayScenario.node[92].veinsmobility posy ETV
+vector 186 highWayScenario.node[93].veinsmobility posx ETV
+vector 187 highWayScenario.node[93].veinsmobility posy ETV
+vector 188 highWayScenario.node[94].veinsmobility posx ETV
+vector 189 highWayScenario.node[94].veinsmobility posy ETV
+vector 190 highWayScenario.node[95].veinsmobility posx ETV
+vector 191 highWayScenario.node[95].veinsmobility posy ETV
+vector 192 highWayScenario.node[96].veinsmobility posx ETV
+vector 193 highWayScenario.node[96].veinsmobility posy ETV
+vector 194 highWayScenario.node[97].veinsmobility posx ETV
+vector 195 highWayScenario.node[97].veinsmobility posy ETV
+vector 196 highWayScenario.node[0].veinsmobility speed ETV
+vector 197 highWayScenario.node[1].veinsmobility speed ETV
+vector 198 highWayScenario.node[2].veinsmobility speed ETV
+vector 199 highWayScenario.node[3].veinsmobility speed ETV
+vector 200 highWayScenario.node[4].veinsmobility speed ETV
+vector 201 highWayScenario.node[5].veinsmobility speed ETV
+vector 202 highWayScenario.node[6].veinsmobility speed ETV
+vector 203 highWayScenario.node[7].veinsmobility speed ETV
+vector 204 highWayScenario.node[8].veinsmobility speed ETV
+vector 205 highWayScenario.node[9].veinsmobility speed ETV
+vector 206 highWayScenario.node[10].veinsmobility speed ETV
+vector 207 highWayScenario.node[11].veinsmobility speed ETV
+vector 208 highWayScenario.node[12].veinsmobility speed ETV
+vector 209 highWayScenario.node[13].veinsmobility speed ETV
+vector 210 highWayScenario.node[14].veinsmobility speed ETV
+vector 211 highWayScenario.node[15].veinsmobility speed ETV
+vector 212 highWayScenario.node[16].veinsmobility speed ETV
+vector 213 highWayScenario.node[17].veinsmobility speed ETV
+vector 214 highWayScenario.node[18].veinsmobility speed ETV
+vector 215 highWayScenario.node[19].veinsmobility speed ETV
+vector 216 highWayScenario.node[20].veinsmobility speed ETV
+vector 217 highWayScenario.node[21].veinsmobility speed ETV
+vector 218 highWayScenario.node[22].veinsmobility speed ETV
+vector 219 highWayScenario.node[23].veinsmobility speed ETV
+vector 220 highWayScenario.node[24].veinsmobility speed ETV
+vector 221 highWayScenario.node[25].veinsmobility speed ETV
+vector 222 highWayScenario.node[26].veinsmobility speed ETV
+vector 223 highWayScenario.node[27].veinsmobility speed ETV
+vector 224 highWayScenario.node[28].veinsmobility speed ETV
+vector 225 highWayScenario.node[29].veinsmobility speed ETV
+vector 226 highWayScenario.node[30].veinsmobility speed ETV
+vector 227 highWayScenario.node[31].veinsmobility speed ETV
+vector 228 highWayScenario.node[32].veinsmobility speed ETV
+vector 229 highWayScenario.node[33].veinsmobility speed ETV
+vector 230 highWayScenario.node[34].veinsmobility speed ETV
+vector 231 highWayScenario.node[35].veinsmobility speed ETV
+vector 232 highWayScenario.node[36].veinsmobility speed ETV
+vector 233 highWayScenario.node[37].veinsmobility speed ETV
+vector 234 highWayScenario.node[38].veinsmobility speed ETV
+vector 235 highWayScenario.node[39].veinsmobility speed ETV
+vector 236 highWayScenario.node[40].veinsmobility speed ETV
+vector 237 highWayScenario.node[41].veinsmobility speed ETV
+vector 238 highWayScenario.node[42].veinsmobility speed ETV
+vector 239 highWayScenario.node[43].veinsmobility speed ETV
+vector 240 highWayScenario.node[44].veinsmobility speed ETV
+vector 241 highWayScenario.node[45].veinsmobility speed ETV
+vector 242 highWayScenario.node[46].veinsmobility speed ETV
+vector 243 highWayScenario.node[47].veinsmobility speed ETV
+vector 244 highWayScenario.node[48].veinsmobility speed ETV
+vector 245 highWayScenario.node[49].veinsmobility speed ETV
+vector 246 highWayScenario.node[50].veinsmobility speed ETV
+vector 247 highWayScenario.node[51].veinsmobility speed ETV
+vector 248 highWayScenario.node[52].veinsmobility speed ETV
+vector 249 highWayScenario.node[53].veinsmobility speed ETV
+vector 250 highWayScenario.node[54].veinsmobility speed ETV
+vector 251 highWayScenario.node[55].veinsmobility speed ETV
+vector 252 highWayScenario.node[56].veinsmobility speed ETV
+vector 253 highWayScenario.node[57].veinsmobility speed ETV
+vector 254 highWayScenario.node[58].veinsmobility speed ETV
+vector 255 highWayScenario.node[59].veinsmobility speed ETV
+vector 256 highWayScenario.node[60].veinsmobility speed ETV
+vector 257 highWayScenario.node[61].veinsmobility speed ETV
+vector 258 highWayScenario.node[62].veinsmobility speed ETV
+vector 259 highWayScenario.node[63].veinsmobility speed ETV
+vector 260 highWayScenario.node[64].veinsmobility speed ETV
+vector 261 highWayScenario.node[65].veinsmobility speed ETV
+vector 262 highWayScenario.node[66].veinsmobility speed ETV
+vector 263 highWayScenario.node[67].veinsmobility speed ETV
+vector 264 highWayScenario.node[68].veinsmobility speed ETV
+vector 265 highWayScenario.node[69].veinsmobility speed ETV
+vector 266 highWayScenario.node[70].veinsmobility speed ETV
+vector 267 highWayScenario.node[71].veinsmobility speed ETV
+vector 268 highWayScenario.node[72].veinsmobility speed ETV
+vector 269 highWayScenario.node[73].veinsmobility speed ETV
+vector 270 highWayScenario.node[74].veinsmobility speed ETV
+vector 271 highWayScenario.node[75].veinsmobility speed ETV
+vector 272 highWayScenario.node[76].veinsmobility speed ETV
+vector 273 highWayScenario.node[77].veinsmobility speed ETV
+vector 274 highWayScenario.node[78].veinsmobility speed ETV
+vector 275 highWayScenario.node[79].veinsmobility speed ETV
+vector 276 highWayScenario.node[80].veinsmobility speed ETV
+vector 277 highWayScenario.node[81].veinsmobility speed ETV
+vector 278 highWayScenario.node[82].veinsmobility speed ETV
+vector 279 highWayScenario.node[83].veinsmobility speed ETV
+vector 280 highWayScenario.node[84].veinsmobility speed ETV
+vector 281 highWayScenario.node[85].veinsmobility speed ETV
+vector 282 highWayScenario.node[86].veinsmobility speed ETV
+vector 283 highWayScenario.node[87].veinsmobility speed ETV
+vector 284 highWayScenario.node[88].veinsmobility speed ETV
+vector 285 highWayScenario.node[98].veinsmobility posx ETV
+vector 286 highWayScenario.node[98].veinsmobility posy ETV
+vector 287 highWayScenario.node[99].veinsmobility posx ETV
+vector 288 highWayScenario.node[99].veinsmobility posy ETV
+vector 289 highWayScenario.node[0].veinsmobility acceleration ETV
+vector 290 highWayScenario.node[0].veinsmobility co2emission ETV
+vector 291 highWayScenario.node[1].veinsmobility acceleration ETV
+vector 292 highWayScenario.node[1].veinsmobility co2emission ETV
+vector 293 highWayScenario.node[2].veinsmobility acceleration ETV
+vector 294 highWayScenario.node[2].veinsmobility co2emission ETV
+vector 295 highWayScenario.node[3].veinsmobility acceleration ETV
+vector 296 highWayScenario.node[3].veinsmobility co2emission ETV
+vector 297 highWayScenario.node[4].veinsmobility acceleration ETV
+vector 298 highWayScenario.node[4].veinsmobility co2emission ETV
+vector 299 highWayScenario.node[5].veinsmobility acceleration ETV
+vector 300 highWayScenario.node[5].veinsmobility co2emission ETV
+vector 301 highWayScenario.node[6].veinsmobility acceleration ETV
+vector 302 highWayScenario.node[6].veinsmobility co2emission ETV
+vector 303 highWayScenario.node[7].veinsmobility acceleration ETV
+vector 304 highWayScenario.node[7].veinsmobility co2emission ETV
+vector 305 highWayScenario.node[8].veinsmobility acceleration ETV
+vector 306 highWayScenario.node[8].veinsmobility co2emission ETV
+vector 307 highWayScenario.node[9].veinsmobility acceleration ETV
+vector 308 highWayScenario.node[9].veinsmobility co2emission ETV
+vector 309 highWayScenario.node[10].veinsmobility acceleration ETV
+vector 310 highWayScenario.node[10].veinsmobility co2emission ETV
+vector 311 highWayScenario.node[11].veinsmobility acceleration ETV
+vector 312 highWayScenario.node[11].veinsmobility co2emission ETV
+vector 313 highWayScenario.node[12].veinsmobility acceleration ETV
+vector 314 highWayScenario.node[12].veinsmobility co2emission ETV
+vector 315 highWayScenario.node[13].veinsmobility acceleration ETV
+vector 316 highWayScenario.node[13].veinsmobility co2emission ETV
+vector 317 highWayScenario.node[14].veinsmobility acceleration ETV
+vector 318 highWayScenario.node[14].veinsmobility co2emission ETV
+vector 319 highWayScenario.node[15].veinsmobility acceleration ETV
+vector 320 highWayScenario.node[15].veinsmobility co2emission ETV
+vector 321 highWayScenario.node[16].veinsmobility acceleration ETV
+vector 322 highWayScenario.node[16].veinsmobility co2emission ETV
+vector 323 highWayScenario.node[17].veinsmobility acceleration ETV
+vector 324 highWayScenario.node[17].veinsmobility co2emission ETV
+vector 325 highWayScenario.node[18].veinsmobility acceleration ETV
+vector 326 highWayScenario.node[18].veinsmobility co2emission ETV
+vector 327 highWayScenario.node[19].veinsmobility acceleration ETV
+vector 328 highWayScenario.node[19].veinsmobility co2emission ETV
+vector 329 highWayScenario.node[20].veinsmobility acceleration ETV
+vector 330 highWayScenario.node[20].veinsmobility co2emission ETV
+vector 331 highWayScenario.node[21].veinsmobility acceleration ETV
+vector 332 highWayScenario.node[21].veinsmobility co2emission ETV
+vector 333 highWayScenario.node[22].veinsmobility acceleration ETV
+vector 334 highWayScenario.node[22].veinsmobility co2emission ETV
+vector 335 highWayScenario.node[23].veinsmobility acceleration ETV
+vector 336 highWayScenario.node[23].veinsmobility co2emission ETV
+vector 337 highWayScenario.node[24].veinsmobility acceleration ETV
+vector 338 highWayScenario.node[24].veinsmobility co2emission ETV
+vector 339 highWayScenario.node[25].veinsmobility acceleration ETV
+vector 340 highWayScenario.node[25].veinsmobility co2emission ETV
+vector 341 highWayScenario.node[26].veinsmobility acceleration ETV
+vector 342 highWayScenario.node[26].veinsmobility co2emission ETV
+vector 343 highWayScenario.node[27].veinsmobility acceleration ETV
+vector 344 highWayScenario.node[27].veinsmobility co2emission ETV
+vector 345 highWayScenario.node[28].veinsmobility acceleration ETV
+vector 346 highWayScenario.node[28].veinsmobility co2emission ETV
+vector 347 highWayScenario.node[29].veinsmobility acceleration ETV
+vector 348 highWayScenario.node[29].veinsmobility co2emission ETV
+vector 349 highWayScenario.node[30].veinsmobility acceleration ETV
+vector 350 highWayScenario.node[30].veinsmobility co2emission ETV
+vector 351 highWayScenario.node[31].veinsmobility acceleration ETV
+vector 352 highWayScenario.node[31].veinsmobility co2emission ETV
+vector 353 highWayScenario.node[32].veinsmobility acceleration ETV
+vector 354 highWayScenario.node[32].veinsmobility co2emission ETV
+vector 355 highWayScenario.node[33].veinsmobility acceleration ETV
+vector 356 highWayScenario.node[33].veinsmobility co2emission ETV
+vector 357 highWayScenario.node[34].veinsmobility acceleration ETV
+vector 358 highWayScenario.node[34].veinsmobility co2emission ETV
+vector 359 highWayScenario.node[35].veinsmobility acceleration ETV
+vector 360 highWayScenario.node[35].veinsmobility co2emission ETV
+vector 361 highWayScenario.node[36].veinsmobility acceleration ETV
+vector 362 highWayScenario.node[36].veinsmobility co2emission ETV
+vector 363 highWayScenario.node[37].veinsmobility acceleration ETV
+vector 364 highWayScenario.node[37].veinsmobility co2emission ETV
+vector 365 highWayScenario.node[38].veinsmobility acceleration ETV
+vector 366 highWayScenario.node[38].veinsmobility co2emission ETV
+vector 367 highWayScenario.node[39].veinsmobility acceleration ETV
+vector 368 highWayScenario.node[39].veinsmobility co2emission ETV
+vector 369 highWayScenario.node[40].veinsmobility acceleration ETV
+vector 370 highWayScenario.node[40].veinsmobility co2emission ETV
+vector 371 highWayScenario.node[41].veinsmobility acceleration ETV
+vector 372 highWayScenario.node[41].veinsmobility co2emission ETV
+vector 373 highWayScenario.node[42].veinsmobility acceleration ETV
+vector 374 highWayScenario.node[42].veinsmobility co2emission ETV
+vector 375 highWayScenario.node[43].veinsmobility acceleration ETV
+vector 376 highWayScenario.node[43].veinsmobility co2emission ETV
+vector 377 highWayScenario.node[44].veinsmobility acceleration ETV
+vector 378 highWayScenario.node[44].veinsmobility co2emission ETV
+vector 379 highWayScenario.node[45].veinsmobility acceleration ETV
+vector 380 highWayScenario.node[45].veinsmobility co2emission ETV
+vector 381 highWayScenario.node[46].veinsmobility acceleration ETV
+vector 382 highWayScenario.node[46].veinsmobility co2emission ETV
+vector 383 highWayScenario.node[47].veinsmobility acceleration ETV
+vector 384 highWayScenario.node[47].veinsmobility co2emission ETV
+vector 385 highWayScenario.node[48].veinsmobility acceleration ETV
+vector 386 highWayScenario.node[48].veinsmobility co2emission ETV
+vector 387 highWayScenario.node[49].veinsmobility acceleration ETV
+vector 388 highWayScenario.node[49].veinsmobility co2emission ETV
+vector 389 highWayScenario.node[50].veinsmobility acceleration ETV
+vector 390 highWayScenario.node[50].veinsmobility co2emission ETV
+vector 391 highWayScenario.node[51].veinsmobility acceleration ETV
+vector 392 highWayScenario.node[51].veinsmobility co2emission ETV
+vector 393 highWayScenario.node[52].veinsmobility acceleration ETV
+vector 394 highWayScenario.node[52].veinsmobility co2emission ETV
+vector 395 highWayScenario.node[53].veinsmobility acceleration ETV
+vector 396 highWayScenario.node[53].veinsmobility co2emission ETV
+vector 397 highWayScenario.node[54].veinsmobility acceleration ETV
+vector 398 highWayScenario.node[54].veinsmobility co2emission ETV
+vector 399 highWayScenario.node[55].veinsmobility acceleration ETV
+vector 400 highWayScenario.node[55].veinsmobility co2emission ETV
+vector 401 highWayScenario.node[56].veinsmobility acceleration ETV
+vector 402 highWayScenario.node[56].veinsmobility co2emission ETV
+vector 403 highWayScenario.node[57].veinsmobility acceleration ETV
+vector 404 highWayScenario.node[57].veinsmobility co2emission ETV
+vector 405 highWayScenario.node[58].veinsmobility acceleration ETV
+vector 406 highWayScenario.node[58].veinsmobility co2emission ETV
+vector 407 highWayScenario.node[59].veinsmobility acceleration ETV
+vector 408 highWayScenario.node[59].veinsmobility co2emission ETV
+vector 409 highWayScenario.node[60].veinsmobility acceleration ETV
+vector 410 highWayScenario.node[60].veinsmobility co2emission ETV
+vector 411 highWayScenario.node[61].veinsmobility acceleration ETV
+vector 412 highWayScenario.node[61].veinsmobility co2emission ETV
+vector 413 highWayScenario.node[62].veinsmobility acceleration ETV
+vector 414 highWayScenario.node[62].veinsmobility co2emission ETV
+vector 415 highWayScenario.node[63].veinsmobility acceleration ETV
+vector 416 highWayScenario.node[63].veinsmobility co2emission ETV
+vector 417 highWayScenario.node[64].veinsmobility acceleration ETV
+vector 418 highWayScenario.node[64].veinsmobility co2emission ETV
+vector 419 highWayScenario.node[65].veinsmobility acceleration ETV
+vector 420 highWayScenario.node[65].veinsmobility co2emission ETV
+vector 421 highWayScenario.node[66].veinsmobility acceleration ETV
+vector 422 highWayScenario.node[66].veinsmobility co2emission ETV
+vector 423 highWayScenario.node[67].veinsmobility acceleration ETV
+vector 424 highWayScenario.node[67].veinsmobility co2emission ETV
+vector 425 highWayScenario.node[68].veinsmobility acceleration ETV
+vector 426 highWayScenario.node[68].veinsmobility co2emission ETV
+vector 427 highWayScenario.node[69].veinsmobility acceleration ETV
+vector 428 highWayScenario.node[69].veinsmobility co2emission ETV
+vector 429 highWayScenario.node[70].veinsmobility acceleration ETV
+vector 430 highWayScenario.node[70].veinsmobility co2emission ETV
+vector 431 highWayScenario.node[71].veinsmobility acceleration ETV
+vector 432 highWayScenario.node[71].veinsmobility co2emission ETV
+vector 433 highWayScenario.node[72].veinsmobility acceleration ETV
+vector 434 highWayScenario.node[72].veinsmobility co2emission ETV
+vector 435 highWayScenario.node[73].veinsmobility acceleration ETV
+vector 436 highWayScenario.node[73].veinsmobility co2emission ETV
+vector 437 highWayScenario.node[74].veinsmobility acceleration ETV
+vector 438 highWayScenario.node[74].veinsmobility co2emission ETV
+vector 439 highWayScenario.node[75].veinsmobility acceleration ETV
+vector 440 highWayScenario.node[75].veinsmobility co2emission ETV
+vector 441 highWayScenario.node[76].veinsmobility acceleration ETV
+vector 442 highWayScenario.node[76].veinsmobility co2emission ETV
+vector 443 highWayScenario.node[77].veinsmobility acceleration ETV
+vector 444 highWayScenario.node[77].veinsmobility co2emission ETV
+vector 445 highWayScenario.node[78].veinsmobility acceleration ETV
+vector 446 highWayScenario.node[78].veinsmobility co2emission ETV
+vector 447 highWayScenario.node[79].veinsmobility acceleration ETV
+vector 448 highWayScenario.node[79].veinsmobility co2emission ETV
+vector 449 highWayScenario.node[80].veinsmobility acceleration ETV
+vector 450 highWayScenario.node[80].veinsmobility co2emission ETV
+vector 451 highWayScenario.node[81].veinsmobility acceleration ETV
+vector 452 highWayScenario.node[81].veinsmobility co2emission ETV
+vector 453 highWayScenario.node[82].veinsmobility acceleration ETV
+vector 454 highWayScenario.node[82].veinsmobility co2emission ETV
+vector 455 highWayScenario.node[83].veinsmobility acceleration ETV
+vector 456 highWayScenario.node[83].veinsmobility co2emission ETV
+vector 457 highWayScenario.node[84].veinsmobility acceleration ETV
+vector 458 highWayScenario.node[84].veinsmobility co2emission ETV
+vector 459 highWayScenario.node[85].veinsmobility acceleration ETV
+vector 460 highWayScenario.node[85].veinsmobility co2emission ETV
+vector 461 highWayScenario.node[86].veinsmobility acceleration ETV
+vector 462 highWayScenario.node[86].veinsmobility co2emission ETV
+vector 463 highWayScenario.node[87].veinsmobility acceleration ETV
+vector 464 highWayScenario.node[87].veinsmobility co2emission ETV
+vector 465 highWayScenario.node[88].veinsmobility acceleration ETV
+vector 466 highWayScenario.node[88].veinsmobility co2emission ETV
+vector 467 highWayScenario.node[89].veinsmobility speed ETV
+vector 468 highWayScenario.node[90].veinsmobility speed ETV
+vector 469 highWayScenario.node[91].veinsmobility speed ETV
+vector 470 highWayScenario.node[92].veinsmobility speed ETV
+vector 471 highWayScenario.node[93].veinsmobility speed ETV
+vector 472 highWayScenario.node[94].veinsmobility speed ETV
+vector 473 highWayScenario.node[95].veinsmobility speed ETV
+vector 474 highWayScenario.node[96].veinsmobility speed ETV
+vector 475 highWayScenario.node[97].veinsmobility speed ETV
+vector 476 highWayScenario.node[89].veinsmobility acceleration ETV
+vector 477 highWayScenario.node[89].veinsmobility co2emission ETV
+vector 478 highWayScenario.node[90].veinsmobility acceleration ETV
+vector 479 highWayScenario.node[90].veinsmobility co2emission ETV
+vector 480 highWayScenario.node[91].veinsmobility acceleration ETV
+vector 481 highWayScenario.node[91].veinsmobility co2emission ETV
+vector 482 highWayScenario.node[92].veinsmobility acceleration ETV
+vector 483 highWayScenario.node[92].veinsmobility co2emission ETV
+vector 484 highWayScenario.node[93].veinsmobility acceleration ETV
+vector 485 highWayScenario.node[93].veinsmobility co2emission ETV
+vector 486 highWayScenario.node[94].veinsmobility acceleration ETV
+vector 487 highWayScenario.node[94].veinsmobility co2emission ETV
+vector 488 highWayScenario.node[95].veinsmobility acceleration ETV
+vector 489 highWayScenario.node[95].veinsmobility co2emission ETV
+vector 490 highWayScenario.node[96].veinsmobility acceleration ETV
+vector 491 highWayScenario.node[96].veinsmobility co2emission ETV
+vector 492 highWayScenario.node[97].veinsmobility acceleration ETV
+vector 493 highWayScenario.node[97].veinsmobility co2emission ETV
+vector 494 highWayScenario.node[98].veinsmobility speed ETV
+vector 495 highWayScenario.node[99].veinsmobility speed ETV
+vector 496 highWayScenario.node[98].veinsmobility acceleration ETV
+vector 497 highWayScenario.node[98].veinsmobility co2emission ETV
+vector 498 highWayScenario.node[99].veinsmobility acceleration ETV
+vector 499 highWayScenario.node[99].veinsmobility co2emission ETV
+458	4	3	3.1138363076605
+458	5	4	3.8354356729301
+458	6	5	5.5909460726007
+458	7	6	5.8765871673176
+458	8	7	5.4196187655995
+458	9	8	1.6174155085128
+458	10	9	1.7586938238335
+458	11	10	1.9328353523131
+458	12	11	1.6447283282561
+458	13	12	1.9808519643112
+458	14	13	1.4418111887517
+458	15	14	2.0848839228767
+458	16	15	1.6600556796248
+458	17	16	1.8631883171932
+458	18	17	1.7836786819542
+458	19	18	1.7771890445368
+458	20	19	1.7245391025168
+458	21	20	1.6694511789674
+458	22	21	1.8129700162331
+458	23	22	1.6728149163474
+458	24	23	1.9735199539021
+458	25	24	1.7337011086653
+458	26	25	1.8172539723335
+458	27	26	1.7239866114473
+458	28	27	1.7868939097573
+458	349	28	1.5802670265142
+458	350	29	1.6996162327217
+458	3507	30	1.9134307973088
+458	3508	31	1.7826194815461
+458	3828	32	1.7826837541414
+458	3829	33	1.8692327764398
+458	4777	34	1.6498696390827
+458	4778	35	1.8315818381688
+458	8521	36	1.7750421338143
+458	8522	37	1.8347585343776
+458	9504	38	1.4562440947447
+458	9505	39	1.9891240604892
+458	11100	40	1.7388156269391
+458	11101	41	1.586514352971
+458	13580	42	1.9117210817175
+458	13581	43	1.8512260873079
+458	14219	44	1.6662927196733
+458	15488	45	1.9221955618021
+458	15489	46	1.5574858078543
+458	15799	47	1.6758189698577
+458	15800	48	2.0053908694368
+458	15801	49	1.688428094403
+458	15802	50	1.6567134457104
+458	15803	51	1.7250467593437
+457	4	3	1.8565004443813
+457	5	4	1.7450691113318
+457	6	5	2.1282776414487
+457	7	6	1.8015764061501
+457	8	7	1.3677374197379
+457	9	8	-0.05559735953342
+457	10	9	-0.0023192500160079
+457	11	10	0.06105285107391
+457	12	11	-0.045660195827951
+457	13	12	0.077822543454822
+457	14	13	-0.12113307835767
+457	15	14	0.116858207318
+457	16	15	-0.040784784927965
+457	17	16	0.034238070435823
+457	18	17	0.0043734210217377
+457	19	18	0.0018894245498817
+457	20	19	-0.017280078779441
+457	21	20	-0.036885681371205
+457	22	21	0.016475174336229
+457	23	22	-0.03510785778286
+457	24	23	0.0751661071321
+457	25	24	-0.014017404557672
+457	26	25	0.016697946181521
+457	27	26	-0.01762430493487
+457	28	27	0.0057302723475718
+457	349	28	-0.069824853560421
+457	350	29	-0.024222958409228
+457	3507	30	0.054456054721959
+457	3508	31	0.0052058187825619
+457	3828	32	0.0050712983286925
+457	3829	33	0.036280561601744
+457	4777	34	-0.044501133789309
+457	4778	35	0.022919794344343
+457	8521	36	0.0016983410133982
+457	8522	37	0.023286288019735
+457	9504	38	-0.11577045110986
+457	9505	39	0.082231638231315
+457	11100	40	-0.011223747665062
+457	11101	41	-0.066700257703197
+457	13580	42	0.054079458138439
+457	13581	43	0.030343671613373
+457	14219	44	-0.03787388530327
+457	15488	45	0.056259925453924
+457	15489	46	-0.078238073564135
+457	15799	47	-0.032772529686335
+457	15800	48	0.088244571019896
+457	15801	49	-0.029664058461785
+457	15802	50	-0.040479563972914
+457	15803	51	-0.014294963511638
+280	3	2	2.1740871836206
+280	4	3	4.0305876280019
+280	5	4	5.7756567393338
+280	6	5	7.9039343807824
+280	7	6	9.7055107869325
+280	8	7	11.07324820667
+280	9	8	11.017650847137
+280	10	9	11.015331597121
+280	11	10	11.076384448195
+280	12	11	11.030724252367
+280	13	12	11.108546795822
+280	14	13	10.987413717464
+280	15	14	11.104271924782
+280	16	15	11.063487139854
+280	17	16	11.09772521029
+280	18	17	11.102098631312
+280	19	18	11.103988055862
+280	20	19	11.086707977082
+280	21	20	11.049822295711
+280	22	21	11.066297470047
+280	23	22	11.031189612264
+280	24	23	11.106355719396
+280	25	24	11.092338314839
+280	26	25	11.10903626102
+280	27	26	11.091411956085
+280	28	27	11.097142228433
+280	349	28	11.027317374873
+280	350	29	11.003094416463
+280	3507	30	11.057550471185
+280	3508	31	11.062756289968
+280	3828	32	11.067827588297
+280	3829	33	11.104108149898
+280	4777	34	11.059607016109
+280	4778	35	11.082526810453
+280	8521	36	11.084225151467
+280	8522	37	11.107511439486
+280	9504	38	10.991740988377
+280	9505	39	11.073972626608
+280	11100	40	11.062748878943
+280	11101	41	10.99604862124
+280	13580	42	11.050128079378
+280	13581	43	11.080471750991
+280	14219	44	11.042597865688
+280	15488	45	11.098857791142
+280	15489	46	11.020619717578
+280	15799	47	10.987847187892
+280	15800	48	11.076091758912
+280	15801	49	11.04642770045
+280	15802	50	11.005948136477
+280	15803	51	10.991653172965
+169	2	1	3948.6320516237
+169	3	2	3949.5153827648
+169	4	3	3951.8066497629
+169	5	4	3955.4049915923
+169	6	5	3960.4057864978
+169	7	6	3966.7820254681
+169	8	7	3968.3911127285
+169	9	8	3965.8912464633
+169	10	9	3963.386513266
+169	11	10	3960.8825475855
+169	12	11	3958.3785447561
+169	13	12	3955.8730087687
+169	14	13	3953.3730061929
+169	15	14	3950.8699399121
+169	16	15	3948.3684522766
+169	17	16	3945.8675965755
+169	18	17	3939.7584530813
+169	19	18	3940.3142267053
+169	20	19	3941.3160265223
+169	21	20	3942.5846784048
+169	22	21	3943.8527265999
+169	23	22	3945.1185701915
+169	24	23	3946.385252678
+169	25	24	3947.6526590133
+169	26	25	3949.2948798811
+169	27	26	3951.7391243016
+169	28	27	3954.1787230499
+169	349	28	3956.616963435
+169	350	29	3959.0561863098
+169	3507	30	3961.4940560325
+169	3508	31	3963.9342214585
+169	3828	32	3966.375095212
+169	3829	33	3969.3566581722
+169	4777	34	3987.7280420058
+169	4778	35	3989.5234479691
+169	8521	36	4004.9735322872
+169	8522	37	4010.9425145166
+169	9504	38	4016.8992133643
+169	9505	39	4022.8563004803
+169	11100	40	4028.825707378
+169	11101	41	4034.7985175266
+169	13580	42	4040.7548044515
+169	13581	43	4046.705291658
+169	14219	44	4062.587264774
+169	15488	45	4068.8547519886
+169	15489	46	4074.6068178807
+169	15799	47	4080.3360148412
+169	15800	48	4086.0752891935
+169	15801	49	4091.7940620993
+169	15802	50	4097.5128009233
+169	15803	51	4103.2411489951
+168	2	1	11778.239791773
+168	3	2	11778.913296264
+168	4	3	11780.660295257
+168	5	4	11783.403886274
+168	6	5	11787.216791393
+168	7	6	11792.078417328
+168	8	7	11800.020122698
+168	9	8	11809.699658679
+168	10	9	11819.398039526
+168	11	10	11829.09344853
+168	12	11	11838.789001377
+168	13	12	11848.490490644
+168	14	13	11858.170554422
+168	15	14	11867.862480932
+168	16	15	11877.548294893
+168	17	16	11887.231661992
+168	18	17	11910.872002044
+168	19	18	11920.736159386
+168	20	19	11930.617078042
+168	21	20	11940.475920465
+168	22	21	11950.330071561
+168	23	22	11960.167090426
+168	24	23	11970.01062844
+168	25	24	11979.859791569
+168	26	25	11989.656840441
+168	27	26	11999.29919324
+168	28	27	12008.923219227
+168	349	28	12018.541886578
+168	350	29	12028.164429773
+168	3507	30	12037.781634889
+168	3508	31	12047.407896375
+168	3828	32	12057.036952158
+168	3829	33	12066.456363707
+168	4777	34	12082.349593704
+168	4778	35	12083.79492051
+168	8521	36	12099.943617579
+168	8522	37	12106.869046465
+168	9504	38	12113.780223728
+168	9505	39	12120.691851474
+168	11100	40	12127.617773076
+168	11101	41	12134.547643253
+168	13580	42	12141.458342588
+168	13581	43	12148.362312881
+168	14219	44	12166.143746189
+168	15488	45	12173.040078275
+168	15489	46	12180.319544717
+168	15799	47	12187.649481381
+168	15800	48	12194.992311064
+168	15801	49	12202.308911189
+168	15802	50	12209.62546771
+168	15803	51	12216.954318306
+485	5	4	4.1148965923633
+485	6	5	5.508109681627
+485	7	6	6.3825872084693
+485	8	7	0.973
+485	9	8	6.694079667164
+485	10	9	6.9408000408884
+485	11	10	8.3501666423274
+485	12	11	8.7977842891071
+485	13	12	10.35940515515
+485	14	13	11.695969244669
+485	15	14	12.677059197996
+485	16	15	13.97047408086
+485	17	16	14.907861855909
+485	18	17	6.0773562066274
+485	19	18	4.037571334837
+485	20	19	0.973
+485	21	20	0.973
+485	22	21	0.973
+485	23	22	0.973
+485	24	23	0.973
+485	25	24	6.0834977820809
+485	26	25	7.5577351435172
+485	27	26	0.973
+485	28	27	0.973
+485	349	28	6.1749924775832
+485	350	29	6.8173368260063
+485	3507	30	7.9327468942553
+485	3508	31	8.3392106508085
+485	3828	32	7.1340214278556
+485	3829	33	2.2644273522
+485	4777	34	1.9552435497658
+485	4778	35	2.4470684845398
+485	8521	36	1.9766237895203
+485	8522	37	2.2637684977843
+485	9504	38	2.0640284835258
+485	9505	39	2.1786963327345
+485	11100	40	2.4922209720552
+485	11101	41	1.9654443447317
+485	13580	42	2.5083837457701
+485	13581	43	1.8956996243233
+485	14219	44	2.4178576325612
+485	15488	45	2.2452304825494
+485	15489	46	1.9605656134716
+485	15799	47	2.3198336029756
+485	15800	48	2.2284283226892
+485	15801	49	0.973
+485	15802	50	0.973
+485	15803	51	0.973
+485	15804	52	6.2374485665749
+485	15805	53	6.716527209592
+485	15806	54	8.0141288180629
+485	15807	55	8.8566504704414
+485	15808	56	4.1256374758536
+485	15809	57	2.3342616717492
+485	15810	58	2.2928052465063
+485	15811	59	1.9375624896695
+485	15812	60	2.3194523274079
+485	15813	61	2.0705816276016
+485	15814	62	2.5563645910563
+485	15815	63	2.2195505851554
+485	15816	64	2.1736993852286
+485	15817	65	2.1747258547723
+485	15818	66	2.2853802493357
+485	15819	67	2.3086801970741
+485	15820	68	2.1310729619556
+485	15821	69	2.0205006957834
+485	15822	70	2.4861675548636
+485	15823	71	2.1583473975961
+485	15824	72	2.0723601119834
+485	15825	73	2.1986955645767
+485	15835	74	1.9632397466194
+485	15837	75	2.340333910969
+485	15838	76	2.0510024482069
+485	15839	77	2.2398801423071
+485	15840	78	2.1937871868315
+485	15841	79	2.1957367907031
+485	15842	80	0.973
+485	15843	81	0.973
+485	15844	82	1.9719655431468
+485	15845	83	6.0534161709372
+485	15846	84	6.8712551636855
+485	15847	85	8.5338909000447
+485	16565	86	10.148531885556
+484	5	4	1.9428918112325
+484	6	5	2.093007006566
+484	7	6	1.9818242726522
+484	8	7	-3.4487204898894
+484	9	8	2.400176063166
+484	10	9	1.9944262112677
+484	11	10	2.069852532316
+484	12	11	1.8786890080851
+484	13	12	1.9853731149202
+484	14	13	2.0082596539217
+484	15	14	1.9541723687248
+484	16	15	1.958116992272
+484	17	16	1.8999146327679
+484	18	17	0.38753353552874
+484	19	18	0.04645404722076
+484	20	19	-3.0973675524598
+484	21	20	-4.5
+484	22	21	-4.5
+484	23	22	-4.4993433298936
+484	24	23	-0.95
+484	25	24	1.9599821809446
+484	26	25	2.0788290069276
+484	27	26	-0.82620959511205
+484	28	27	-4.4985683409461
+484	349	28	2.2667002380802
+484	350	29	2.0240472309571
+484	3507	30	2.011920502258
+484	3508	31	1.8216231778916
+484	3828	32	1.3095734927045
+484	3829	33	0.013386573498137
+484	4777	34	-0.067044442330953
+484	4778	35	0.062115618488752
+484	8521	36	-0.06135603275383
+484	8522	37	0.014840366395656
+484	9504	38	-0.037380776747595
+484	9505	39	-0.0065224380558355
+484	11100	40	0.074683095733635
+484	11101	41	-0.063855481969659
+484	13580	42	0.078462716848589
+484	13581	43	-0.08239897898631
+484	14219	44	0.055314296951982
+484	15488	45	0.0090378486085676
+484	15489	46	-0.065036936202086
+484	15799	47	0.030045411144384
+484	15800	48	0.0054811014328155
+484	15801	49	-1.978807937493
+484	15802	50	-4.4747598418081
+484	15803	51	-1.66
+484	15804	52	2.0156353641441
+484	15805	53	1.815205110684
+484	15806	54	1.907188011962
+484	15807	55	1.8519044372253
+484	15808	56	0.5123395989946
+484	15809	57	0.033001249432564
+484	15810	58	0.021272902849596
+484	15811	59	-0.071374277092982
+484	15812	60	0.029721255174373
+484	15813	61	-0.035653670707253
+484	15814	62	0.090894268872217
+484	15815	63	0.0013234899542294
+484	15816	64	-0.010546082288492
+484	15817	65	-0.009972694686148
+484	15818	66	0.018873094837181
+484	15819	67	0.024281019878108
+484	15820	68	-0.022205732201693
+484	15821	69	-0.050213236811105
+484	15822	70	0.071422595207114
+484	15823	71	-0.015137622482143
+484	15824	72	-0.036935007923748
+484	15825	73	-0.0031929506803863
+484	15835	74	-0.064204461136832
+484	15837	75	0.035482645612209
+484	15838	76	-0.040587225495837
+484	15839	77	0.0096454815589819
+484	15840	78	-0.002599805954377
+484	15841	79	-0.002016682927497
+484	15842	80	-3.4758473180749
+484	15843	81	-4.4780184569489
+484	15844	82	0.23537835205905
+484	15845	83	1.883316545235
+484	15846	84	1.8269018780743
+484	15847	85	2.0092069457704
+484	16565	86	2.1071009208681
+471	4	3	3.8405729058904
+471	5	4	5.7834647171229
+471	6	5	7.8764717236889
+471	7	6	9.8582959963411
+471	8	7	6.4095755064517
+471	9	8	8.8097515696177
+471	10	9	10.804177780885
+471	11	10	12.874030313201
+471	12	11	14.752719321286
+471	13	12	16.738092436207
+471	14	13	18.746352090128
+471	15	14	20.700524458853
+471	16	15	22.658641451125
+471	17	16	24.558556083893
+471	18	17	24.946089619422
+471	19	18	24.992543666643
+471	20	19	21.895176114183
+471	21	20	17.395176114183
+471	22	21	12.895176114183
+471	23	22	8.3958327842892
+471	24	23	7.4458327842892
+471	25	24	9.4058149652339
+471	26	25	11.484643972161
+471	27	26	10.658434377049
+471	28	27	6.1598660361033
+471	349	28	8.4265662741835
+471	350	29	10.450613505141
+471	3507	30	12.462534007399
+471	3508	31	14.28415718529
+471	3828	32	15.593730677995
+471	3829	33	15.607117251493
+471	4777	34	15.540072809162
+471	4778	35	15.602188427651
+471	8521	36	15.540832394897
+471	8522	37	15.555672761292
+471	9504	38	15.518291984545
+471	9505	39	15.511769546489
+471	11100	40	15.586452642223
+471	11101	41	15.522597160253
+471	13580	42	15.601059877102
+471	13581	43	15.518660898115
+471	14219	44	15.573975195067
+471	15488	45	15.583013043676
+471	15489	46	15.517976107474
+471	15799	47	15.548021518618
+471	15800	48	15.553502620051
+471	15801	49	13.574694682558
+471	15802	50	9.0999348407498
+471	15803	51	7.4399348407498
+471	15804	52	9.4555702048939
+471	15805	53	11.270775315578
+471	15806	54	13.17796332754
+471	15807	55	15.029867764765
+471	15808	56	15.54220736376
+471	15809	57	15.575208613192
+471	15810	58	15.596481516042
+471	15811	59	15.525107238949
+471	15812	60	15.554828494123
+471	15813	61	15.519174823416
+471	15814	62	15.610069092288
+471	15815	63	15.611392582243
+471	15816	64	15.600846499954
+471	15817	65	15.590873805268
+471	15818	66	15.609746900105
+471	15819	67	15.634027919983
+471	15820	68	15.611822187782
+471	15821	69	15.56160895097
+471	15822	70	15.633031546178
+471	15823	71	15.617893923695
+471	15824	72	15.580958915772
+471	15825	73	15.577765965091
+471	15835	74	15.513561503954
+471	15837	75	15.549044149567
+471	15838	76	15.508456924071
+471	15839	77	15.51810240563
+471	15840	78	15.515502599675
+471	15841	79	15.513485916748
+471	15842	80	12.037638598673
+471	15843	81	7.5596201417242
+471	15844	82	7.7949984937832
+471	15845	83	9.6783150390182
+471	15846	84	11.505216917092
+471	15847	85	13.514423862863
+471	16565	86	15.621524783731
+187	3	2	3417.1232571051
+187	4	3	3415.1124066548
+187	5	4	3411.9232456155
+187	6	5	3407.4146034609
+187	7	6	3413.4896929715
+187	8	7	3418.9361949477
+187	9	8	3428.018132402
+187	10	9	3426.2055927614
+187	11	10	3424.0161113218
+187	12	11	3421.46718442
+187	13	12	3418.580063121
+187	14	13	3415.2989439232
+187	15	14	3411.6561890061
+187	16	15	3407.662195431
+187	17	16	3403.3119204063
+187	18	17	3398.7374185162
+187	19	18	3394.1613563918
+187	20	19	3389.8011820985
+187	21	20	3380.5763751725
+187	22	21	3378.9299814196
+187	23	22	3377.7801265473
+187	24	23	3377.0092622246
+187	25	24	3361.2747998213
+187	26	25	3358.0149635236
+187	27	26	3354.3849234637
+187	28	27	3351.8630797357
+187	349	28	3335.9481019524
+187	350	29	3337.6591069761
+187	3507	30	3339.7382979346
+187	3508	31	3342.1555396193
+187	3828	32	3344.8796937491
+187	3829	33	3347.6766763239
+187	4777	34	3350.4764162751
+187	4778	35	3353.2787639531
+187	8521	36	3356.0710910442
+187	8522	37	3358.8708900491
+187	9504	38	3361.670104032
+187	9505	39	3364.4670474352
+187	11100	40	3370.2024149554
+187	11101	41	3373.0795073864
+187	13580	42	3375.959181058
+187	13581	43	3378.8317873569
+187	14219	44	3381.7078521446
+187	15488	45	3384.5829983084
+187	15489	46	3387.4566062311
+187	15799	47	3390.3368005859
+187	15800	48	3393.2131414796
+187	15801	49	3395.9891965134
+187	15802	50	3393.6179109071
+187	15803	51	3387.4860062672
+187	15804	52	3380.0809088628
+187	15805	53	3380.9787357385
+187	15806	54	3382.0453509084
+187	15807	55	3383.2691686182
+187	15808	56	3384.3614852312
+187	15809	57	3385.3669528255
+187	15810	58	3384.4869708713
+187	15811	59	3382.9015595352
+187	15812	60	3368.6429985053
+187	15813	61	3354.7538670016
+187	15814	62	3340.8486704493
+187	15815	63	3326.9094829798
+187	15816	64	3312.9789785285
+187	15817	65	3299.0415162335
+187	15818	66	3285.1138480267
+187	15819	67	3271.1915406514
+187	15820	68	3242.4689673694
+187	15821	69	3228.0029714474
+187	15822	70	3213.536190275
+187	15823	71	3199.1248867016
+187	15824	72	3184.7305374863
+187	15825	73	3170.3427662414
+187	15835	74	3156.0034700489
+187	15837	75	3141.6584795825
+187	15838	76	3127.2902864168
+187	15839	77	3112.9148797008
+187	15840	78	3099.5370981469
+187	15841	79	3086.1465897836
+187	15842	80	3074.2314739765
+187	15843	81	3066.16290407
+187	15844	82	3054.5039784476
+187	15845	83	3055.5677631142
+187	15846	84	3057.5760126022
+187	15847	85	3057.2537340988
+187	16565	86	3058.4069151472
+186	3	2	10899.885498013
+186	4	3	10899.482750507
+186	5	4	10898.844002532
+186	6	5	10897.940979444
+186	7	6	10895.895616678
+186	8	7	10896.990390944
+186	9	8	10911.026962858
+186	10	9	10919.910735288
+186	11	10	10930.642006711
+186	12	11	10943.135022604
+186	13	12	10957.28562545
+186	14	13	10973.367324087
+186	15	14	10991.221502266
+186	16	15	11010.797201034
+186	17	16	11032.119136543
+186	18	17	11054.540071711
+186	19	18	11076.968654031
+186	20	19	11098.339108673
+186	21	20	11133.151486101
+186	22	21	11138.757777556
+186	23	22	11142.673257393
+186	24	23	11145.298200581
+186	25	24	11162.473703359
+186	26	25	11161.790318391
+186	27	26	11161.024389222
+186	28	27	11160.492286645
+186	349	28	11134.374375803
+186	350	29	11125.971282703
+186	3507	30	11115.759953714
+186	3508	31	11103.888388967
+186	3828	32	11090.509514881
+186	3829	33	11076.772965514
+186	4777	34	11063.022874112
+186	4778	35	11049.259975633
+186	8521	36	11035.546290292
+186	8522	37	11021.795908864
+186	9504	38	11008.048400599
+186	9505	39	10994.312043612
+186	11100	40	10966.471469025
+186	11101	41	10952.753619478
+186	13580	42	10939.02346269
+186	13581	43	10925.327002823
+186	14219	44	10911.614053034
+186	15488	45	10897.905483203
+186	15489	46	10884.204247638
+186	15799	47	10870.471608256
+186	15800	48	10856.757342006
+186	15801	49	10843.521234303
+186	15802	50	10834.856977068
+186	15803	51	10832.525171291
+186	15804	52	10814.9425198
+186	15805	53	10805.819649119
+186	15806	54	10794.981710842
+186	15807	55	10782.546428488
+186	15808	56	10768.956053308
+186	15809	57	10755.315030384
+186	15810	58	10741.676318993
+186	15811	59	10728.069437851
+186	15812	60	10717.22444875
+186	15813	61	10716.086166544
+186	15814	62	10714.946567729
+186	15815	63	10714.407314575
+186	15816	64	10714.079740832
+186	15817	65	10713.58952382
+186	15818	66	10712.876403922
+186	15819	67	10712.163558508
+186	15820	68	10709.741241008
+186	15821	69	10708.195450152
+186	15822	70	10706.649575387
+186	15823	71	10704.578754427
+186	15824	72	10702.457519565
+186	15825	73	10700.30923
+186	15835	74	10697.952156384
+186	15837	75	10695.618383021
+186	15838	76	10693.387892082
+186	15839	77	10691.156281325
+186	15840	78	10685.476738874
+186	15841	79	10679.763297584
+186	15842	80	10674.446999372
+186	15843	81	10670.598354916
+186	15844	82	10655.886417084
+186	15845	83	10648.106413549
+186	15846	84	10638.842973921
+186	15847	85	10627.85887589
+186	16565	86	10615.545782501
+404	4	3	3.5850992436349
+404	5	4	4.8498700621115
+404	6	5	5.4327436998216
+404	7	6	0.973
+404	8	7	6.3562967704266
+404	9	8	5.5542495896394
+404	10	9	0.973
+404	11	10	4.6603043938504
+404	12	11	0.973
+404	13	12	5.7173847184234
+404	14	13	0.973
+404	15	14	5.8590126756257
+404	16	15	7.120791669061
+404	17	16	7.0955347410999
+404	18	17	8.756979712641
+404	19	18	9.9358403580364
+404	20	19	11.555196547981
+404	21	20	11.350354563282
+404	22	21	9.1585832847863
+404	23	22	2.6701269136038
+404	24	23	3.2004036962938
+404	25	24	3.3657931557908
+404	26	25	2.9365491745095
+404	27	26	3.06680354949
+404	28	27	3.014990661936
+404	349	28	3.015333032815
+404	350	29	2.9894600658982
+404	3507	30	3.1732770149538
+404	3508	31	2.7604950047813
+404	3828	32	2.8938320297439
+404	3829	33	3.221681848273
+404	4777	34	2.9241062608901
+404	4778	35	2.8702386768896
+404	8521	36	3.4564760943941
+404	8522	37	2.6780386012016
+404	9504	38	3.6045465272116
+404	9505	39	2.6751888980661
+404	11100	40	2.8954327193117
+404	11101	41	3.1606137299198
+404	13580	42	3.1903978908156
+404	13581	43	3.2851181154416
+404	14219	44	2.7702738920059
+404	15488	45	0.973
+404	15489	46	0.973
+404	15799	47	0.973
+404	15800	48	0.973
+404	15801	49	0.973
+404	15802	50	6.4339526405852
+404	15803	51	7.6311165173043
+404	15804	52	8.3579006592805
+404	15805	53	2.4531943752022
+404	15806	54	2.1859703399318
+404	15807	55	1.5828584943909
+404	15808	56	1.9503353721072
+404	15809	57	2.2004480587194
+404	15810	58	1.8464902214342
+404	15811	59	2.0072007836999
+404	15812	60	2.1881900915351
+404	15813	61	1.6411676101667
+404	15814	62	2.1956108051278
+404	15815	63	1.8088242063842
+404	15816	64	1.9758888398652
+404	15817	65	2.1319980905949
+404	15818	66	1.9558247216514
+404	15819	67	1.7878273400017
+404	15820	68	2.3153107738564
+404	15821	69	1.6977951361314
+404	15822	70	2.2136010718336
+404	15823	71	1.7306350977102
+404	15824	72	1.9517684055551
+404	15825	73	2.2515484235147
+404	15835	74	1.8847587928411
+404	15837	75	1.789044759469
+404	15838	76	1.8558668580483
+404	15839	77	2.0253749480992
+404	15840	78	1.9390263914059
+404	15841	79	2.2170619245486
+404	15842	80	1.8107542679217
+404	15843	81	2.2650572055956
+404	15844	82	1.8737271099292
+404	15845	83	0.973
+404	15846	84	0.973
+404	15847	85	4.9149939757607
+404	16565	86	6.6140866964472
+404	16780	87	8.1146832928128
+404	19917	88	4.8065904077284
+403	4	3	1.9569612565031
+403	5	4	2.0625983146927
+403	6	5	1.8448731235392
+403	7	6	-0.94851139210087
+403	8	7	2.0062451243796
+403	9	8	1.4110511112175
+403	10	9	-4.4800306828508
+403	11	10	1.5689577320963
+403	12	11	-1.2929168137498
+403	13	12	1.9311467848718
+403	14	13	-1.9376888633368
+403	15	14	1.9853266039863
+403	16	15	2.0360995920072
+403	17	16	1.7045191161823
+403	18	17	1.9017882481986
+403	19	18	1.9213385581155
+403	20	19	2.0153257386224
+403	21	20	1.7449025405338
+403	22	21	1.1847185654288
+403	23	22	-0.071089090001767
+403	24	23	0.030967210661618
+403	25	24	0.06085053275805
+403	26	25	-0.021579677399714
+403	27	26	0.0035537102981493
+403	28	27	-0.0062791038071737
+403	349	28	-0.0060103263217037
+403	350	29	-0.010671889467631
+403	3507	30	0.024152350770308
+403	3508	31	-0.054163827963638
+403	3828	32	-0.027359292614275
+403	3829	33	0.035183064339218
+403	4777	34	-0.021905161135365
+403	4778	35	-0.031363926343619
+403	8521	36	0.079795338108671
+403	8522	37	-0.069122302271428
+403	9504	38	0.1070455071656
+403	9505	39	-0.070787380647381
+403	11100	40	-0.027104630663523
+403	11101	41	0.023662268831394
+403	13580	42	0.028446998607834
+403	13581	43	0.045199468052012
+403	14219	44	-0.052856209571473
+403	15488	45	-0.83848411878473
+403	15489	46	-4.4672637156187
+403	15799	47	-2.6848795382842
+403	15800	48	-3.5405872838028
+403	15801	49	-3.0788609789382
+403	15802	50	2.2269274147879
+403	15803	51	2.1759744064207
+403	15804	52	2.0153283328609
+403	15805	53	0.14989959333472
+403	15806	54	0.064436376304364
+403	15807	55	-0.11987138227792
+403	15808	56	-0.0048462277813819
+403	15809	57	0.070838565139566
+403	15810	58	-0.038219017651864
+403	15811	59	0.011556232960428
+403	15812	60	0.06564880225109
+403	15813	61	-0.10171688524075
+403	15814	62	0.069107259234878
+403	15815	63	-0.049830299811436
+403	15816	64	0.0022402204014362
+403	15817	65	0.049271386873443
+403	15818	66	-0.0053382040117871
+403	15819	67	-0.056123362274375
+403	15820	68	0.10461058798945
+403	15821	69	-0.084719572446776
+403	15822	70	0.073494704139884
+403	15823	71	-0.074454516188707
+403	15824	72	-0.0053285096003659
+403	15825	73	0.085069686148781
+403	15835	74	-0.027855718843639
+403	15837	75	-0.056127067650669
+403	15838	76	-0.034328402418177
+403	15839	77	0.018116213213652
+403	15840	78	-0.008600106399971
+403	15841	79	0.075572706612292
+403	15842	80	-0.049390682349912
+403	15843	81	0.089020559671335
+403	15844	82	-0.031364064607768
+403	15845	83	-2.0534965452427
+403	15846	84	-4.4477766671309
+403	15847	85	1.6318696786859
+403	16565	86	1.9464494993491
+403	16780	87	2.0649029886769
+403	19917	88	0.87769186662637
+253	3	2	2.785107756544
+253	4	3	4.7420690130471
+253	5	4	6.8046673277399
+253	6	5	8.649540451279
+253	7	6	7.7010290591782
+253	8	7	9.7072741835578
+253	9	8	11.118325294775
+253	10	9	6.6382946119245
+253	11	10	8.2072523440208
+253	12	11	6.914335530271
+253	13	12	8.8454823151428
+253	14	13	6.907793451806
+253	15	14	8.8931200557923
+253	16	15	10.9292196478
+253	17	16	12.633738763982
+253	18	17	14.53552701218
+253	19	18	16.456865570296
+253	20	19	18.472191308918
+253	21	20	20.217093849452
+253	22	21	21.401812414881
+253	23	22	21.330723324879
+253	24	23	21.361690535541
+253	25	24	21.422541068299
+253	26	25	21.400961390899
+253	27	26	21.404515101197
+253	28	27	21.39823599739
+253	349	28	21.392225671068
+253	350	29	21.381553781601
+253	3507	30	21.405706132371
+253	3508	31	21.351542304407
+253	3828	32	21.324183011793
+253	3829	33	21.359366076132
+253	4777	34	21.337460914997
+253	4778	35	21.306096988653
+253	8521	36	21.385892326762
+253	8522	37	21.316770024491
+253	9504	38	21.423815531656
+253	9505	39	21.353028151009
+253	11100	40	21.325923520345
+253	11101	41	21.349585789177
+253	13580	42	21.378032787785
+253	13581	43	21.423232255837
+253	14219	44	21.370376046265
+253	15488	45	20.53189192748
+253	15489	46	16.064628211862
+253	15799	47	13.379748673577
+253	15800	48	9.8391613897747
+253	15801	49	6.7603004108366
+253	15802	50	8.9872278256245
+253	15803	51	11.163202232045
+253	15804	52	13.178530564906
+253	15805	53	13.328430158241
+253	15806	54	13.392866534545
+253	15807	55	13.272995152267
+253	15808	56	13.268148924486
+253	15809	57	13.338987489626
+253	15810	58	13.300768471974
+253	15811	59	13.312324704934
+253	15812	60	13.377973507185
+253	15813	61	13.276256621944
+253	15814	62	13.345363881179
+253	15815	63	13.295533581368
+253	15816	64	13.297773801769
+253	15817	65	13.347045188643
+253	15818	66	13.341706984631
+253	15819	67	13.285583622357
+253	15820	68	13.390194210346
+253	15821	69	13.305474637899
+253	15822	70	13.378969342039
+253	15823	71	13.30451482585
+253	15824	72	13.29918631625
+253	15825	73	13.384256002399
+253	15835	74	13.356400283555
+253	15837	75	13.300273215905
+253	15838	76	13.265944813486
+253	15839	77	13.2840610267
+253	15840	78	13.2754609203
+253	15841	79	13.351033626912
+253	15842	80	13.301642944562
+253	15843	81	13.390663504234
+253	15844	82	13.359299439626
+253	15845	83	11.305802894383
+253	15846	84	6.8580262272524
+253	15847	85	8.4898959059383
+253	16565	86	10.436345405287
+253	16780	87	12.501248393964
+253	19917	88	13.378940260591
+115	2	1	3449.2494497363
+115	3	2	3448.0125280002
+115	4	3	3445.3828409449
+115	5	4	3441.3563355958
+115	6	5	3435.9514674812
+115	7	6	3430.9578489101
+115	8	7	3408.3577122634
+115	9	8	3405.6014176531
+115	10	9	3403.3815160063
+115	11	10	3388.2159149122
+115	12	11	3388.0942166438
+115	13	12	3375.7413997647
+115	14	13	3375.6466367086
+115	15	14	3374.5460418583
+115	16	15	3375.6462505047
+115	17	16	3376.9525025893
+115	18	17	3384.7043146467
+115	19	18	3387.5641407006
+115	20	19	3390.7778206107
+115	21	20	3394.3423655731
+115	22	21	3398.2111238854
+115	23	22	3402.1279839217
+115	24	23	3406.048520458
+115	25	24	3409.9725428836
+115	26	25	3413.8920851677
+115	27	26	3417.8136204194
+115	28	27	3421.7322049386
+115	349	28	3428.5072306192
+115	350	29	3432.5328435633
+115	3507	30	3436.5555062008
+115	3508	31	3440.577795926
+115	3828	32	3444.6045227527
+115	3829	33	3448.6294703987
+115	4777	34	3452.647679498
+115	4778	35	3456.6723548522
+115	8521	36	3460.6938762497
+115	8522	37	3464.7168512304
+115	9504	38	3468.7434560155
+115	9505	39	3472.7636915188
+115	11100	40	3476.787874686
+115	11101	41	3480.8137279115
+115	13580	42	3484.8390924615
+115	13581	43	3488.8654210627
+115	14219	44	3492.888213596
+115	15488	45	3496.8922175592
+115	15489	46	3500.2969844753
+115	15799	47	3495.0762856399
+115	15800	48	3490.9668178963
+115	15801	49	3489.6474597914
+115	15802	50	3472.0850067256
+115	15803	51	3463.2647297812
+115	15804	52	3452.435542979
+115	15805	53	3440.7122434223
+115	15806	54	3428.9703557402
+115	15807	55	3417.2408080459
+115	15808	56	3406.3002866599
+115	15809	57	3395.8159037211
+115	15810	58	3384.5092793328
+115	15811	59	3373.133728918
+115	15812	60	3361.7342051224
+115	15813	61	3335.432212958
+115	15814	62	3323.0809513052
+115	15815	63	3310.7337423541
+115	15816	64	3298.3898217878
+115	15817	65	3286.0421208332
+115	15818	66	3273.4658567123
+115	15819	67	3260.9023244435
+115	15820	68	3248.3323565016
+115	15821	69	3235.7411891033
+115	15822	70	3223.1676318133
+115	15823	71	3210.606031866
+115	15824	72	3198.0433753946
+115	15825	73	3185.4794169615
+115	15835	74	3173.4362637773
+115	15837	75	3162.0057070969
+115	15838	76	3150.6166789018
+115	15839	77	3139.2321375402
+115	15840	78	3127.0307496947
+115	15841	79	3114.6316275944
+115	15842	80	3102.2519186678
+115	15843	81	3091.1191196993
+115	15844	82	3070.2324808293
+115	15845	83	3065.078502679
+115	15846	84	3062.2622650726
+115	15847	85	3064.2040322065
+115	16565	86	3067.0044345407
+115	16780	87	3070.7773343356
+115	19917	88	3076.7440403276
+114	2	1	11176.64226073
+114	3	2	11176.410940301
+114	4	3	11175.91915467
+114	5	4	11175.166145878
+114	6	5	11174.155365347
+114	7	6	11173.220221671
+114	8	7	11169.88831243
+114	9	8	11169.777523487
+114	10	9	11169.688294797
+114	11	10	11168.151182982
+114	12	11	11168.126843329
+114	13	12	11165.524279953
+114	14	13	11165.505327342
+114	15	14	11142.330267745
+114	16	15	11138.580985293
+114	17	16	11134.129549618
+114	18	17	11107.33928561
+114	19	18	11093.322464525
+114	20	19	11077.571305023
+114	21	20	11060.100456082
+114	22	21	11041.138570966
+114	23	22	11021.940925617
+114	24	23	11002.725260695
+114	25	24	10983.492510438
+114	26	25	10964.28171863
+114	27	26	10945.06115872
+114	28	27	10925.855061189
+114	349	28	10892.482261393
+114	350	29	10872.307686261
+114	3507	30	10852.147896748
+114	3508	31	10831.989976105
+114	3828	32	10811.809818691
+114	3829	33	10791.638577736
+114	4777	34	10771.501107368
+114	4778	35	10751.331231018
+114	8521	36	10731.177160891
+114	8522	37	10711.015806053
+114	9504	38	10690.836260257
+114	9505	39	10670.688634457
+114	11100	40	10650.521224728
+114	11101	41	10630.345445413
+114	13580	42	10610.172115121
+114	13581	43	10589.993953435
+114	14219	44	10569.833512942
+114	15488	45	10549.767232376
+114	15489	46	10532.704060405
+114	15799	47	10517.81286558
+114	15800	48	10518.943116762
+114	15801	49	10522.000424499
+114	15802	50	10532.679998287
+114	15803	51	10533.909850071
+114	15804	52	10534.133772439
+114	15805	53	10534.376182977
+114	15806	54	10534.618977874
+114	15807	55	10534.861517609
+114	15808	56	10532.435690189
+114	15809	57	10527.277672574
+114	15810	58	10524.161469355
+114	15811	59	10521.31346614
+114	15812	60	10520.542178597
+114	15813	61	10520.377326344
+114	15814	62	10518.011955741
+114	15815	63	10515.647361264
+114	15816	64	10513.283396541
+114	15817	65	10510.918707841
+114	15818	66	10510.260578118
+114	15819	67	10509.631675848
+114	15820	68	10509.107082557
+114	15821	69	10508.590982133
+114	15822	70	10508.075603532
+114	15823	71	10507.519850055
+114	15824	72	10506.887548208
+114	15825	73	10506.255180832
+114	15835	74	10503.437706396
+114	15837	75	10498.167389172
+114	15838	76	10492.871297959
+114	15839	77	10487.521591211
+114	15840	78	10485.295000052
+114	15841	79	10487.212793722
+114	15842	80	10485.507980396
+114	15843	81	10479.668875462
+114	15844	82	10466.632104848
+114	15845	83	10460.192993259
+114	15846	84	10455.112465849
+114	15847	85	10452.013858408
+114	16565	86	10457.06450352
+114	16780	87	10462.851446062
+114	19917	88	10468.079265693
+306	4	3	3.9571137452492
+306	5	4	4.8154991747249
+306	6	5	6.714217934795
+306	7	6	7.2922095516384
+306	8	7	7.6603948573697
+306	9	8	6.6350457892148
+306	10	9	0.973
+306	11	10	0.973
+306	12	11	3.5280407082229
+306	13	12	6.070213447814
+306	14	13	7.8140939380075
+306	15	14	7.8925189456583
+306	16	15	8.7157841575632
+306	17	16	10.650911064476
+306	18	17	0.973
+306	19	18	0.973
+306	20	19	0.973
+306	21	20	6.3567117384644
+306	22	21	6.9144693745949
+306	23	22	7.6263433526363
+306	24	23	9.3590302561775
+306	25	24	10.391348633197
+306	26	25	11.816325865398
+306	27	26	12.9523947021
+306	28	27	13.791529838012
+306	349	28	14.255124703484
+306	350	29	16.674123457209
+306	3507	30	18.361650680205
+306	3508	31	10.766871744362
+306	3828	32	5.3414760493376
+306	3829	33	4.8636137366805
+306	4777	34	4.3042874272468
+306	4778	35	4.8491667502853
+306	8521	36	5.5983963370423
+306	8522	37	4.0593129402601
+306	9504	38	5.3791218549205
+306	9505	39	4.540056192309
+306	11100	40	5.4881487005578
+306	11101	41	4.133813202188
+306	13580	42	5.3566875749701
+306	13581	43	4.1991535982008
+306	14219	44	5.5688491396689
+306	15488	45	4.8025551718866
+306	15489	46	4.677933446978
+306	15799	47	4.5390982171157
+306	15800	48	4.731101811295
+306	15801	49	4.7362365265172
+306	15802	50	4.9565733336161
+306	15803	51	5.4501485644393
+306	15804	52	4.3713199591509
+306	15805	53	4.724272975008
+306	15806	54	5.2173544554915
+306	15807	55	4.400325982858
+306	15808	56	5.1347046789257
+306	15809	57	5.0557615664877
+306	15810	58	4.4569924276688
+306	15811	59	5.5358888277013
+306	15812	60	4.070965785216
+306	15813	61	4.7838501202255
+306	15814	62	5.1562764000356
+306	15815	63	4.932860341302
+306	15816	64	4.7201857833238
+306	15817	65	4.550362297982
+306	15818	66	5.0348066695717
+306	15819	67	4.671887850057
+306	15820	68	5.0576906796295
+306	15821	69	4.6717033995162
+306	15822	70	4.8891802073941
+306	15823	71	5.1836788267304
+306	15824	72	4.615649430777
+306	15825	73	4.59414886564
+306	15835	74	5.076857006385
+306	15837	75	5.4434768226109
+306	15838	76	4.876099670468
+306	15839	77	4.5333755001812
+306	15840	78	4.648633718499
+306	15841	79	5.1994495145279
+306	15842	80	4.4350857454668
+306	15843	81	4.53223998837
+306	15844	82	4.8183853878395
+306	15845	83	5.6025877902937
+306	15846	84	4.3062853743383
+306	15847	85	5.1515277652843
+306	16565	86	4.7762988888568
+306	16780	87	5.2936583319317
+306	19917	88	4.3565022761764
+305	4	3	1.9313953465223
+305	5	4	1.863581226354
+305	6	5	2.1945368643315
+305	7	6	1.9713583664689
+305	8	7	1.7732096304418
+305	9	8	1.2880233092781
+305	10	9	-2.96013460346
+305	11	10	-4.5
+305	12	11	1.0057033525274
+305	13	12	1.8252986821672
+305	14	13	2.056648964677
+305	15	14	1.7666641602665
+305	16	15	1.7387096420932
+305	17	16	1.9471071834071
+305	18	17	-2.1273272977136
+305	19	18	-4.5
+305	20	19	-4.4942242014225
+305	21	20	2.2881402945076
+305	22	21	2.0147259287955
+305	23	22	1.8926948095323
+305	24	23	2.0596877357876
+305	25	24	2.0101291977638
+305	26	25	2.0453881801083
+305	27	26	2.0115648739715
+305	28	27	1.9306666764152
+305	349	28	1.804914780478
+305	350	29	1.9791282761353
+305	3507	30	2.010262676545
+305	3508	31	0.84177058682801
+305	3828	32	0.069170747026799
+305	3829	33	0.0014823470474248
+305	4777	34	-0.074834185214716
+305	4778	35	0.002375502064826
+305	8521	36	0.10407027154928
+305	8522	37	-0.10947910647607
+305	9504	38	0.074576401757078
+305	9505	39	-0.042517537854145
+305	11100	40	0.088023228337988
+305	11101	41	-0.099665332052393
+305	13580	42	0.070690880746117
+305	13581	43	-0.08968986151973
+305	14219	44	0.1002374823601
+305	15488	45	-0.0078025207249439
+305	15489	46	-0.024457877764945
+305	15799	47	-0.042453498851973
+305	15800	48	-0.014649111784529
+305	15801	49	-0.013385280510413
+305	15802	50	0.017174425779377
+305	15803	51	0.083541388700251
+305	15804	52	-0.066475274690895
+305	15805	53	-0.01581886271946
+305	15806	54	0.05190721281804
+305	15807	55	-0.061393085366579
+305	15808	56	0.041059808968566
+305	15809	57	0.02868578609079
+305	15810	58	-0.053964706643018
+305	15811	59	0.094840360779781
+305	15812	60	-0.10820310423383
+305	15813	61	-0.0068118305201637
+305	15814	62	0.044169513341039
+305	15815	63	0.012027658289298
+305	15816	64	-0.017393505384682
+305	15817	65	-0.039895299540365
+305	15818	66	0.027690115470904
+305	15819	67	-0.02284550581593
+305	15820	68	0.030611140462568
+305	15821	69	-0.023167167794888
+305	15822	70	0.0073751069814882
+305	15823	71	0.04714320807485
+305	15824	72	-0.032004267119337
+305	15825	73	-0.033725201487542
+305	15835	74	0.033369203992187
+305	15837	75	0.081775713530369
+305	15838	76	0.0015322610107269
+305	15839	77	-0.045138529974501
+305	15840	78	-0.02772905305261
+305	15841	79	0.048263611572331
+305	15842	80	-0.057620350762736
+305	15843	81	-0.042205989921932
+305	15844	82	-0.0015361472684887
+305	15845	83	0.10511390684405
+305	15846	84	-0.075342698055319
+305	15847	85	0.042699004858733
+305	16565	86	-0.010019402543548
+305	16780	87	0.06065994933946
+305	19917	88	-0.069146354724655
+204	3	2	3.5807854174662
+204	4	3	5.5121807639886
+204	5	4	7.3757619903426
+204	6	5	9.570298854674
+204	7	6	11.541657221143
+204	8	7	13.314866851585
+204	9	8	14.602890160863
+204	10	9	11.642755557403
+204	11	10	7.1427555574029
+204	12	11	8.1484589099303
+204	13	12	9.9737575920974
+204	14	13	12.030406556774
+204	15	14	13.797070717041
+204	16	15	15.535780359134
+204	17	16	17.482887542541
+204	18	17	15.355560244828
+204	19	18	10.855560244828
+204	20	19	6.3613360434051
+204	21	20	8.6494763379127
+204	22	21	10.664202266708
+204	23	22	12.556897076241
+204	24	23	14.616584812028
+204	25	24	16.626714009792
+204	26	25	18.6721021899
+204	27	26	20.683667063872
+204	28	27	22.614333740287
+204	349	28	24.419248520765
+204	350	29	26.3983767969
+204	3507	30	28.408639473445
+204	3508	31	29.250410060273
+204	3828	32	29.3195808073
+204	3829	33	29.321063154347
+204	4777	34	29.246228969133
+204	4778	35	29.248604471197
+204	8521	36	29.352674742747
+204	8522	37	29.243195636271
+204	9504	38	29.317772038028
+204	9505	39	29.275254500174
+204	11100	40	29.363277728512
+204	11101	41	29.263612396459
+204	13580	42	29.334303277205
+204	13581	43	29.244613415686
+204	14219	44	29.344850898046
+204	15488	45	29.337048377321
+204	15489	46	29.312590499556
+204	15799	47	29.270137000704
+204	15800	48	29.255487888919
+204	15801	49	29.242102608409
+204	15802	50	29.259277034188
+204	15803	51	29.342818422889
+204	15804	52	29.276343148198
+204	15805	53	29.260524285478
+204	15806	54	29.312431498296
+204	15807	55	29.25103841293
+204	15808	56	29.292098221898
+204	15809	57	29.320784007989
+204	15810	58	29.266819301346
+204	15811	59	29.361659662126
+204	15812	60	29.253456557892
+204	15813	61	29.246644727372
+204	15814	62	29.290814240713
+204	15815	63	29.302841899002
+204	15816	64	29.285448393617
+204	15817	65	29.245553094077
+204	15818	66	29.273243209548
+204	15819	67	29.250397703732
+204	15820	68	29.281008844195
+204	15821	69	29.2578416764
+204	15822	70	29.265216783381
+204	15823	71	29.312359991456
+204	15824	72	29.280355724337
+204	15825	73	29.246630522849
+204	15835	74	29.279999726841
+204	15837	75	29.361775440372
+204	15838	76	29.363307701382
+204	15839	77	29.318169171408
+204	15840	78	29.290440118355
+204	15841	79	29.338703729928
+204	15842	80	29.281083379165
+204	15843	81	29.238877389243
+204	15844	82	29.237341241974
+204	15845	83	29.342455148819
+204	15846	84	29.267112450763
+204	15847	85	29.309811455622
+204	16565	86	29.299792053078
+204	16780	87	29.360452002418
+204	19917	88	29.291305647693
+17	2	1	3066.0626572694
+17	3	2	3066.7256634714
+17	4	3	3067.8558733426
+17	5	4	3069.4539177598
+17	6	5	3071.5528056243
+17	7	6	3074.1647222914
+17	8	7	3077.2105829093
+17	9	8	3080.6768613892
+17	10	9	3083.9514439407
+17	11	10	3086.181385761
+17	12	11	3082.5032087287
+17	13	12	3075.2460392041
+17	14	13	3066.4236058836
+17	15	14	3056.1286282967
+17	16	15	3044.3918058342
+17	17	16	3031.1719566484
+17	18	17	3017.6219834682
+17	19	18	3007.3739596032
+17	20	19	3000.7030063898
+17	21	20	2989.9651810898
+17	22	21	2988.1601229293
+17	23	22	2985.9818409287
+17	24	23	2983.3091540159
+17	25	24	2980.2423265491
+17	26	25	2976.7947150157
+17	27	26	2972.9421181804
+17	28	27	2968.6090068766
+17	349	28	2963.848133865
+17	350	29	2958.7044763233
+17	3507	30	2949.3493114869
+17	3508	31	2942.8946872565
+17	3828	32	2937.0385180761
+17	3829	33	2931.3014176807
+17	4777	34	2925.3528568951
+17	4778	35	2919.1725000699
+17	8521	36	2913.0519588886
+17	8522	37	2907.0478700547
+17	9504	38	2901.0396429469
+17	9505	39	2895.1798633914
+17	11100	40	2886.8153061664
+17	11101	41	2881.8473238659
+17	13580	42	2877.1581167276
+17	13581	43	2869.5629649561
+17	14219	44	2863.6377010025
+17	15488	45	2857.7157257702
+17	15489	46	2851.7131817545
+17	15799	47	2845.6641036236
+17	15800	48	2839.613207397
+17	15801	49	2833.5533115545
+17	15802	50	2827.4893064758
+17	15803	51	2821.0822817255
+17	15804	52	2810.634428454
+17	15805	53	2803.563495877
+17	15806	54	2796.3996728783
+17	15807	55	2789.2333675017
+17	15808	56	2778.0439388104
+17	15809	57	2771.5336551069
+17	15810	58	2761.5044286926
+17	15811	59	2751.6201595731
+17	15812	60	2745.0010672308
+17	15813	61	2738.0986318877
+17	15814	62	2730.8832507677
+17	15815	63	2723.6745232103
+17	15816	64	2705.0392985938
+17	15817	65	2699.7509898367
+17	15818	66	2694.3214768185
+17	15819	67	2679.4611758404
+17	15820	68	2670.6317251807
+17	15821	69	2660.7066658352
+17	15822	70	2652.0453176585
+17	15823	71	2642.7737860646
+17	15824	72	2632.8571230387
+17	15825	73	2624.5811226128
+17	15835	74	2616.307216685
+17	15837	75	2608.0300161509
+17	15838	76	2595.2827490647
+17	15839	77	2587.1109613808
+17	15840	78	2578.8770193425
+17	15841	79	2570.6373140631
+17	15842	80	2562.3957141878
+17	15843	81	2549.0380026081
+17	15844	82	2540.2662594966
+17	15845	83	2531.9192088684
+17	15846	84	2524.0783805157
+17	15847	85	2516.6737071395
+17	16565	86	2511.2564058228
+17	16780	87	2507.2868286746
+17	19917	88	2503.9500665024
+16	2	1	10048.688827071
+16	3	2	10046.268157755
+16	4	3	10042.141704114
+16	5	4	10036.307162785
+16	6	5	10028.644016593
+16	7	6	10019.107776187
+16	8	7	10007.987184378
+16	9	8	9995.3316256023
+16	10	9	9983.375958397
+16	11	10	9975.2343275564
+16	12	11	9962.3670391113
+16	13	12	9959.8058112371
+16	14	13	9956.69216451
+16	15	14	9953.058821859
+16	16	15	9948.9987153391
+16	17	16	9944.5252687426
+16	18	17	9939.9401119414
+16	19	18	9936.4722972307
+16	20	19	9934.2149225414
+16	21	20	9939.9156980113
+16	22	21	9948.5474690251
+16	23	22	9958.864676728
+16	24	23	9970.9787693627
+16	25	24	9984.8793245867
+16	26	25	10000.505803425
+16	27	26	10017.967899237
+16	28	27	10037.224052639
+16	349	28	10058.044889975
+16	350	29	10080.539767853
+16	3507	30	10119.682405077
+16	3508	31	10146.539577163
+16	3828	32	10173.696761082
+16	3829	33	10200.867837293
+16	4777	34	10227.998764298
+16	4778	35	10255.077307093
+16	8521	36	10282.182321548
+16	8522	37	10309.302677526
+16	9504	38	10336.44172601
+16	9505	39	10363.595903061
+16	11100	40	10402.791864108
+16	11101	41	10427.826458279
+16	13580	42	10452.921920423
+16	13581	43	10492.76032192
+16	14219	44	10519.760483429
+16	15488	45	10546.764690488
+16	15489	46	10573.734703189
+16	15799	47	10600.699872094
+16	15800	48	10627.659022839
+16	15801	49	10654.614462694
+16	15802	50	10681.588181126
+16	15803	51	10708.470616841
+16	15804	52	10748.930196915
+16	15805	53	10773.018121875
+16	15806	54	10797.07026222
+16	15807	55	10821.130737012
+16	15808	56	10856.379653588
+16	15809	57	10876.867472904
+16	15810	58	10909.558291306
+16	15811	59	10941.941345917
+16	15812	60	10963.386507135
+16	15813	61	10984.734589984
+16	15814	62	11005.983386056
+16	15815	63	11027.212587849
+16	15816	64	11087.328124199
+16	15817	65	11103.494484069
+16	15818	66	11119.625571431
+16	15819	67	11163.346493481
+16	15820	68	11187.824594946
+16	15821	69	11216.202633256
+16	15822	70	11240.922405478
+16	15823	71	11268.454406266
+16	15824	72	11298.87985982
+16	15825	73	11323.476563996
+16	15835	74	11348.067043214
+16	15837	75	11372.688823436
+16	15838	76	11411.005062068
+16	15839	77	11435.669389999
+16	15840	78	11460.31309823
+16	15841	79	11484.926846993
+16	15842	80	11509.546255316
+16	15843	81	11549.566702653
+16	15844	82	11576.004308074
+16	15845	83	11602.559222321
+16	15846	84	11629.276627513
+16	15847	85	11656.136589614
+16	16565	86	11683.442996994
+16	16780	87	11711.021224526
+16	19917	88	11738.672915321
+454	4	3	3.1498808463462
+454	5	4	4.0315739707665
+454	6	5	5.2349400344572
+454	7	6	0.973
+454	8	7	6.1908784990643
+454	9	8	6.1074367942851
+454	10	9	7.5069477538215
+454	11	10	5.3076143605986
+454	12	11	1.9211170461673
+454	13	12	2.2762029185383
+454	14	13	1.5799900511761
+454	15	14	2.0107251743974
+454	16	15	2.3347391224057
+454	17	16	1.6576116514298
+454	18	17	2.3522871142863
+454	19	18	1.6261071574917
+454	20	19	2.1584062597993
+454	21	20	2.0794652644852
+454	22	21	1.7275758539251
+454	23	22	2.1674454947646
+454	24	23	1.8672679827326
+454	25	24	2.3096525765795
+454	26	25	1.9357308705659
+454	27	26	1.6458583604556
+454	28	27	2.2311055595229
+454	349	28	0.973
+454	350	29	0.973
+454	3507	30	5.1436018570045
+454	3508	31	6.6768744403793
+454	3828	32	6.4792970171545
+454	3829	33	8.502236869465
+454	4777	34	9.5253311730896
+454	4778	35	11.84331213853
+454	8521	36	12.992069928048
+454	8522	37	10.756167129947
+454	9504	38	3.0448418209521
+454	9505	39	3.2955687148964
+454	11100	40	3.2409416515292
+454	11101	41	3.1994962850603
+454	13580	42	2.7640855877374
+454	13581	43	3.3328717939895
+454	14219	44	2.8370942920121
+454	15488	45	3.0979147755313
+454	15489	46	3.0467555943113
+454	15799	47	2.7795222247519
+454	15800	48	3.0745925432951
+454	15801	49	3.6682978756512
+454	15802	50	2.9202920027573
+454	15803	51	1.0994875684187
+454	15804	52	0.973
+454	15805	53	0.973
+454	15806	54	0.973
+454	15807	55	2.4509512384738
+454	15808	56	6.694550312664
+454	15809	57	7.102382638099
+454	15810	58	8.7964797355741
+454	15811	59	9.9322564660897
+454	15812	60	11.643247430724
+454	15813	61	12.023451526792
+454	15814	62	13.454323876393
+454	15815	63	14.924789994301
+454	15816	64	17.124537864874
+454	15817	65	0.973
+454	15818	66	0.973
+454	15819	67	0.973
+454	15820	68	0.973
+454	15821	69	2.9920600935015
+454	15822	70	8.416190002725
+454	15823	71	8.7788710166168
+454	15824	72	9.6138367965866
+454	15825	73	11.514716525084
+454	15835	74	12.139785348125
+454	15837	75	9.141081325388
+454	15838	76	2.9550672684845
+454	15839	77	3.365989098825
+454	15840	78	3.0764634135406
+454	15841	79	2.6631619630954
+454	15842	80	3.5328698052605
+454	15843	81	2.7303125875595
+454	15844	82	3.1197789738833
+454	15845	83	2.82551261381
+454	15846	84	3.4243312791915
+454	15847	85	3.1195833131478
+454	16565	86	3.0881436366731
+454	16780	87	3.067356071516
+454	19917	88	2.9710500816692
+454	20143	89	2.9661725181221
+454	23264	90	3.5521426543501
+454	24334	91	2.4745132296971
+453	4	3	1.8494115330681
+453	5	4	1.8261714151944
+453	6	5	1.945694974754
+453	7	6	-1.140488676826
+453	8	7	2.1412162762415
+453	9	8	1.7126422080281
+453	10	9	1.8686919314181
+453	11	10	1.0210419923292
+453	12	11	-0.01990466985386
+453	13	12	0.086283814336639
+453	14	13	-0.1241745831212
+453	15	14	0.0086017629061832
+453	16	15	0.10461556053488
+453	17	16	-0.10049049213296
+453	18	17	0.10963857210707
+453	19	18	-0.11019977672491
+453	20	19	0.05227219563676
+453	21	20	0.027127049523406
+453	22	21	-0.078899305181112
+453	23	22	0.054941744019743
+453	24	23	-0.03630823574029
+453	25	24	0.096389272783417
+453	26	25	-0.017509536761791
+453	27	26	-0.10396997785894
+453	28	27	0.074052579188718
+453	349	28	-2.1780750384684
+453	350	29	-4.5
+453	3507	30	1.7264153639972
+453	3508	31	1.9539221756603
+453	3828	32	1.5847820564359
+453	3829	33	1.9132372401492
+453	4777	34	1.8972940302873
+453	4778	35	2.141817731224
+453	8521	36	2.0916661208752
+453	8522	37	1.4722471703495
+453	9504	38	-0.0076512202154824
+453	9505	39	0.039086011778561
+453	11100	40	0.027636117115616
+453	11101	41	0.019035139027984
+453	13580	42	-0.062293690394146
+453	13581	43	0.045164551117924
+453	14219	44	-0.048193595793563
+453	15488	45	0.0017793440702363
+453	15489	46	-0.007771466530393
+453	15799	47	-0.057251424631104
+453	15800	48	-0.00046553938649652
+453	15801	49	0.10946275474271
+453	15802	50	-0.032660834651907
+453	15803	51	-0.37559640631939
+453	15804	52	-4.5
+453	15805	53	-4.4911256629344
+453	15806	54	-4.4889164773473
+453	15807	55	0.44932848978089
+453	15808	56	2.0189293278032
+453	15809	57	1.8055597367277
+453	15810	58	1.9933711935766
+453	15811	59	1.9836649619951
+453	15812	60	2.0854476236203
+453	15813	61	1.9067627752433
+453	15814	62	1.94546978598
+453	15815	63	1.9734401579783
+453	15816	64	2.0916221338371
+453	15817	65	-2.1066649687343
+453	15818	66	-4.4977582935361
+453	15819	67	-4.5
+453	15820	68	-4.4967335435137
+453	15821	69	0.47
+453	15822	70	2.0707013546349
+453	15823	71	1.8596240849677
+453	15824	72	1.8124257099209
+453	15825	73	1.9833311602846
+453	15835	74	1.8704423788865
+453	15837	75	1.158088719465
+453	15838	76	-0.025847816627937
+453	15839	77	0.051081556009596
+453	15840	78	-0.0041643895697803
+453	15841	79	-0.080793765990528
+453	15842	80	0.083077951031736
+453	15843	81	-0.068352988497352
+453	15844	82	0.0061827669595367
+453	15845	83	-0.048728006465826
+453	15846	84	0.064048939635978
+453	15847	85	0.0054313577269198
+453	16565	86	-0.00057557494845284
+453	16780	87	-0.0044107233453552
+453	19917	88	-0.022142903888597
+453	20143	89	-0.022340447672178
+453	23264	90	0.08691681772936
+453	24334	91	-0.11596708488651
+278	3	2	2.2672872919004
+278	4	3	4.1166988249685
+278	5	4	5.9428702401629
+278	6	5	7.8885652149169
+278	7	6	6.7480765380909
+278	8	7	8.8892928143324
+278	9	8	10.60193502236
+278	10	9	12.470626953779
+278	11	10	13.491668946108
+278	12	11	13.471764276254
+278	13	12	13.558048090591
+278	14	13	13.433873507469
+278	15	14	13.442475270376
+278	16	15	13.54709083091
+278	17	16	13.446600338778
+278	18	17	13.556238910885
+278	19	18	13.44603913416
+278	20	19	13.498311329796
+278	21	20	13.52543837932
+278	22	21	13.446539074139
+278	23	22	13.501480818158
+278	24	23	13.465172582418
+278	25	24	13.561561855202
+278	26	25	13.54405231844
+278	27	26	13.440082340581
+278	28	27	13.51413491977
+278	349	28	11.336059881301
+278	350	29	6.8360598813012
+278	3507	30	8.5624752452984
+278	3508	31	10.516397420959
+278	3828	32	12.101179477395
+278	3829	33	14.014416717544
+278	4777	34	15.911710747831
+278	4778	35	18.053528479055
+278	8521	36	20.14519459993
+278	8522	37	21.61744177028
+278	9504	38	21.609790550064
+278	9505	39	21.648876561843
+278	11100	40	21.676512678958
+278	11101	41	21.695547817986
+278	13580	42	21.633254127592
+278	13581	43	21.67841867871
+278	14219	44	21.630225082917
+278	15488	45	21.632004426987
+278	15489	46	21.624232960457
+278	15799	47	21.566981535825
+278	15800	48	21.566515996439
+278	15801	49	21.675978751182
+278	15802	50	21.64331791653
+278	15803	51	21.26772151021
+278	15804	52	16.76772151021
+278	15805	53	12.276595847276
+278	15806	54	7.7876793699286
+278	15807	55	8.2370078597095
+278	15808	56	10.255937187513
+278	15809	57	12.06149692424
+278	15810	58	14.054868117817
+278	15811	59	16.038533079812
+278	15812	60	18.123980703432
+278	15813	61	20.030743478676
+278	15814	62	21.976213264656
+278	15815	63	23.949653422634
+278	15816	64	26.041275556471
+278	15817	65	23.934610587737
+278	15818	66	19.436852294201
+278	15819	67	14.936852294201
+278	15820	68	10.440118750687
+278	15821	69	10.910118750687
+278	15822	70	12.980820105322
+278	15823	71	14.84044419029
+278	15824	72	16.652869900211
+278	15825	73	18.636201060495
+278	15835	74	20.506643439382
+278	15837	75	21.664732158847
+278	15838	76	21.638884342219
+278	15839	77	21.689965898228
+278	15840	78	21.685801508659
+278	15841	79	21.605007742668
+278	15842	80	21.6880856937
+278	15843	81	21.619732705202
+278	15844	82	21.625915472162
+278	15845	83	21.577187465696
+278	15846	84	21.641236405332
+278	15847	85	21.646667763059
+278	16565	86	21.646092188111
+278	16780	87	21.641681464765
+278	19917	88	21.619538560877
+278	20143	89	21.597198113204
+278	23264	90	21.684114930934
+278	24334	91	21.568147846047
+165	2	1	3902.5909772123
+165	3	2	3902.5402489159
+165	4	3	3902.4126003199
+165	5	4	3902.2118013031
+165	6	5	3902.4525380797
+165	7	6	3902.9589412374
+165	8	7	3899.7512939313
+165	9	8	3899.0821140459
+165	10	9	3899.2932618002
+165	11	10	3889.6602519779
+165	12	11	3878.3814039379
+165	13	12	3867.0928116465
+165	14	13	3855.8277891695
+165	15	14	3844.5722329397
+165	16	15	3833.2818357811
+165	17	16	3822.0472628642
+165	18	17	3795.5742538809
+165	19	18	3783.1791000288
+165	20	19	3770.7721865102
+165	21	20	3758.3591413618
+165	22	21	3745.9695748513
+165	23	22	3733.5619493747
+165	24	23	3721.1596428845
+165	25	24	3708.7635650756
+165	26	25	3696.3589544623
+165	27	26	3683.9687585939
+165	28	27	3671.566970052
+165	349	28	3659.7638240668
+165	350	29	3651.6307093036
+165	3507	30	3635.3437115159
+165	3508	31	3632.1179303463
+165	3828	32	3628.2879331519
+165	3829	33	3623.8863521871
+165	4777	34	3618.8450344668
+165	4778	35	3605.0644464335
+165	8521	36	3596.587064005
+165	8522	37	3587.2555550235
+165	9504	38	3577.7155970687
+165	9505	39	3568.1619171319
+165	11100	40	3558.6095457137
+165	11101	41	3549.0339844544
+165	13580	42	3539.3265564568
+165	13581	43	3529.6078787837
+165	14219	44	3520.7197333793
+165	15488	45	3512.3648984069
+165	15489	46	3498.7549376445
+165	15799	47	3491.4383788482
+165	15800	48	3484.1183720965
+165	15801	49	3476.7972855531
+165	15802	50	3469.4793615662
+165	15803	51	3462.1642096198
+165	15804	52	3455.7367591036
+165	15805	53	3450.7935941014
+165	15806	54	3447.4029645485
+165	15807	55	3437.1600514156
+165	15808	56	3431.1526293023
+165	15809	57	3423.9220965309
+165	15810	58	3407.4168151701
+165	15811	59	3393.7361543118
+165	15812	60	3378.261158174
+165	15813	61	3360.9928709896
+165	15814	62	3342.0448306569
+165	15815	63	3321.2886877094
+165	15816	64	3297.2622283001
+165	15817	65	3275.2170708366
+165	15818	66	3256.7322234118
+165	15819	67	3242.1228692247
+165	15820	68	3231.3891130926
+165	15821	69	3222.8164268923
+165	15822	70	3212.9499412398
+165	15823	71	3208.7003619981
+165	15824	72	3194.3819481098
+165	15825	73	3192.3331856389
+165	15835	74	3190.0577441027
+165	15837	75	3169.4208643039
+165	15838	76	3164.0432277524
+165	15839	77	3158.6686323869
+165	15840	78	3153.2953410076
+165	15841	79	3147.9198375223
+165	15842	80	3142.5459974824
+165	15843	81	3137.1666093159
+165	15844	82	3131.7889853751
+165	15845	83	3126.4111517411
+165	15846	84	3121.0394055875
+165	15847	85	3115.6607784709
+165	16565	86	3110.2884811231
+165	16780	87	3104.9133809779
+165	19917	88	3099.5337619407
+165	20143	89	3093.7305812721
+165	23264	90	3087.8897540239
+165	24334	91	3082.0583596504
+164	2	1	12534.566187762
+164	3	2	12535.220275341
+164	4	3	12536.866168602
+164	5	4	12539.455258956
+164	6	5	12542.964873162
+164	7	6	12546.819163862
+164	8	7	12546.946038494
+164	9	8	12541.837567047
+164	10	9	12535.742107453
+164	11	10	12525.726117685
+164	12	11	12525.309706404
+164	13	12	12524.892935369
+164	14	13	12524.477034523
+164	15	14	12524.061483168
+164	16	15	12523.644645498
+164	17	16	12524.220941527
+164	18	17	12526.084326473
+164	19	18	12526.551197314
+164	20	19	12526.484538275
+164	21	20	12526.412249862
+164	22	21	12526.172711918
+164	23	22	12525.932824825
+164	24	23	12525.693040569
+164	25	24	12525.453376737
+164	26	25	12525.070975602
+164	27	26	12524.657575358
+164	28	27	12524.243788324
+164	349	28	12523.849975064
+164	350	29	12523.855702405
+164	3507	30	12516.680401844
+164	3508	31	12509.932349882
+164	3828	32	12501.957112539
+164	3829	33	12492.791661208
+164	4777	34	12482.294080322
+164	4778	35	12455.103082605
+164	8521	36	12439.437905652
+164	8522	37	12422.194406179
+164	9504	38	12404.565718227
+164	9505	39	12386.911673713
+164	11100	40	12369.260047182
+164	11101	41	12351.606300415
+164	13580	42	12334.049803423
+164	13581	43	12316.472960682
+164	14219	44	12298.490602827
+164	15488	45	12280.230806417
+164	15489	46	12248.23476921
+164	15799	47	12229.794190006
+164	15800	48	12211.34492061
+164	15801	49	12192.892929719
+164	15802	50	12174.448909702
+164	15803	51	12156.011876307
+164	15804	52	12140.010848248
+164	15805	53	12127.861599185
+164	15806	54	12119.528152315
+164	15807	55	12110.23129658
+164	15808	56	12112.025868642
+164	15809	57	12114.18581543
+164	15810	58	12119.114593122
+164	15811	59	12123.196083016
+164	15812	60	12127.812895099
+164	15813	61	12132.964717834
+164	15814	62	12138.617678311
+164	15815	63	12144.810068325
+164	15816	64	12153.699062633
+164	15817	65	12162.206571157
+164	15818	66	12169.340110452
+164	15819	67	12174.978047285
+164	15820	68	12179.120341208
+164	15821	69	12182.428650575
+164	15822	70	12193.760494272
+164	15823	71	12201.033157202
+164	15824	72	12227.395637087
+164	15825	73	12231.885681941
+164	15835	74	12236.872514093
+164	15837	75	12295.372355151
+164	15838	76	12314.4961647
+164	15839	77	12333.609159264
+164	15840	78	12352.717516626
+164	15841	79	12371.833740621
+164	15842	80	12390.944049116
+164	15843	81	12410.074087712
+164	15844	82	12429.197852416
+164	15845	83	12448.322362825
+164	15846	84	12467.425225096
+164	15847	85	12486.552557267
+164	16565	86	12505.65737968
+164	16780	87	12524.772169329
+164	19917	88	12543.903028941
+164	20143	89	12562.901149078
+164	23264	90	12581.892565307
+164	24334	91	12600.853310599
+356	4	3	3.605100752675
+356	5	4	4.5766366625097
+356	6	5	5.5570575872758
+356	7	6	7.8501067113408
+356	8	7	5.3757884245543
+356	9	8	1.8147072727094
+356	10	9	2.05798232641
+356	11	10	1.7633720129517
+356	12	11	1.7951153542247
+356	13	12	2.202953750867
+356	14	13	1.8227277275643
+356	15	14	1.9742025626544
+356	16	15	1.6756421094758
+356	17	16	2.0334843646795
+356	18	17	1.5446347153889
+356	19	18	0.973
+356	20	19	0.973
+356	21	20	6.0320030074971
+356	22	21	7.3266509348097
+356	23	22	8.6995256626634
+356	24	23	9.2713732967055
+356	25	24	10.392250799484
+356	26	25	12.960005391276
+356	27	26	3.1980723288455
+356	28	27	3.1827183257869
+356	349	28	2.2097752923257
+356	350	29	2.9773916334008
+356	3507	30	2.5824777869496
+356	3508	31	3.1375154571545
+356	3828	32	2.9571301721634
+356	3829	33	2.3110839618693
+356	4777	34	3.1105482222261
+356	4778	35	2.4446365028181
+356	8521	36	2.7292109272813
+356	8522	37	3.1624273739404
+356	9504	38	2.6502037029203
+356	9505	39	2.7731334976008
+356	11100	40	2.4011765525037
+356	11101	41	3.021184246421
+356	13580	42	2.6300498243222
+356	13581	43	3.1097772012304
+356	14219	44	2.7001203063407
+356	15488	45	2.6411842109793
+356	15489	46	0.973
+356	15799	47	0.973
+356	15800	48	0.973
+356	15801	49	2.1873894637529
+356	15802	50	5.9040670981986
+356	15803	51	8.1363149948607
+356	15804	52	7.8678166377354
+356	15805	53	10.314709805621
+356	15806	54	10.733222905171
+356	15807	55	11.547193638616
+356	15808	56	13.716819515534
+356	15809	57	15.148685928253
+356	15810	58	9.3952614735498
+356	15811	59	3.5077153552501
+356	15812	60	3.6846423859685
+356	15813	61	3.8176392835718
+356	15814	62	3.3900510135921
+356	15815	63	3.5838772221135
+356	15816	64	4.0058549044992
+356	15817	65	3.5654343002732
+356	15818	66	3.6431226856407
+356	15819	67	3.3984008891682
+356	15820	68	4.2983825219161
+356	15821	69	3.5418542372791
+356	15822	70	3.7136398598294
+356	15823	71	3.8160336548197
+356	15824	72	3.0652217342587
+356	15825	73	3.7107631097196
+356	15835	74	4.1738383862565
+356	15837	75	3.8357738266122
+356	15838	76	3.0067420660416
+356	15839	77	4.2940386683207
+356	15840	78	1.6992227634184
+356	15841	79	0.973
+356	15842	80	0.973
+356	15843	81	0.973
+356	15844	82	0.973
+356	15845	83	6.4617900636569
+356	15846	84	6.329878930596
+356	15847	85	6.9201229751874
+356	16565	86	2.0457773742885
+356	16780	87	1.6511620466924
+356	19917	88	2.0939986134404
+356	20143	89	1.8278291363809
+356	23264	90	1.9276512781695
+356	24334	91	1.6094955048609
+356	25968	92	1.9294485121129
+356	26881	93	2.1188335790776
+356	27637	94	1.7158406708638
+356	27922	95	1.9816622775224
+356	28026	96	1.8367299763848
+356	28027	97	1.8433058400093
+356	28028	98	1.9471560001094
+356	28029	99	1.7923052255199
+356	28030	100	1.9969771404183
+356	28031	101	1.72262920676
+356	28032	102	1.9634893981479
+356	28033	103	1.6119870170972
+356	28034	104	1.9473712060343
+356	28035	105	2.1140449157227
+355	4	3	1.8500372890336
+355	5	4	1.8680802456755
+355	6	5	1.874690515215
+355	7	6	2.2834588911827
+355	8	7	1.1884239331972
+355	9	8	-0.018191059520468
+355	10	9	0.062184231134598
+355	11	10	-0.036329404260032
+355	12	11	-0.024870206096676
+355	13	12	0.10925881055184
+355	14	13	-0.018144057004248
+355	15	14	0.031842937464827
+355	16	15	-0.066831242614427
+355	17	16	0.052270453320817
+355	18	17	-0.10986655137735
+355	19	18	-3.5671631006967
+355	20	19	-0.94601727073377
+355	21	20	1.8917826753994
+355	22	21	1.9765631338325
+355	23	22	2.0411905418546
+355	24	23	1.8911055358686
+355	25	24	1.8964794869139
+355	26	25	2.1653641641792
+355	27	26	0.092244299579761
+355	28	27	0.085807632121725
+355	349	28	-0.1155060972902
+355	350	29	0.045134742481171
+355	3507	30	-0.036991681908258
+355	3508	31	0.077410630551167
+355	3828	32	0.038126867986282
+355	3829	33	-0.094900812935084
+355	4777	34	0.071209909259341
+355	4778	35	-0.066845752389636
+355	8521	36	-0.0065919378865509
+355	8522	37	0.08180871144403
+355	9504	38	-0.02505876004696
+355	9505	39	0.00078534645261286
+355	11100	40	-0.075309909596108
+355	11101	41	0.053750177647451
+355	13580	42	-0.027777405702508
+355	13581	43	0.070843618137296
+355	14219	44	-0.014794616852885
+355	15488	45	-0.026363211711868
+355	15489	46	-3.0677448698158
+355	15799	47	-4.5
+355	15800	48	-4.4955572055359
+355	15801	49	0.33629969678053
+355	15802	50	1.7992012683302
+355	15803	51	2.183889437872
+355	15804	52	1.7706562664104
+355	15805	53	2.1148904057173
+355	15806	54	1.9263742991909
+355	15807	55	1.858938778257
+355	15808	56	2.0350322507974
+355	15809	57	2.0421168404655
+355	15810	58	0.96061230442734
+355	15811	59	-0.028905267987867
+355	15812	60	0.0008647988503796
+355	15813	61	0.022427464886569
+355	15814	62	-0.047876951489595
+355	15815	63	-0.014670703934971
+355	15816	64	0.054415079348253
+355	15817	65	-0.01904448429821
+355	15818	66	-0.0057484219991615
+355	15819	67	-0.045416442125568
+355	15820	68	0.10235144144157
+355	15821	69	-0.02398288517259
+355	15822	70	0.0047511259885518
+355	15823	71	0.021187174506483
+355	15824	72	-0.10174555398524
+355	15825	73	0.0069660699297671
+355	15835	74	0.081850126006174
+355	15837	75	0.024087347581517
+355	15838	76	-0.11165665150853
+355	15839	77	0.10150105323875
+355	15840	78	-0.32719898253515
+355	15841	79	-4.4264616949451
+355	15842	80	-4.5
+355	15843	81	-4.4871685562624
+355	15844	82	-4.4866631102696
+355	15845	83	2.3048899863497
+355	15846	84	1.8064824635349
+355	15847	85	1.7061928213141
+355	16565	86	0.056441771746613
+355	16780	87	-0.074537244793028
+355	19917	88	0.072733810434585
+355	20143	89	-0.016370109140409
+355	23264	90	0.016737684623806
+355	24334	91	-0.088290932551027
+355	25968	92	0.019537058048881
+355	26881	93	0.08063909825869
+355	27637	94	-0.053463139215019
+355	27922	95	0.035129080694169
+355	28026	96	-0.013282714511734
+355	28027	97	-0.01074869907694
+355	28028	98	0.023526529031805
+355	28029	99	-0.027833807698915
+355	28030	100	0.039896762997376
+355	28031	101	-0.051056057140229
+355	28032	102	0.02934287271928
+355	28033	103	-0.087087606764399
+355	28034	104	0.025896685740445
+355	28035	105	0.079407443515956
+229	3	2	3.1760241928889
+229	4	3	5.0260614819226
+229	5	4	6.8941417275981
+229	6	5	8.7688322428131
+229	7	6	11.052291133996
+229	8	7	12.240715067193
+229	9	8	12.222524007673
+229	10	9	12.284708238807
+229	11	10	12.248378834547
+229	12	11	12.22350862845
+229	13	12	12.332767439002
+229	14	13	12.314623381998
+229	15	14	12.346466319463
+229	16	15	12.279635076848
+229	17	16	12.331905530169
+229	18	17	12.222038978792
+229	19	18	8.6548758780952
+229	20	19	7.7088586073614
+229	21	20	9.6006412827609
+229	22	21	11.577204416593
+229	23	22	13.618394958448
+229	24	23	15.509500494317
+229	25	24	17.40597998123
+229	26	25	19.57134414541
+229	27	26	19.663588444989
+229	28	27	19.749396077111
+229	349	28	19.633889979821
+229	350	29	19.679024722302
+229	3507	30	19.642033040394
+229	3508	31	19.719443670945
+229	3828	32	19.757570538931
+229	3829	33	19.662669725996
+229	4777	34	19.733879635256
+229	4778	35	19.667033882866
+229	8521	36	19.660441944979
+229	8522	37	19.742250656423
+229	9504	38	19.717191896376
+229	9505	39	19.717977242829
+229	11100	40	19.642667333233
+229	11101	41	19.69641751088
+229	13580	42	19.668640105178
+229	13581	43	19.739483723315
+229	14219	44	19.724689106462
+229	15488	45	19.69832589475
+229	15489	46	16.630581024935
+229	15799	47	12.130581024935
+229	15800	48	7.6350238193988
+229	15801	49	7.9713235161794
+229	15802	50	9.7705247845096
+229	15803	51	11.954414222382
+229	15804	52	13.725070488792
+229	15805	53	15.839960894509
+229	15806	54	17.7663351937
+229	15807	55	19.625273971957
+229	15808	56	21.660306222755
+229	15809	57	23.70242306322
+229	15810	58	24.663035367647
+229	15811	59	24.63413009966
+229	15812	60	24.63499489851
+229	15813	61	24.657422363396
+229	15814	62	24.609545411907
+229	15815	63	24.594874707972
+229	15816	64	24.64928978732
+229	15817	65	24.630245303022
+229	15818	66	24.624496881023
+229	15819	67	24.579080438897
+229	15820	68	24.681431880339
+229	15821	69	24.657448995166
+229	15822	70	24.662200121155
+229	15823	71	24.683387295661
+229	15824	72	24.581641741676
+229	15825	73	24.588607811606
+229	15835	74	24.670457937612
+229	15837	75	24.694545285193
+229	15838	76	24.582888633685
+229	15839	77	24.684389686924
+229	15840	78	24.357190704389
+229	15841	79	19.930729009443
+229	15842	80	15.430729009443
+229	15843	81	10.943560453181
+229	15844	82	6.4568973429115
+229	15845	83	8.7617873292612
+229	15846	84	10.568269792796
+229	15847	85	12.27446261411
+229	16565	86	12.330904385857
+229	16780	87	12.256367141064
+229	19917	88	12.329100951498
+229	20143	89	12.312730842358
+229	23264	90	12.329468526982
+229	24334	91	12.241177594431
+229	25968	92	12.26071465248
+229	26881	93	12.341353750738
+229	27637	94	12.287890611523
+229	27922	95	12.323019692218
+229	28026	96	12.309736977706
+229	28027	97	12.298988278629
+229	28028	98	12.322514807661
+229	28029	99	12.294680999962
+229	28030	100	12.334577762959
+229	28031	101	12.283521705819
+229	28032	102	12.312864578538
+229	28033	103	12.225776971774
+229	28034	104	12.251673657514
+229	28035	105	12.33108110103
+67	2	1	4630.1135257085
+67	3	2	4630.2474286136
+67	4	3	4630.4903635407
+67	5	4	4630.8341058999
+67	6	5	4631.2910748218
+67	7	6	4631.8673004425
+67	8	7	4633.2483586243
+67	9	8	4634.7734974489
+67	10	9	4636.2997012288
+67	11	10	4635.03125376
+67	12	11	4631.1860875189
+67	13	12	4639.2187778105
+67	14	13	4639.2913084003
+67	15	14	4637.6941524071
+67	16	15	4636.0991356037
+67	17	16	4634.8500250549
+67	18	17	4634.1114621388
+67	19	18	4633.4717120858
+67	20	19	4633.0357652232
+67	21	20	4615.4917400859
+67	22	21	4605.2595202537
+67	23	22	4592.9930058986
+67	24	23	4579.0216392109
+67	25	24	4563.3560687564
+67	26	25	4545.7808955954
+67	27	26	4527.3851269019
+67	28	27	4508.9817314082
+67	349	28	4490.6108053308
+67	350	29	4472.1566627944
+67	3507	30	4453.5429755917
+67	3508	31	4434.7797334196
+67	3828	32	4415.8430649449
+67	3829	33	4396.8125705408
+67	4777	34	4377.7483118923
+67	4778	35	4358.6994311741
+67	8521	36	4339.645491304
+67	8522	37	4320.5644226623
+67	9504	38	4301.4763540464
+67	9505	39	4282.3956636793
+67	11100	40	4263.3256278842
+67	11101	41	4244.2581800032
+67	13580	42	4225.203488612
+67	13581	43	4206.1327231452
+67	14219	44	4187.0693945736
+67	15488	45	4168.0138335966
+67	15489	46	4150.0994577545
+67	15799	47	4136.394352353
+67	15800	48	4127.0419097879
+67	15801	49	4115.0332641407
+67	15802	50	4114.584076482
+67	15803	51	4114.0312885949
+67	15804	52	4113.0370678959
+67	15805	53	4110.8704349861
+67	15806	54	4108.3974958693
+67	15807	55	4105.5685210664
+67	15808	56	4102.1747592553
+67	15809	57	4106.3145709775
+67	15810	58	4117.4573061677
+67	15811	59	4128.6796587537
+67	15812	60	4146.8310643305
+67	15813	61	4157.5389374779
+67	15814	62	4168.2402784687
+67	15815	63	4178.9374600431
+67	15816	64	4189.6430140185
+67	15817	65	4200.3447219505
+67	15818	66	4218.1211886994
+67	15819	67	4229.1714250345
+67	15820	68	4240.2237279038
+67	15821	69	4251.2760305375
+67	15822	70	4262.3338001676
+67	15823	71	4273.3898185446
+67	15824	72	4284.4409154412
+67	15825	73	4295.4932354516
+67	15835	74	4306.5513915427
+67	15837	75	4317.6092962067
+67	15838	76	4328.6634119406
+67	15839	77	4344.0318208313
+67	15840	78	4354.7810327232
+67	15841	79	4365.4817236188
+67	15842	80	4373.9935313272
+67	15843	81	4380.733103123
+67	15844	82	4385.1553482319
+67	15845	83	4380.8448431404
+67	15846	84	4372.1207809988
+67	15847	85	4361.7243545654
+67	16565	86	4350.703800757
+67	16780	87	4339.6758599582
+67	19917	88	4328.6487380025
+67	20143	89	4317.6142795729
+67	23264	90	4306.5766303826
+67	24334	91	4305.3698398991
+67	25968	92	4304.825023437
+67	26881	93	4304.2807707561
+67	27637	94	4303.7370864761
+67	27922	95	4303.1931873151
+67	28026	96	4302.6491704869
+67	28027	97	4306.6430467169
+67	28028	98	4318.470597312
+67	28029	99	4330.2833864379
+67	28030	100	4342.0564130272
+67	28031	101	4346.8409739802
+67	28032	102	4347.1792671182
+67	28033	103	4347.5172630256
+67	28034	104	4347.8555132262
+67	28035	105	4348.1934246984
+66	2	1	6224.6366457255
+66	3	2	6222.5382136246
+66	4	3	6218.7311084023
+66	5	4	6213.3442200415
+66	6	5	6206.1829246676
+66	7	6	6197.1527222316
+66	8	7	6186.4482522929
+66	9	8	6175.4961778023
+66	10	9	6164.536455831
+66	11	10	6153.9635711806
+66	12	11	6147.096276693
+66	13	12	6154.9038381381
+66	14	13	6166.2927338737
+66	15	14	6177.7613443283
+66	16	15	6189.2145940201
+66	17	16	6200.7143309713
+66	18	17	6212.2475379907
+66	19	18	6222.2377089562
+66	20	19	6229.0453421394
+66	21	20	6236.3054863592
+66	22	21	6234.6888162817
+66	23	22	6232.8943698585
+66	24	23	6230.1338308752
+66	25	24	6226.7090186622
+66	26	25	6222.5564452875
+66	27	26	6217.2909628476
+66	28	27	6212.0232973631
+66	349	28	6206.7649257083
+66	350	29	6201.6776022863
+66	3507	30	6197.279001393
+66	3508	31	6193.5210336289
+66	3828	32	6190.9203613935
+66	3829	33	6188.7581578184
+66	4777	34	6187.1759484721
+66	4778	35	6185.595015394
+66	8521	36	6184.0136624392
+66	8522	37	6182.430057973
+66	9504	38	6180.8458725545
+66	9505	39	6179.2622994826
+66	11100	40	6177.6796106708
+66	11101	41	6176.097136639
+66	13580	42	6174.5157213129
+66	13581	43	6172.9329719431
+66	14219	44	6171.3508397872
+66	15488	45	6169.7693522911
+66	15489	46	6168.2825757312
+66	15799	47	6167.1451412127
+66	15800	48	6166.3689493707
+66	15801	49	6171.8303515913
+66	15802	50	6179.5226902451
+66	15803	51	6188.9891828131
+66	15804	52	6200.1128923544
+66	15805	53	6212.7617563135
+66	15806	54	6227.1988445377
+66	15807	55	6243.1309321906
+66	15808	56	6260.722310527
+66	15809	57	6295.8970271919
+66	15810	58	6311.2581391028
+66	15811	59	6326.7290096776
+66	15812	60	6352.4447667358
+66	15813	61	6372.2453985115
+66	15814	62	6392.0339512474
+66	15815	63	6411.814812533
+66	15816	64	6431.6111557755
+66	15817	65	6451.4003870464
+66	15818	66	6484.2832055165
+66	15819	67	6504.7178181933
+66	15820	68	6525.1562524017
+66	15821	69	6545.5946861744
+66	15822	70	6566.0432297719
+66	15823	71	6586.4885348704
+66	15824	72	6606.9247389378
+66	15825	73	6627.3632048442
+66	15835	74	6647.8124631034
+66	15837	75	6668.2612564119
+66	15838	76	6688.703043054
+66	15839	77	6717.1340629816
+66	15840	78	6736.4025927853
+66	15841	79	6752.9160660493
+66	15842	80	6766.0516206029
+66	15843	81	6775.5274598831
+66	15844	82	6781.7152401116
+66	15845	83	6798.0947264542
+66	15846	84	6801.4888462593
+66	15847	85	6805.5336038833
+66	16565	86	6809.8211799388
+66	16780	87	6814.1116299227
+66	19917	88	6818.4017613335
+66	20143	89	6822.6947470191
+66	23264	90	6826.9889740788
+66	24334	91	6838.3383780777
+66	25968	92	6850.1693361234
+66	26881	93	6861.9880513841
+66	27637	94	6873.7944235381
+66	27922	95	6885.6054619374
+66	28026	96	6897.4190555395
+66	28027	97	6906.2736754351
+66	28028	98	6906.0401088847
+66	28029	99	6905.8068338389
+66	28030	100	6905.8038697743
+66	28031	101	6915.383640898
+66	28032	102	6927.2032272568
+66	28033	103	6939.0124287123
+66	28034	104	6950.8305148857
+66	28035	105	6962.6367662684
+358	4	3	3.4548905672199
+358	5	4	5.0370395110862
+358	6	5	5.6403077177571
+358	7	6	7.0231067512134
+358	8	7	7.6996166324989
+358	9	8	5.7511197061203
+358	10	9	2.3715287380526
+358	11	10	1.8602700253174
+358	12	11	1.9789110988786
+358	13	12	1.9039823885897
+358	14	13	2.1861152511776
+358	15	14	1.9547071432202
+358	16	15	2.3221423247151
+358	17	16	1.8368166181084
+358	18	17	2.1854903885729
+358	19	18	1.9862091136335
+358	20	19	2.1484140046855
+358	21	20	1.7875885404602
+358	22	21	2.0963013958711
+358	23	22	2.0388624595955
+358	24	23	1.9636581132916
+358	25	24	2.1648944363323
+358	26	25	1.9208706257969
+358	27	26	0.973
+358	28	27	0.973
+358	349	28	0.973
+358	350	29	1.5968778883478
+358	3507	30	2.379508271667
+358	3508	31	0.973
+358	3828	32	6.3101502996174
+358	3829	33	6.5371812603642
+358	4777	34	0.973
+358	4778	35	0.973
+358	8521	36	6.708864563741
+358	8522	37	7.1848327462337
+358	9504	38	7.3120326928606
+358	9505	39	4.9607700966537
+358	11100	40	2.1184803392369
+358	11101	41	1.8221091026775
+358	13580	42	2.030849590614
+358	13581	43	2.1438599630326
+358	14219	44	2.0120439635225
+358	15488	45	1.8639378009936
+358	15489	46	2.2783281129055
+358	15799	47	2.0628400693792
+358	15800	48	1.7111193883927
+358	15801	49	2.1418075602094
+358	15802	50	2.1297436533704
+358	15803	51	2.0593024280626
+358	15804	52	2.0601017686878
+358	15805	53	1.7571647706524
+358	15806	54	2.1454690842433
+358	15807	55	0.973
+358	15808	56	0.973
+358	15809	57	6.7146137970261
+358	15810	58	7.1692068308859
+358	15811	59	8.1572192682347
+358	15812	60	4.3073926131792
+358	15813	61	2.1933503367469
+358	15814	62	2.0455508046184
+358	15815	63	2.0198995182647
+358	15816	64	2.0403010341211
+358	15817	65	2.1164952834616
+358	15818	66	2.1780309994075
+358	15819	67	1.6345613405673
+358	15820	68	2.4118922436191
+358	15821	69	1.639356657176
+358	15822	70	2.0157223590841
+358	15823	71	2.2988583148678
+358	15824	72	2.0048443603221
+358	15825	73	2.0642695094764
+358	15835	74	1.9313444944743
+358	15837	75	2.0367929290026
+358	15838	76	2.2130436039407
+358	15839	77	1.9866348712326
+358	15840	78	2.0418596667472
+358	15841	79	1.9360931686067
+358	15842	80	2.2133224590832
+358	15843	81	2.0301662426727
+358	15844	82	1.7243387471288
+358	15845	83	2.1640716184283
+358	15846	84	2.1101930090581
+358	15847	85	2.0966461764327
+358	16565	86	1.7962385346748
+358	16780	87	2.0124319494227
+358	19917	88	2.350824161775
+358	20143	89	1.7780778852609
+358	23264	90	1.9509668780737
+358	24334	91	0.973
+358	25968	92	0.973
+358	26881	93	4.6332332255335
+358	27637	94	6.6575323410976
+358	27922	95	7.3960467147337
+358	28026	96	8.2799989699893
+358	28027	97	2.013661714933
+358	28028	98	2.0887218414906
+358	28029	99	2.0029591193451
+358	28030	100	1.9347760681495
+358	28031	101	2.1701223526156
+358	28032	102	2.0085437760579
+358	28033	103	2.0210150489933
+358	28034	104	2.0347227544364
+358	28035	105	2.1987208825126
+357	4	3	1.7882937066513
+357	5	4	2.1139981198148
+357	6	5	1.8881957369694
+357	7	6	2.0091102000629
+357	8	7	1.8799062828417
+357	9	8	1.1138796375774
+357	10	9	0.099520128997975
+357	11	10	-0.050915591842495
+357	12	11	-0.015119029767812
+357	13	12	-0.036460500073153
+357	14	13	0.046358902326318
+357	15	14	-0.021991235138849
+357	16	15	0.084620397884866
+357	17	16	-0.05789178883424
+357	18	17	0.044515673106069
+357	19	18	-0.014262217730282
+357	20	19	0.032891654905397
+357	21	20	-0.072330447721761
+357	22	21	0.019119057406206
+357	23	22	0.0019547763955785
+357	24	23	-0.019862172666471
+357	25	24	0.038849901105277
+357	26	25	-0.032790050581097
+357	27	26	-1.4417003526614
+357	28	27	-4.4396410712097
+357	349	28	-0.26473022641847
+357	350	29	0.035080625944583
+357	3507	30	0.41430746413794
+357	3508	31	-1.7657118038368
+357	3828	32	2.2485524293594
+357	3829	33	1.8830399635737
+357	4777	34	-1.8037178451326
+357	4778	35	-1.6219641628319
+357	8521	36	2.2367692164262
+357	8522	37	1.9672870985302
+357	9504	38	1.7029086934007
+357	9505	39	0.87120774867798
+357	11100	40	0.024614410942887
+357	11101	41	-0.061822603158653
+357	13580	42	0.00044646235415691
+357	13581	43	0.033079606522806
+357	14219	44	-0.0059771766443735
+357	15488	45	-0.048772098503541
+357	15489	46	0.072473713322541
+357	15799	47	0.0081609834870324
+357	15800	48	-0.094120645758229
+357	15801	49	0.033603243578691
+357	15802	50	0.02905875112163
+357	15803	51	0.0078403717465694
+357	15804	52	0.0078356643789448
+357	15805	53	-0.080299315261655
+357	15806	54	0.034723487109877
+357	15807	55	-3.8496569466412
+357	15808	56	-3.0643576457424
+357	15809	57	2.2764031052845
+357	15810	58	1.9856011061463
+357	15811	59	1.9481632706174
+357	15812	60	0.68163768846652
+357	15813	61	0.048133756776805
+357	15814	62	0.0039878423837951
+357	15815	63	-0.003543691111263
+357	15816	64	0.0024577826727175
+357	15817	65	0.024364583939315
+357	15818	66	0.041279228937347
+357	15819	67	-0.11723994597793
+357	15820	68	0.11084118653554
+357	15821	69	-0.11569951300509
+357	15822	70	-0.0030700176279055
+357	15823	71	0.078761854120531
+357	15824	72	-0.0084233625931667
+357	15825	73	0.0089808007841921
+357	15835	74	-0.029709222894162
+357	15837	75	0.0016646807757219
+357	15838	76	0.052390580016654
+357	15839	77	-0.014398018005306
+357	15840	78	0.0019531458290309
+357	15841	79	-0.028661102792249
+357	15842	80	0.052098154942506
+357	15843	81	-0.0021649616933441
+357	15844	82	-0.090735041541047
+357	15845	83	0.039266612089705
+357	15846	84	0.022502649982926
+357	15847	85	0.017907779554371
+357	16565	86	-0.069523072259035
+357	16780	87	-0.0048671084223315
+357	19917	88	0.092696281543466
+357	20143	89	-0.075256189645733
+357	23264	90	-0.023052852370309
+357	24334	91	-2.857163770142
+357	25968	92	-4.4971605043562
+357	26881	93	1.5756869434461
+357	27637	94	2.0291444113478
+357	27922	95	1.9080084869824
+357	28026	96	1.8632985372594
+357	28027	97	-0.0048413927131321
+357	28028	98	0.017007383315358
+357	28029	99	-0.0082931274501608
+357	28030	100	-0.027826930570882
+357	28031	101	0.041089741189499
+357	28032	102	-0.006821179755498
+357	28033	103	-0.0030147215025504
+357	28034	104	0.0010384045937109
+357	28035	105	0.048267835075967
+230	3	2	3.0825815873761
+230	4	3	4.8708752940274
+230	5	4	6.9848734138422
+230	6	5	8.8730691508115
+230	7	6	10.882179350874
+230	8	7	12.762085633716
+230	9	8	13.875965271294
+230	10	9	13.975485400291
+230	11	10	13.924569808449
+230	12	11	13.909450778681
+230	13	12	13.872990278608
+230	14	13	13.919349180934
+230	15	14	13.897357945795
+230	16	15	13.98197834368
+230	17	16	13.924086554846
+230	18	17	13.968602227952
+230	19	18	13.954340010222
+230	20	19	13.987231665127
+230	21	20	13.914901217406
+230	22	21	13.934020274812
+230	23	22	13.935975051207
+230	24	23	13.916112878541
+230	25	24	13.954962779646
+230	26	25	13.922172729065
+230	27	26	12.480472376404
+230	28	27	8.040831305194
+230	349	28	7.7761010787755
+230	350	29	7.8111817047201
+230	3507	30	8.225489168858
+230	3508	31	6.4597773650212
+230	3828	32	8.7083297943806
+230	3829	33	10.591369757954
+230	4777	34	8.7876519128216
+230	4778	35	7.1656877499897
+230	8521	36	9.4024569664159
+230	8522	37	11.369744064946
+230	9504	38	13.072652758347
+230	9505	39	13.943860507025
+230	11100	40	13.968474917968
+230	11101	41	13.906652314809
+230	13580	42	13.907098777163
+230	13581	43	13.940178383686
+230	14219	44	13.934201207042
+230	15488	45	13.885429108538
+230	15489	46	13.957902821861
+230	15799	47	13.966063805348
+230	15800	48	13.871943159589
+230	15801	49	13.905546403168
+230	15802	50	13.93460515429
+230	15803	51	13.942445526036
+230	15804	52	13.950281190415
+230	15805	53	13.869981875154
+230	15806	54	13.904705362263
+230	15807	55	10.055048415622
+230	15808	56	6.9906907698798
+230	15809	57	9.2670938751643
+230	15810	58	11.252694981311
+230	15811	59	13.200858251928
+230	15812	60	13.882495940395
+230	15813	61	13.930629697171
+230	15814	62	13.934617539555
+230	15815	63	13.931073848444
+230	15816	64	13.933531631117
+230	15817	65	13.957896215056
+230	15818	66	13.999175443993
+230	15819	67	13.881935498015
+230	15820	68	13.992776684551
+230	15821	69	13.877077171546
+230	15822	70	13.874007153918
+230	15823	71	13.952769008038
+230	15824	72	13.944345645445
+230	15825	73	13.953326446229
+230	15835	74	13.923617223335
+230	15837	75	13.925281904111
+230	15838	76	13.977672484128
+230	15839	77	13.963274466122
+230	15840	78	13.965227611951
+230	15841	79	13.936566509159
+230	15842	80	13.988664664102
+230	15843	81	13.986499702408
+230	15844	82	13.895764660867
+230	15845	83	13.935031272957
+230	15846	84	13.95753392294
+230	15847	85	13.975441702494
+230	16565	86	13.905918630235
+230	16780	87	13.901051521813
+230	19917	88	13.993747803356
+230	20143	89	13.918491613711
+230	23264	90	13.89543876134
+230	24334	91	11.038274991198
+230	25968	92	6.5411144868421
+230	26881	93	8.1168014302881
+230	27637	94	10.145945841636
+230	27922	95	12.053954328618
+230	28026	96	13.917252865878
+230	28027	97	13.912411473165
+230	28028	98	13.92941885648
+230	28029	99	13.92112572903
+230	28030	100	13.893298798459
+230	28031	101	13.934388539648
+230	28032	102	13.927567359893
+230	28033	103	13.92455263839
+230	28034	104	13.925591042984
+230	28035	105	13.97385887806
+69	2	1	3072.555551005
+69	3	2	3074.1769635091
+69	4	3	3077.2034639829
+69	5	4	3081.6518112337
+69	6	5	3087.5327350901
+69	7	6	3094.9460549939
+69	8	7	3103.7854754398
+69	9	8	3123.8327704607
+69	10	9	3136.0557011233
+69	11	10	3148.261192344
+69	12	11	3160.4916676847
+69	13	12	3172.6972404001
+69	14	13	3184.9347487265
+69	15	14	3205.7997246193
+69	16	15	3215.846448292
+69	17	16	3225.876218472
+69	18	17	3235.9193665043
+69	19	18	3260.7690293324
+69	20	19	3271.6432246977
+69	21	20	3282.5073749901
+69	22	21	3293.3593034947
+69	23	22	3304.225236905
+69	24	23	3315.098554556
+69	25	24	3325.9516279038
+69	26	25	3356.6609240001
+69	27	26	3361.1140282686
+69	28	27	3364.391010044
+69	349	28	3378.5318503852
+69	350	29	3378.6378724662
+69	3507	30	3391.1426907715
+69	3508	31	3391.2644883865
+69	3828	32	3404.9749264227
+69	3829	33	3407.0122913444
+69	4777	34	3409.1730340646
+69	4778	35	3410.6433674473
+69	8521	36	3435.8821229315
+69	8522	37	3443.135123824
+69	9504	38	3451.6399359496
+69	9505	39	3473.0267340821
+69	11100	40	3485.9587046517
+69	11101	41	3498.9035911761
+69	13580	42	3511.8407197425
+69	13581	43	3524.7832055609
+69	14219	44	3537.9187306405
+69	15488	45	3551.0586382257
+69	15489	46	3564.206130441
+69	15799	47	3577.3159878604
+69	15800	48	3590.289896077
+69	15801	49	3603.2621956161
+69	15802	50	3616.2302738133
+69	15803	51	3629.2094417408
+69	15804	52	3642.2704677963
+69	15805	53	3655.3340359518
+69	15806	54	3668.3370784671
+69	15807	55	3679.5655056512
+69	15808	56	3686.8247634248
+69	15809	57	3699.3836885943
+69	15810	58	3699.2120011212
+69	15811	59	3699.0072398133
+69	15812	60	3698.7787875043
+69	15813	61	3698.5482341606
+69	15814	62	3698.3178430378
+69	15815	63	3698.0990848052
+69	15816	64	3697.8864833278
+69	15817	65	3697.4056636108
+69	15818	66	3697.1822090334
+69	15819	67	3696.9590329886
+69	15820	68	3696.7354920274
+69	15821	69	3696.5122766058
+69	15822	70	3696.2893503939
+69	15823	71	3696.0083544308
+69	15824	72	3695.6805688506
+69	15825	73	3698.0337025026
+69	15835	74	3709.4628169133
+69	15837	75	3720.6597086522
+69	15838	76	3722.5415344407
+69	15839	77	3721.8813769455
+69	15840	78	3720.173114859
+69	15841	79	3717.5798181526
+69	15842	80	3727.5317192014
+69	15843	81	3739.4002929531
+69	15844	82	3750.4970680991
+69	15845	83	3762.9847302716
+69	15846	84	3775.7810014733
+69	15847	85	3788.4911350771
+69	16565	86	3799.2607044624
+69	16780	87	3806.4258151915
+69	19917	88	3809.8492289315
+69	20143	89	3812.7350212117
+69	23264	90	3815.1982137033
+69	24334	91	3817.470615496
+69	25968	92	3818.9864090331
+69	26881	93	3816.1965793088
+69	27637	94	3814.5997461366
+69	27922	95	3812.674054487
+69	28026	96	3810.4204770296
+69	28027	97	3807.937223547
+69	28028	98	3804.6156647599
+69	28029	99	3799.3125057687
+69	28030	100	3789.7062900397
+69	28031	101	3777.4831364959
+69	28032	102	3765.0636030124
+69	28033	103	3752.8405499474
+69	28034	104	3741.9544475121
+69	28035	105	3730.6925457579
+68	2	1	11098.121124205
+68	3	2	11098.39622347
+68	4	3	11098.909718991
+68	5	4	11099.664454174
+68	6	5	11100.66224951
+68	7	6	11101.920041008
+68	8	7	11103.419793889
+68	9	8	11106.82972472
+68	10	9	11108.90749122
+68	11	10	11110.982293203
+68	12	11	11113.061342217
+68	13	12	11115.136158053
+68	14	13	11117.216402599
+68	15	14	11120.766546994
+68	16	15	11122.471179049
+68	17	16	11124.172934597
+68	18	17	11125.876959971
+68	19	18	11130.101302247
+68	20	19	11131.950080972
+68	21	20	11133.797151882
+68	22	21	11135.642144902
+68	23	22	11137.489518968
+68	24	23	11139.338148469
+68	25	24	11141.27572072
+68	26	25	11147.238502317
+68	27	26	11148.099558993
+68	28	27	11148.733199452
+68	349	28	11151.680389555
+68	350	29	11151.702709993
+68	3507	30	11154.432671741
+68	3508	31	11154.458313345
+68	3828	32	11159.961221231
+68	3829	33	11161.011224822
+68	4777	34	11162.124814042
+68	4778	35	11162.882584687
+68	8521	36	11170.883761296
+68	8522	37	11172.239462397
+68	9504	38	11173.829146906
+68	9505	39	11177.826475511
+68	11100	40	11180.242129671
+68	11101	41	11182.660196494
+68	13580	42	11185.076814152
+68	13581	43	11187.375099976
+68	14219	44	11187.801508406
+68	15488	45	11188.228059101
+68	15489	46	11188.654856011
+68	15799	47	11189.6785024
+68	15800	48	11191.893317296
+68	15801	49	11194.10785757
+68	15802	50	11196.300159433
+68	15803	51	11198.447924739
+68	15804	52	11200.032345067
+68	15805	53	11201.367775837
+68	15806	54	11203.291804678
+68	15807	55	11205.209309054
+68	15808	56	11206.448989227
+68	15809	57	11222.244158719
+68	15810	58	11231.143990662
+68	15811	59	11241.758284149
+68	15812	60	11253.600657501
+68	15813	61	11265.551943027
+68	15814	62	11277.494819439
+68	15815	63	11289.442388186
+68	15816	64	11301.379961141
+68	15817	65	11328.35304029
+68	15818	66	11340.943660795
+68	15819	67	11353.51858729
+68	15820	68	11366.114075119
+68	15821	69	11378.69122031
+68	15822	70	11391.252069893
+68	15823	71	11403.825694428
+68	15824	72	11416.413571224
+68	15825	73	11428.200360247
+68	15835	74	11431.61785451
+68	15837	75	11435.330073765
+68	15838	76	11458.521605356
+68	15839	77	11467.905869497
+68	15840	78	11477.094926603
+68	15841	79	11486.13612665
+68	15842	80	11503.389822269
+68	15843	81	11499.373850806
+68	15844	82	11493.107883773
+68	15845	83	11491.187213599
+68	15846	84	11491.471104464
+68	15847	85	11492.542871676
+68	16565	86	11498.96566351
+68	16780	87	11509.393133427
+68	19917	88	11521.733936575
+68	20143	89	11534.18559443
+68	23264	90	11546.73531181
+68	24334	91	11558.312969817
+68	25968	92	11566.03578505
+68	26881	93	11568.438094261
+68	27637	94	11560.296146075
+68	27922	95	11550.477411152
+68	28026	96	11538.98684895
+68	28027	97	11526.791963618
+68	28028	98	11514.812675785
+68	28029	99	11503.786725008
+68	28030	100	11496.31100006
+68	28031	101	11494.750009472
+68	28032	102	11494.344859171
+68	28033	103	11495.667685432
+68	28034	104	11501.555680027
+68	28035	105	11506.257967372
+302	4	3	3.8548956330403
+302	5	4	5.3571774962106
+302	6	5	5.6135103914684
+302	7	6	7.6500892227322
+302	8	7	7.6867761684719
+302	9	8	5.8563569193778
+302	10	9	2.0257877008417
+302	11	10	2.1827728049094
+302	12	11	2.1346288130457
+302	13	12	1.8500748113853
+302	14	13	2.0548446114169
+302	15	14	2.2869917529472
+302	16	15	2.1394343170454
+302	17	16	1.7392138983923
+302	18	17	2.0955132732994
+302	19	18	2.3111582844782
+302	20	19	2.0448322406905
+302	21	20	2.1610765116622
+302	22	21	1.9646405414111
+302	23	22	2.2315961253087
+302	24	23	1.8288539478806
+302	25	24	2.3259165546552
+302	26	25	1.749365593252
+302	27	26	2.4093437887564
+302	28	27	1.9565527432998
+302	349	28	2.0720944832451
+302	350	29	1.893418254207
+302	3507	30	2.0259751605585
+302	3508	31	2.195919481431
+302	3828	32	2.1132029778383
+302	3829	33	2.0517737538832
+302	4777	34	1.8890955734209
+302	4778	35	2.0662165183705
+302	8521	36	2.1704334458804
+302	8522	37	2.2267103077129
+302	9504	38	1.971577092512
+302	9505	39	2.2903825148234
+302	11100	40	1.923186162189
+302	11101	41	1.9608371807832
+302	13580	42	2.3416852908448
+302	13581	43	1.9711499041217
+302	14219	44	2.1125893615257
+302	15488	45	1.8076763859943
+302	15489	46	2.2404624042962
+302	15799	47	0.973
+302	15800	48	0.973
+302	15801	49	0.973
+302	15802	50	6.6090304132439
+302	15803	51	7.1395158898754
+302	15804	52	8.3774379639852
+302	15805	53	9.6343384572762
+302	15806	54	11.78129258027
+302	15807	55	10.725942922089
+302	15808	56	12.739803554045
+302	15809	57	15.724743357722
+302	15810	58	15.368508464028
+302	15811	59	17.911562134751
+302	15812	60	14.190472877593
+302	15813	61	4.4993711907181
+302	15814	62	4.3657025380609
+302	15815	63	4.5953768617475
+302	15816	64	5.2884607435438
+302	15817	65	4.7749017808754
+302	15818	66	4.5811550869844
+302	15819	67	3.9899915124225
+302	15820	68	5.36611980289
+302	15821	69	4.1935499314558
+302	15822	70	5.0624270400288
+302	15823	71	4.1329546936728
+302	15824	72	4.7706634153865
+302	15825	73	5.2267896854166
+302	15835	74	4.6744029279754
+302	15837	75	4.6762388337883
+302	15838	76	4.6836236707294
+302	15839	77	4.9295554169244
+302	15840	78	4.2814673172773
+302	15841	79	5.0095912923668
+302	15842	80	3.9801624349401
+302	15843	81	5.4402871520227
+302	15844	82	4.8023518708316
+302	15845	83	4.5141016642142
+302	15846	84	4.4910485698812
+302	15847	85	4.3184474813825
+302	16565	86	4.883976295959
+302	16780	87	5.0479446010278
+302	19917	88	4.1011033708356
+302	20143	89	4.7338376570445
+302	23264	90	5.3240348869415
+302	24334	91	4.3844289855151
+302	25968	92	4.5531565462502
+302	26881	93	4.8379521508662
+302	27637	94	4.7230294164689
+302	27922	95	5.175139326716
+302	28026	96	4.1872911131673
+302	28027	97	4.9384903417936
+302	28028	98	4.4669143561321
+302	28029	99	4.3915551362456
+302	28030	100	5.3611301473354
+302	28031	101	4.6374845778346
+302	28032	102	4.3443976015134
+302	28033	103	4.407374231964
+302	28034	104	4.9157942844072
+302	28035	105	4.70556047308
+302	28036	106	5.2040259155915
+302	28037	107	4.0901983346184
+302	28038	108	0.973
+302	28039	109	0.973
+302	28040	110	0.973
+302	28041	111	0.973
+302	28042	112	1.8748715931156
+302	28043	113	2.2390164839052
+302	28044	114	2.0847262782803
+302	28045	115	2.0221592694765
+302	28046	116	2.0648202304775
+302	28047	117	2.0260349126878
+302	28048	118	2.0651119918035
+302	28049	119	2.1624955348131
+302	28050	120	1.8845696372728
+302	28051	121	2.2211664326594
+302	28052	122	2.1413403230514
+302	28053	123	1.7923006468926
+302	28063	124	2.1192891114065
+302	28065	125	2.0708876352301
+301	4	3	1.8546570841782
+301	5	4	2.0945939786523
+301	6	5	1.761089522501
+301	7	6	2.1131031549838
+301	8	7	1.7889260588889
+301	9	8	1.0921136793584
+301	10	9	-0.014213180600199
+301	11	10	0.030204241208265
+301	12	11	0.015810540628154
+301	13	12	-0.064550610489677
+301	14	13	-0.0050989703484809
+301	15	14	0.060066440247464
+301	16	15	0.016962382148487
+301	17	16	-0.096081533078104
+301	18	17	0.0070533268968571
+301	19	18	0.067208562784362
+301	20	19	-0.0093675621435967
+301	21	20	0.023446639685424
+301	22	21	-0.032275079188402
+301	23	22	0.043404296399094
+301	24	23	-0.070810842481443
+301	25	24	0.070583289233037
+301	26	25	-0.093279481541831
+301	27	26	0.094568863261957
+301	28	27	-0.034880701408255
+301	349	28	-0.0014734676922679
+301	350	29	-0.05168621004559
+301	3507	30	-0.012887895512396
+301	3508	31	0.035248522122856
+301	3828	32	0.010970383575186
+301	3829	33	-0.0065940150571979
+301	4777	34	-0.052255983408541
+301	4778	35	-0.00080649899086005
+301	8521	36	0.028527111725417
+301	8522	37	0.043380490751005
+301	9504	38	-0.029491196281743
+301	9505	39	0.060692321220413
+301	11100	40	-0.043958646862302
+301	11101	41	-0.032165396853815
+301	13580	42	0.075503758990671
+301	13581	43	-0.030454719972331
+301	14219	44	0.010092361702119
+301	15488	45	-0.076028044477571
+301	15489	46	0.047956407731398
+301	15799	47	-1.2266344216572
+301	15800	48	-4.4451888216475
+301	15801	49	-0.95
+301	15802	50	2.0885303253191
+301	15803	51	1.8861660832725
+301	15804	52	1.9397663793736
+301	15805	53	1.9723649815982
+301	15806	54	2.1692074408312
+301	15807	55	1.7024662353192
+301	15808	56	1.8835342090856
+301	15809	57	2.1648519585538
+301	15810	58	1.8806564862281
+301	15811	59	2.0496041285247
+301	15812	60	1.3643367010515
+301	15813	61	-0.02957642632304
+301	15814	62	-0.047033281719777
+301	15815	63	-0.013354700373018
+301	15816	64	0.083153976609463
+301	15817	65	0.0088503498001948
+301	15818	66	-0.018315872366074
+301	15819	67	-0.099820889299735
+301	15820	68	0.094957266629208
+301	15821	69	-0.071287755183874
+301	15822	70	0.052014258115086
+301	15823	71	-0.079032935574652
+301	15824	72	0.012638370401692
+301	15825	73	0.075326807515228
+301	15835	74	-0.0041139077791001
+301	15837	75	-0.003701510829849
+301	15838	76	-0.002535651752261
+301	15839	77	0.031616323310882
+301	15840	78	-0.059454964625182
+301	15841	79	0.043793120703192
+301	15842	80	-0.10085380975855
+301	15843	81	0.10563964906847
+301	15844	82	0.013204057102556
+301	15845	83	-0.027236759704536
+301	15846	84	-0.029412203351967
+301	15847	85	-0.052318381250373
+301	16565	86	0.028263950827533
+301	16780	87	0.049856390752829
+301	19917	88	-0.083532548330258
+301	20143	89	0.0076324981357878
+301	23264	90	0.089084889336956
+301	24334	91	-0.044579710261896
+301	25968	92	-0.01946600295836
+301	26881	93	0.02081093242159
+301	27637	94	0.0040645452379273
+301	27922	95	0.066473968566861
+301	28026	96	-0.0729862584034
+301	28027	97	0.034016246583779
+301	28028	98	-0.032685558903029
+301	28029	99	-0.041944433741737
+301	28030	100	0.094091732872183
+301	28031	101	-0.0097561838640843
+301	28032	102	-0.050071171971503
+301	28033	103	-0.039457835282665
+301	28034	104	0.032684075771833
+301	28035	105	0.0022414934122921
+301	28036	106	0.071172201132867
+301	28037	107	-0.08604471839266
+301	28038	108	-1.0849394635067
+301	28039	109	-4.4883694017626
+301	28040	110	-4.4870118133882
+301	28041	111	-4.2626136338655
+301	28042	112	-0.057844667849132
+301	28043	113	0.045926238934044
+301	28044	114	0.0014016419788838
+301	28045	115	-0.016160839418882
+301	28046	116	-0.0037362829619081
+301	28047	117	-0.014505567657761
+301	28048	118	-0.0031194736668851
+301	28049	119	0.024246793023776
+301	28050	120	-0.05449542389484
+301	28051	121	0.041605227803812
+301	28052	122	0.017981273517943
+301	28053	123	-0.080696447824593
+301	28063	124	0.013719566175714
+301	28065	125	-0.00029738136567303
+202	3	2	3.6569751139134
+202	4	3	5.5116321980915
+202	5	4	7.6062261767438
+202	6	5	9.3673156992448
+202	7	6	11.480418854229
+202	8	7	13.269344913118
+202	9	8	14.361458592476
+202	10	9	14.347245411876
+202	11	10	14.377449653084
+202	12	11	14.393260193712
+202	13	12	14.328709583222
+202	14	13	14.323610612874
+202	15	14	14.383677053121
+202	16	15	14.40063943527
+202	17	16	14.304557902192
+202	18	17	14.311611229089
+202	19	18	14.378819791873
+202	20	19	14.369452229729
+202	21	20	14.392898869415
+202	22	21	14.360623790226
+202	23	22	14.404028086626
+202	24	23	14.333217244144
+202	25	24	14.403800533377
+202	26	25	14.310521051835
+202	27	26	14.405089915097
+202	28	27	14.370209213689
+202	349	28	14.368735745997
+202	350	29	14.317049535951
+202	3507	30	14.304161640439
+202	3508	31	14.339410162562
+202	3828	32	14.350380546137
+202	3829	33	14.34378653108
+202	4777	34	14.291530547671
+202	4778	35	14.29072404868
+202	8521	36	14.319251160406
+202	8522	37	14.362631651157
+202	9504	38	14.333140454875
+202	9505	39	14.393832776095
+202	11100	40	14.349874129233
+202	11101	41	14.317708732379
+202	13580	42	14.39321249137
+202	13581	43	14.362757771398
+202	14219	44	14.3728501331
+202	15488	45	14.296822088622
+202	15489	46	14.344778496353
+202	15799	47	13.118144074696
+202	15800	48	8.6729552530487
+202	15801	49	7.7229552530487
+202	15802	50	9.8114855783679
+202	15803	51	11.69765166164
+202	15804	52	13.637418041014
+202	15805	53	15.609783022612
+202	15806	54	17.778990463443
+202	15807	55	19.481456698763
+202	15808	56	21.364990907848
+202	15809	57	23.529842866402
+202	15810	58	25.41049935263
+202	15811	59	27.460103481155
+202	15812	60	28.824440182206
+202	15813	61	28.794863755883
+202	15814	62	28.747830474164
+202	15815	63	28.734475773791
+202	15816	64	28.8176297504
+202	15817	65	28.8264801002
+202	15818	66	28.808164227834
+202	15819	67	28.708343338534
+202	15820	68	28.803300605164
+202	15821	69	28.73201284998
+202	15822	70	28.784027108095
+202	15823	71	28.70499417252
+202	15824	72	28.717632542922
+202	15825	73	28.792959350437
+202	15835	74	28.788845442658
+202	15837	75	28.785143931828
+202	15838	76	28.782608280076
+202	15839	77	28.814224603387
+202	15840	78	28.754769638762
+202	15841	79	28.798562759465
+202	15842	80	28.697708949706
+202	15843	81	28.803348598775
+202	15844	82	28.816552655877
+202	15845	83	28.789315896173
+202	15846	84	28.759903692821
+202	15847	85	28.70758531157
+202	16565	86	28.735849262398
+202	16780	87	28.785705653151
+202	19917	88	28.70217310482
+202	20143	89	28.709805602956
+202	23264	90	28.798890492293
+202	24334	91	28.754310782031
+202	25968	92	28.734844779073
+202	26881	93	28.755655711495
+202	27637	94	28.759720256732
+202	27922	95	28.826194225299
+202	28026	96	28.753207966896
+202	28027	97	28.78722421348
+202	28028	98	28.754538654577
+202	28029	99	28.712594220835
+202	28030	100	28.806685953707
+202	28031	101	28.796929769843
+202	28032	102	28.746858597872
+202	28033	103	28.707400762589
+202	28034	104	28.740084838361
+202	28035	105	28.742326331773
+202	28036	106	28.813498532906
+202	28037	107	28.727453814513
+202	28038	108	27.642514351007
+202	28039	109	23.154144949244
+202	28040	110	18.667133135856
+202	28041	111	14.40451950199
+202	28042	112	14.346674834141
+202	28043	113	14.392601073075
+202	28044	114	14.394002715054
+202	28045	115	14.377841875635
+202	28046	116	14.374105592673
+202	28047	117	14.359600025015
+202	28048	118	14.356480551349
+202	28049	119	14.380727344372
+202	28050	120	14.326231920478
+202	28051	121	14.367837148281
+202	28052	122	14.385818421799
+202	28053	123	14.305121973975
+202	28063	124	14.31884154015
+202	28065	125	14.318544158785
+13	2	1	5032.2448991246
+13	3	2	5030.1359787127
+13	4	3	5026.4867400323
+13	5	4	5021.3200179856
+13	6	5	5014.6304019909
+13	7	6	5006.3904309216
+13	8	7	4996.7217062586
+13	9	8	4985.6835366851
+13	10	9	4959.0966419584
+13	11	10	4945.1091345169
+13	12	11	4931.1225083994
+13	13	12	4917.1573891236
+13	14	13	4903.1730573786
+13	15	14	4889.188048737
+13	16	15	4875.1967356163
+13	17	16	4861.2314293651
+13	18	17	4847.2742061861
+13	19	18	4833.2984027174
+13	20	19	4819.3314819377
+13	21	20	4805.371559235
+13	22	21	4791.3838356323
+13	23	22	4777.3992690995
+13	24	23	4763.4202693526
+13	25	24	4749.4234425528
+13	26	25	4735.4266659713
+13	27	26	4721.4092043277
+13	28	27	4707.4020255696
+13	349	28	4693.389441474
+13	350	29	4679.3957786255
+13	3507	30	4665.4093797426
+13	3508	31	4651.4155550922
+13	3828	32	4637.3983465948
+13	3829	33	4623.4013148174
+13	4777	34	4609.4017636819
+13	4778	35	4595.392737776
+13	8521	36	4581.3757428672
+13	8522	37	4567.3560096438
+13	9504	38	4553.3681648905
+13	9505	39	4539.3565270908
+13	11100	40	4525.3537706582
+13	11101	41	4511.3496977806
+13	13580	42	4497.3312788412
+13	13581	43	4483.3098888389
+13	14219	44	4461.6971585032
+13	15488	45	4450.1784788256
+13	15489	46	4438.6615214343
+13	15799	47	4427.3273672695
+13	15800	48	4418.7407919429
+13	15801	49	4412.9112749091
+13	15802	50	4396.6164457568
+13	15803	51	4390.9559225335
+13	15804	52	4384.3231660048
+13	15805	53	4376.6690285614
+13	15806	54	4367.9030361848
+13	15807	55	4358.1831166202
+13	15808	56	4347.510176454
+13	15809	57	4335.7628337156
+13	15810	58	4323.003908309
+13	15811	59	4309.1668338943
+13	15812	60	4294.4158710071
+13	15813	61	4274.0257657865
+13	15814	62	4259.4703537188
+13	15815	63	4239.4195089181
+13	15816	64	4224.9546290425
+13	15817	65	4210.423063497
+13	15818	66	4189.5913429573
+13	15819	67	4173.8013483235
+13	15820	68	4158.0074634885
+13	15821	69	4143.3438652047
+13	15822	70	4130.4449776295
+13	15823	71	4124.1421167689
+13	15824	72	4119.6598709192
+13	15825	73	4118.7565037939
+13	15835	74	4117.8522920431
+13	15837	75	4116.9488951924
+13	15838	76	4116.0452062317
+13	15839	77	4114.0883034752
+13	15840	78	4110.8948327791
+13	15841	79	4106.6984958583
+13	15842	80	4102.0247639233
+13	15843	81	4109.4393085276
+13	15844	82	4122.5563477413
+13	15845	83	4142.1811115783
+13	15846	84	4155.2853926309
+13	15847	85	4167.7713335907
+13	16565	86	4180.2581595726
+13	16780	87	4192.7534176382
+13	19917	88	4205.2458585869
+13	20143	89	4225.0299119574
+13	23264	90	4237.9346140343
+13	24334	91	4250.8306146609
+13	25968	92	4263.7421660642
+13	26881	93	4276.6511716363
+13	27637	94	4289.5522171346
+13	27922	95	4302.4539193576
+13	28026	96	4315.3672682842
+13	28027	97	4328.2753395864
+13	28028	98	4345.4304339759
+13	28029	99	4358.3911961443
+13	28030	100	4372.4116315067
+13	28031	101	4387.2807477289
+13	28032	102	4409.4224894268
+13	28033	103	4422.2767552982
+13	28034	104	4443.3375258787
+13	28035	105	4456.6700644904
+13	28036	106	4470.014057762
+13	28037	107	4493.8497696861
+13	28038	108	4508.3798926404
+13	28039	109	4521.183521896
+13	28040	110	4531.7029568691
+13	28041	111	4546.5879673637
+13	28042	112	4552.2543245529
+13	28043	113	4557.91980135
+13	28044	114	4563.5892930334
+13	28045	115	4569.2564856954
+13	28046	116	4574.9289730282
+13	28047	117	4580.5919131704
+13	28048	118	4586.2609157731
+13	28049	119	4591.9322336136
+13	28050	120	4597.5980262373
+13	28051	121	4603.2564489713
+13	28052	122	4608.9275152693
+13	28053	123	4614.5950274512
+13	28063	124	4620.263599551
+13	28065	125	4625.9272019944
+12	2	1	5557.6880129517
+12	3	2	5557.8328424258
+12	4	3	5558.083452793
+12	5	4	5558.4382758733
+12	6	5	5558.8976832368
+12	7	6	5559.463560768
+12	8	7	5560.127557522
+12	9	8	5560.8856004927
+12	10	9	5562.7042081521
+12	11	10	5563.6637560127
+12	12	11	5564.6232434142
+12	13	12	5565.581255439
+12	14	13	5566.5405854457
+12	15	14	5567.4999618879
+12	16	15	5568.4597708194
+12	17	16	5569.4177956708
+12	18	17	5570.3752660205
+12	19	18	5571.3340109846
+12	20	19	5572.2921465931
+12	21	20	5573.2498021311
+12	22	21	5574.2093648205
+12	23	22	5575.1687109338
+12	24	23	5576.1276751637
+12	25	24	5576.9906309177
+12	26	25	5576.9968212143
+12	27	26	5577.0030206593
+12	28	27	5577.0092155564
+12	349	28	5577.0154128442
+12	350	29	5577.0216017638
+12	3507	30	5577.0277874707
+12	3508	31	5577.0339764618
+12	3828	32	5577.0401757948
+12	3829	33	5577.0463662043
+12	4777	34	5577.0525577281
+12	4778	35	5577.0587534422
+12	8521	36	5577.0649526807
+12	8522	37	5577.0711531303
+12	9504	38	5577.0773394767
+12	9505	39	5577.083536346
+12	11100	40	5577.0897292873
+12	11101	41	5577.0959228108
+12	13580	42	5577.1021226792
+12	13581	43	5577.1083238615
+12	14219	44	5577.1143642615
+12	15488	45	5577.1203397136
+12	15489	46	5577.1263142721
+12	15799	47	5577.1321939993
+12	15800	48	5577.1366483874
+12	15801	49	5577.1396725186
+12	15802	50	5587.6115490971
+12	15803	51	5596.2114424975
+12	15804	52	5606.2884259934
+12	15805	53	5617.9171683357
+12	15806	54	5631.2351244707
+12	15807	55	5646.0023586679
+12	15808	56	5662.2174935732
+12	15809	57	5680.0649418221
+12	15810	58	5699.4492626833
+12	15811	59	5720.471588756
+12	15812	60	5742.8823630574
+12	15813	61	5773.0851804518
+12	15814	62	5793.5275509138
+12	15815	63	5821.5782752627
+12	15816	64	5841.6074200978
+12	15817	65	5861.5898872757
+12	15818	66	5890.2548027505
+12	15819	67	5911.9758260922
+12	15820	68	5933.7022008701
+12	15821	69	5956.184512945
+12	15822	70	5979.6544004004
+12	15823	71	6005.5879737644
+12	15824	72	6046.1609009297
+12	15825	73	6071.7615741027
+12	15835	74	6097.3861832591
+12	15837	75	6122.9876988244
+12	15838	76	6148.5974925444
+12	15839	77	6188.0128029865
+12	15840	78	6212.6193213105
+12	15841	79	6237.117654461
+12	15842	80	6261.4998031092
+12	15843	81	6300.2047166757
+12	15844	82	6318.2875575457
+12	15845	83	6345.3504942886
+12	15846	84	6368.0782206704
+12	15847	85	6391.1667944623
+12	16565	86	6414.2570048069
+12	16780	87	6437.3628074715
+12	19917	88	6460.46340082
+12	20143	89	6497.0591389524
+12	23264	90	6520.9231162155
+12	24334	91	6544.7710023505
+12	25968	92	6568.6476457076
+12	26881	93	6592.5195811946
+12	27637	94	6616.3767965419
+12	27922	95	6640.2352263351
+12	28026	96	6664.1151937561
+12	28027	97	6687.9854015477
+12	28028	98	6719.7204282485
+12	28029	99	6741.9738533435
+12	28030	100	6763.6104081012
+12	28031	101	6784.689183134
+12	28032	102	6815.8590205438
+12	28033	103	6835.6735331144
+12	28034	104	6866.5054320662
+12	28035	105	6884.04719209
+12	28036	106	6901.6040231293
+12	28037	107	6933.7777123306
+12	28038	108	6953.7176308408
+12	28039	109	6971.2882546268
+12	28040	110	6985.7242423193
+12	28041	111	6994.1828021152
+12	28042	112	6982.1391269855
+12	28043	113	6970.0973231031
+12	28044	114	6958.0455429877
+12	28045	115	6945.995073885
+12	28046	116	6933.9333464273
+12	28047	117	6921.8919196955
+12	28048	118	6909.8376020146
+12	28049	119	6897.7783613139
+12	28050	120	6885.7308691912
+12	28051	121	6873.6990480774
+12	28052	122	6861.6403422455
+12	28053	123	6849.5891937297
+12	28063	124	6837.5357914512
+12	28065	125	6825.4929564314

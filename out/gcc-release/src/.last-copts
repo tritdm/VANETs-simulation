@@ -1,0 +1,1 @@
+-O3 -DNDEBUG=1 -ffp-contract=off   -MMD -MP -MF .d  -fPIC  -fno-omit-frame-pointer -DHAVE_SWAPCONTEXT -DWITH_QTENV -DWITH_NETBUILDER -DWITH_OSG -DOMNETPPLIBS_IMPORT -DINET_IMPORT -DVEINS_IMPORT -I/home/mike/Documents/dsrc_cv2x/inet4.4/src -I/home/mike/Documents/dsrc_cv2x/veins-veins-5.2/src -I. -I/home/mike/Documents/dsrc_cv2x/omnetpp-6.0/include

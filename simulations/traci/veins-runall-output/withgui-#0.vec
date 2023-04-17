@@ -1,0 +1,100 @@
+version 3
+run withgui-0-20230417-17:07:49-22325
+attr configname withgui
+attr datetime 20230417-17:07:49
+attr datetimef 20230417-170749
+attr experiment withgui
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network scenario
+attr processid 22325
+attr repetition 0
+attr replication #0
+attr resultdir veins-runall-output
+attr runnumber 0
+attr seedset 0
+config image-path ../../../../../inet4.4/images:../../../../../veins-veins-5.2/images
+config *.manager.ignoreGuiCommands false
+config cmdenv-event-banner-details true
+config cmdenv-event-banners true
+config cmdenv-express-mode false
+config cmdenv-autoflush true
+config cmdenv-log-prefix "[%c%?-%l] %G:%R "
+config cmdenv-performance-display false
+config result-dir veins-runall-output
+config network scenario
+config debug-on-errors true
+config print-undisposed false
+config sim-time-limit 100s
+config **.scalar-recording true
+config **.vector-recording true
+config *.playgroundSizeX 10672m
+config *.playgroundSizeY 7105m
+config *.playgroundSizeZ 10000m
+config *.annotations.draw false
+config *.world.useTorus false
+config *.world.use2D false
+config *.manager.updateInterval 1s
+config *.manager.host "\"localhost\""
+config *.manager.port 9999
+config *.manager.moduleType "\"org.car2x.veins.nodes.Car\""
+config *.manager.moduleName "\"node\""
+config *.manager.moduleDisplayString "\"\""
+config *.manager.autoShutdown true
+config *.manager.margin 25
+config *.manager.launchConfig "xmldoc(\"sumo-launchd.launch.xml\")"
+config *.manager.trafficLightModuleType "\"org.car2x.veins.nodes.TrafficLight\""
+config *.manager.trafficLightModuleName "\"trafficLight\""
+config *.manager.trafficLightModuleDisplayString default
+config *.manager.trafficLightFilter "\"10\""
+config *.manager.ignoreGuiCommands true
+config *.trafficLight[*].mobility.x 0
+config *.trafficLight[*].mobility.y 0
+config *.trafficLight[*].mobility.z 3
+config *.trafficLight[*].applType "\"test.myveins.TrafficLightApp\""
+config *.trafficLight[*].logicType "\"test.myveins.TrafficLightTestLogic\""
+config *.trafficLight[*].appl.headerLength "80 bit"
+config *.trafficLight[*].appl.sendBeacons true
+config *.trafficLight[*].appl.dataOnSch true
+config *.connectionManager.sendDirect true
+config *.connectionManager.maxInterfDist 2600m
+config *.connectionManager.drawMaxIntfDist false
+config *.**.nic.mac1609_4.useServiceChannel false
+config *.**.nic.mac1609_4.txPower 20mW
+config *.**.nic.mac1609_4.bitrate 18Mbps
+config *.**.nic.phy80211p.minPowerLevel -110dBm
+config *.**.nic.phy80211p.useNoiseFloor true
+config *.**.nic.phy80211p.noiseFloor -98dBm
+config *.**.nic.phy80211p.decider "xmldoc(\"config.xml\")"
+config *.**.nic.phy80211p.analogueModels "xmldoc(\"config.xml\")"
+config *.**.nic.phy80211p.usePropagationDelay true
+config *.node[*].applType "\"test.myveins.TraCI\""
+config *.node[*].appl.headerLength "80 bit"
+config *.node[*].appl.sendBeacons true
+config *.node[*].appl.dataOnSch false
+config *.node[*].appl.beaconInterval 1s
+config *.node[*].veinsmobility.x 0
+config *.node[*].veinsmobility.y 0
+config *.node[*].veinsmobility.z 0
+config *.node[*].veinsmobility.setHostSpeed true
+
+vector 0 scenario.node[0].veinsmobility posx ETV
+vector 1 scenario.node[0].veinsmobility posy ETV
+vector 2 scenario.node[1].veinsmobility posx ETV
+vector 3 scenario.node[1].veinsmobility posy ETV
+vector 4 scenario.node[0].veinsmobility speed ETV
+vector 5 scenario.node[1].veinsmobility speed ETV
+0	11	1	27.6
+0	72	2	57.868911527549
+1	11	1	76.65
+1	72	2	76.65
+2	11	1	323.35
+2	72	2	323.35
+3	11	1	34.85
+3	72	2	56.181222047588
+4	72	2	30.268911527549
+5	72	2	21.331222047588
+

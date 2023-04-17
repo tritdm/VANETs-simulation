@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<!-- caotoc.launchd.xml -->
+
+<launch>
+    <copy file="caotoc.net.xml" />
+    <copy file="caotoc.rou.xml" />
+    <copy file="caotoc.poly.xml" />
+    <copy file="caotoc.sumo.cfg" type="config" />
+</launch>
