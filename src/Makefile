@@ -34,10 +34,10 @@ O = $(PROJECT_OUTPUT_DIR)/$(CONFIGNAME)/$(PROJECTRELATIVE_PATH)
 
 # Object files for local .cc, .msg and .sm files
 OBJS = \
-    $O/myveins/MyVeinsApp.o \
     $O/myveins/TraCI.o \
     $O/myveins/TraCIDemo11p.o \
-    $O/myveins/TraCIDemoRSU11p.o \
+    $O/myveins/TraCIMobility.o \
+    $O/myveins/TraCIVehicleInserter.o \
     $O/myveins/TrafficLightApp.o \
     $O/myveins/TrafficLightTestLogic.o
 

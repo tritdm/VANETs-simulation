@@ -1,9 +1,9 @@
-file 3636 1681726085                                            
+file 4439 1685437111                                            
 version 3
-run withgui-0-20230417-17:07:49-22325
+run withgui-0-20230530-15:56:32-10663
 attr configname withgui
-attr datetime 20230417-17:07:49
-attr datetimef 20230417-170749
+attr datetime 20230530-15:56:32
+attr datetimef 20230530-155632
 attr experiment withgui
 attr inifile omnetpp.ini
 attr iterationvars ""
@@ -11,7 +11,7 @@ attr iterationvarsd ""
 attr iterationvarsf ""
 attr measurement ""
 attr network scenario
-attr processid 22325
+attr processid 10663
 attr repetition 0
 attr replication #0
 attr resultdir veins-runall-output
@@ -84,14 +84,26 @@ config *.node[*].veinsmobility.setHostSpeed true
 
 vector 0 scenario.node[0].veinsmobility posx ETV
 vector 1 scenario.node[0].veinsmobility posy ETV
-vector 2 scenario.node[1].veinsmobility posx ETV
-vector 3 scenario.node[1].veinsmobility posy ETV
-vector 4 scenario.node[0].veinsmobility speed ETV
-vector 5 scenario.node[1].veinsmobility speed ETV
-0	3464 35 11 72 1 2 2 27.6 57.868911527549 85.468911527549 4110.5709213833
-1	3499 26 11 72 1 2 2 76.65 76.65 153.3 11750.445
-2	3525 28 11 72 1 2 2 323.35 323.35 646.7 209110.445
-3	3553 36 11 72 1 2 2 34.85 56.181222047588 91.031222047588 4370.8522107604
-4	3589 23 72 72 2 2 1 30.268911527549 30.268911527549 30.268911527549 916.20700506257
-5	3612 23 72 72 2 2 1 21.331222047588 21.331222047588 21.331222047588 455.02103404351
+vector 2 scenario.node[0].veinsmobility speed ETV
+vector 3 scenario.node[1].veinsmobility posx ETV
+vector 4 scenario.node[1].veinsmobility posy ETV
+vector 5 scenario.node[0].veinsmobility acceleration ETV
+vector 6 scenario.node[0].veinsmobility co2emission ETV
+vector 7 scenario.node[1].veinsmobility speed ETV
+vector 8 scenario.node[2].veinsmobility posx ETV
+vector 9 scenario.node[2].veinsmobility posy ETV
+vector 10 scenario.node[1].veinsmobility acceleration ETV
+vector 11 scenario.node[1].veinsmobility co2emission ETV
+0	3790 72 11 201 1 5 5 131.03 131.03 655.15 85844.3045
+1	3862 108 11 201 1 5 5 185.16755509971 203.02 979.99106866927 192290.13315122
+2	3970 94 43 201 2 5 4 1.5889868666884 7.1733753402717 17.852444900293 97.921785236538
+3	4064 44 75 201 3 5 3 427.73 427.73 1283.19 548858.8587
+4	4108 61 75 201 3 5 3 124.45 129.5672247164 380.30265468268 48223.478042479
+5	4169 70 75 201 3 5 3 1.4827357839793 2.2911964192521 5.5843884735834 10.725838343543
+6	4239 71 75 201 3 5 3 2.7608631102024 4.5437881163169 11.358123082132 44.699009643499
+7	4310 48 138 201 4 5 2 1.8354299662868 3.2817947501084 5.1172247163951 14.138979942982
+8	4358 15 201 201 5 5 1 541.73 541.73 541.73 293471.3929
+9	4373 15 201 201 5 5 1 163.75 163.75 163.75 26814.0625
+10	4388 25 201 201 5 5 1 1.4463647838216 1.4463647838216 1.4463647838216 2.0919710878794
+11	4413 25 201 201 5 5 1 2.4155269947203 2.4155269947203 2.4155269947203 5.8347706622223
 

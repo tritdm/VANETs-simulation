@@ -1,39 +1,41 @@
-<!--
-// Copyright (C) 2011 Christoph Sommer <sommer@ccs-labs.org>
-//
-// Documentation for these modules is at http://veins.car2x.org/
-//
-// SPDX-License-Identifier: (GPL-2.0-or-later OR CC-BY-SA-4.0)
-//
-// This program is free software; you can redistribute it and/or modify
-// it under the terms of the GNU General Public License as published by
-// the Free Software Foundation; either version 2 of the License, or
-// (at your option) any later version.
-//
-// This program is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-//
-// You should have received a copy of the GNU General Public License
-// along with this program; if not, write to the Free Software
-// Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
-//
-// -
-//
-// At your option, you can also redistribute and/or modify this file
-// under a
-// Creative Commons Attribution-ShareAlike 4.0 International License.
-//
-// You should have received a copy of the license along with this
-// work.  If not, see <http://creativecommons.org/licenses/by-sa/4.0/>.
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2023-05-28 22:30:51 by Eclipse SUMO duarouter Version 1.17.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/duarouterConfiguration.xsd">
+
+    <input>
+        <net-file value="net.net.xml"/>
+        <route-files value="trips.trips.xml"/>
+    </input>
+
+    <output>
+        <output-file value="routes.rou.xml"/>
+    </output>
+
+    <report>
+        <ignore-errors value="true"/>
+    </report>
+
+</configuration>
 -->
 
-<routes>
-     <vType id="vtype0" accel="3" decel="9.81" width="1.8" height="1.5" sigma="0.5" length="2.5" minGap="2.5" maxSpeed="70"/>
-     <route id="route0" multi_ref="x" edges="25 28 31 34 37 40 43 46 49 52 55 "></route>
-     <flow id="flow0" type="vtype0" route="route0" begin="0" period="5" number="2" departSpeed="max"/>
-     <route id="route1" multi_ref="x" edges="67 6"></route>
-     <flow id="flow1" type="vtype0" route="route1" begin="0" period="5" number="2" departSpeed="max"/>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <vehicle id="0" depart="0.00">
+        <route edges="62 28 31 34 37 40 12"/>
+    </vehicle>
+    <vehicle id="2" depart="2.00">
+        <route edges="69 8 36 70"/>
+    </vehicle>
+    <vehicle id="4" depart="4.00">
+        <route edges="40 12"/>
+    </vehicle>
+    <vehicle id="5" depart="5.00">
+        <route edges="28 31 34 37 40 43 46 49 18 51"/>
+    </vehicle>
+    <vehicle id="7" depart="7.00">
+        <route edges="63 28 31 34 37 40 43 46 49 52 55"/>
+    </vehicle>
+    <vehicle id="8" depart="8.00">
+        <route edges="28 4 64"/>
+    </vehicle>
 </routes>
-

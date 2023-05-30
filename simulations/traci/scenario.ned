@@ -24,8 +24,8 @@ package test.simulations.traci;
 
 import org.car2x.veins.nodes.Scenario;
 import org.car2x.veins.nodes.TrafficLight;
-import org.car2x.veins.modules.mobility.traci.TraCIVehicleInserter;
-
+//import org.car2x.veins.modules.mobility.traci.TraCIVehicleInserter;
+import test.myveins.TraCIVehicleInserter;
 network scenario extends Scenario
 {
     submodules:

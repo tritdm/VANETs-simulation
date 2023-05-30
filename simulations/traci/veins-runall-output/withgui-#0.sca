@@ -1,8 +1,8 @@
 version 3
-run withgui-0-20230417-17:07:49-22325
+run withgui-0-20230530-15:56:32-10663
 attr configname withgui
-attr datetime 20230417-17:07:49
-attr datetimef 20230417-170749
+attr datetime 20230530-15:56:32
+attr datetimef 20230530-155632
 attr experiment withgui
 attr inifile omnetpp.ini
 attr iterationvars ""
@@ -10,7 +10,7 @@ attr iterationvarsd ""
 attr iterationvarsf ""
 attr measurement ""
 attr network scenario
-attr processid 22325
+attr processid 10663
 attr repetition 0
 attr replication #0
 attr resultdir veins-runall-output
@@ -132,7 +132,7 @@ par scenario.roadsCanvasVisualizer lineZIndex -1
 par scenario.roadsCanvasVisualizer lineColor "\"firebrick4\""
 par scenario.roadsCanvasVisualizer lineWidth 1
 par scenario.roadsCanvasVisualizer lineWidthZoom false
-par scenario.TraCIVehicleInserter typename "\"org.car2x.veins.modules.mobility.traci.TraCIVehicleInserter\""
+par scenario.TraCIVehicleInserter typename "\"test.myveins.TraCIVehicleInserter\""
 par scenario.TraCIVehicleInserter numVehicles 0
 par scenario.TraCIVehicleInserter useRouteDistributions false
 par scenario.TraCIVehicleInserter vehicleRngIndex 0
@@ -158,8 +158,8 @@ attr unit s
 par scenario.node[0].appl appName "\"My first Veins App!\""
 scalar scenario.node[0].appl generatedWSMs 0
 scalar scenario.node[0].appl receivedWSMs 0
-scalar scenario.node[0].appl generatedBSMs 2
-scalar scenario.node[0].appl receivedBSMs 0
+scalar scenario.node[0].appl generatedBSMs 4
+scalar scenario.node[0].appl receivedBSMs 4
 scalar scenario.node[0].appl generatedWSAs 0
 scalar scenario.node[0].appl receivedWSAs 0
 par scenario.node[0].nic.phy80211p typename "\"org.car2x.veins.modules.phy.PhyLayer80211p\""
@@ -202,7 +202,7 @@ par scenario.node[0].nic.phy80211p ccaThreshold -65dBm
 attr unit dBm
 par scenario.node[0].nic.phy80211p collectCollisionStatistics false
 par scenario.node[0].nic.phy80211p allowTxDuringRx false
-scalar scenario.node[0].nic.phy80211p busyTime 7.8838525088014e-05
+scalar scenario.node[0].nic.phy80211p busyTime 0.00010610266780034
 par scenario.node[0].nic.mac1609_4 typename "\"org.car2x.veins.modules.mac.ieee80211p.Mac1609_4\""
 par scenario.node[0].nic.mac1609_4 notAffectedByHostState false
 par scenario.node[0].nic.mac1609_4 headerLength 0bit
@@ -227,32 +227,32 @@ par scenario.node[0].nic.mac1609_4 useAcks false
 par scenario.node[0].nic.mac1609_4 frameErrorRate 0
 par scenario.node[0].nic.mac1609_4 ackErrorRate 0
 scalar scenario.node[0].nic.mac1609_4 ReceivedUnicastPackets 0
-scalar scenario.node[0].nic.mac1609_4 ReceivedBroadcasts 0
-scalar scenario.node[0].nic.mac1609_4 SentPackets 2
+scalar scenario.node[0].nic.mac1609_4 ReceivedBroadcasts 4
+scalar scenario.node[0].nic.mac1609_4 SentPackets 4
 scalar scenario.node[0].nic.mac1609_4 SentAcknowledgements 0
 scalar scenario.node[0].nic.mac1609_4 RetriesExceeded 0
-scalar scenario.node[0].nic.mac1609_4 SNIRLostPackets 2
+scalar scenario.node[0].nic.mac1609_4 SNIRLostPackets 3
 scalar scenario.node[0].nic.mac1609_4 RXTXLostPackets 0
-scalar scenario.node[0].nic.mac1609_4 TotalLostPackets 2
+scalar scenario.node[0].nic.mac1609_4 TotalLostPackets 3
 scalar scenario.node[0].nic.mac1609_4 DroppedPacketsInMac 0
 scalar scenario.node[0].nic.mac1609_4 TooLittleTime 0
-scalar scenario.node[0].nic.mac1609_4 TimesIntoBackoff 1
-scalar scenario.node[0].nic.mac1609_4 SlotsBackoff 0
+scalar scenario.node[0].nic.mac1609_4 TimesIntoBackoff 4
+scalar scenario.node[0].nic.mac1609_4 SlotsBackoff 9
 scalar scenario.node[0].nic.mac1609_4 NumInternalContention 0
-scalar scenario.node[0].nic.mac1609_4 totalBusyTime 0.000193
+scalar scenario.node[0].nic.mac1609_4 totalBusyTime 0.000708
 scalar scenario.node[0].nic.mac1609_4 retriesExceeded:count 0
 attr recordingmode count
 attr source org_car2x_veins_modules_mac_sigRetriesExceeded
 scalar scenario.node[0].nic.mac1609_4 sentAcks:count 0
 attr recordingmode count
 attr source org_car2x_veins_modules_mac_sigSentAck
-scalar scenario.node[0].nic.mac1609_4 sentPackets:count 2
+scalar scenario.node[0].nic.mac1609_4 sentPackets:count 4
 attr recordingmode count
 attr source org_car2x_veins_modules_mac_sigSentPacket
 scalar scenario.node[0].nic.mac1609_4 collisions:count 0
 attr recordingmode count
 attr source org_car2x_veins_modules_mac_sigCollision
-scalar scenario.node[0].nic.mac1609_4 channelBusy:timeavg 0.00011999969527939
+scalar scenario.node[0].nic.mac1609_4 channelBusy:timeavg 0.00016768010893447
 attr recordingmode timeavg
 attr source org_car2x_veins_modules_mac_sigChannelBusy
 par scenario.node[0].nic typename "\"org.car2x.veins.modules.nic.Nic80211p\""
@@ -276,12 +276,12 @@ attr unit s
 par scenario.node[0].veinsmobility accidentInterval "uniform(30s, 60s)"
 attr unit s
 scalar scenario.node[0].veinsmobility startTime 1
-scalar scenario.node[0].veinsmobility totalTime 1
-scalar scenario.node[0].veinsmobility stopTime 2.623571722798
-scalar scenario.node[0].veinsmobility minSpeed 30.268911527549
-scalar scenario.node[0].veinsmobility maxSpeed 30.268911527549
-scalar scenario.node[0].veinsmobility totalDistance 30.268911527549
-scalar scenario.node[0].veinsmobility totalCO2Emission 0
+scalar scenario.node[0].veinsmobility totalTime 4
+scalar scenario.node[0].veinsmobility stopTime 5.222325501212
+scalar scenario.node[0].veinsmobility minSpeed 1.5889868666884
+scalar scenario.node[0].veinsmobility maxSpeed 7.1733753402717
+scalar scenario.node[0].veinsmobility totalDistance 17.852444900293
+scalar scenario.node[0].veinsmobility totalCO2Emission 11.358123082132
 par scenario.node[0] typename "\"org.car2x.veins.nodes.Car\""
 par scenario.node[0] applType "\"test.myveins.TraCI\""
 par scenario.node[0] nicType "\"Nic80211p\""
@@ -308,8 +308,8 @@ attr unit s
 par scenario.node[1].appl appName "\"My first Veins App!\""
 scalar scenario.node[1].appl generatedWSMs 0
 scalar scenario.node[1].appl receivedWSMs 0
-scalar scenario.node[1].appl generatedBSMs 1
-scalar scenario.node[1].appl receivedBSMs 1
+scalar scenario.node[1].appl generatedBSMs 3
+scalar scenario.node[1].appl receivedBSMs 2
 scalar scenario.node[1].appl generatedWSAs 0
 scalar scenario.node[1].appl receivedWSAs 0
 par scenario.node[1].nic.phy80211p typename "\"org.car2x.veins.modules.phy.PhyLayer80211p\""
@@ -352,7 +352,7 @@ par scenario.node[1].nic.phy80211p ccaThreshold -65dBm
 attr unit dBm
 par scenario.node[1].nic.phy80211p collectCollisionStatistics false
 par scenario.node[1].nic.phy80211p allowTxDuringRx false
-scalar scenario.node[1].nic.phy80211p busyTime 0.00011825778763202
+scalar scenario.node[1].nic.phy80211p busyTime 0.00011519464626599
 par scenario.node[1].nic.mac1609_4 typename "\"org.car2x.veins.modules.mac.ieee80211p.Mac1609_4\""
 par scenario.node[1].nic.mac1609_4 notAffectedByHostState false
 par scenario.node[1].nic.mac1609_4 headerLength 0bit
@@ -377,32 +377,32 @@ par scenario.node[1].nic.mac1609_4 useAcks false
 par scenario.node[1].nic.mac1609_4 frameErrorRate 0
 par scenario.node[1].nic.mac1609_4 ackErrorRate 0
 scalar scenario.node[1].nic.mac1609_4 ReceivedUnicastPackets 0
-scalar scenario.node[1].nic.mac1609_4 ReceivedBroadcasts 1
-scalar scenario.node[1].nic.mac1609_4 SentPackets 1
+scalar scenario.node[1].nic.mac1609_4 ReceivedBroadcasts 2
+scalar scenario.node[1].nic.mac1609_4 SentPackets 3
 scalar scenario.node[1].nic.mac1609_4 SentAcknowledgements 0
 scalar scenario.node[1].nic.mac1609_4 RetriesExceeded 0
-scalar scenario.node[1].nic.mac1609_4 SNIRLostPackets 1
+scalar scenario.node[1].nic.mac1609_4 SNIRLostPackets 2
 scalar scenario.node[1].nic.mac1609_4 RXTXLostPackets 0
-scalar scenario.node[1].nic.mac1609_4 TotalLostPackets 1
+scalar scenario.node[1].nic.mac1609_4 TotalLostPackets 2
 scalar scenario.node[1].nic.mac1609_4 DroppedPacketsInMac 0
 scalar scenario.node[1].nic.mac1609_4 TooLittleTime 0
-scalar scenario.node[1].nic.mac1609_4 TimesIntoBackoff 1
-scalar scenario.node[1].nic.mac1609_4 SlotsBackoff 1
+scalar scenario.node[1].nic.mac1609_4 TimesIntoBackoff 3
+scalar scenario.node[1].nic.mac1609_4 SlotsBackoff 0
 scalar scenario.node[1].nic.mac1609_4 NumInternalContention 0
-scalar scenario.node[1].nic.mac1609_4 totalBusyTime 0.000193
+scalar scenario.node[1].nic.mac1609_4 totalBusyTime 0.000451
 scalar scenario.node[1].nic.mac1609_4 retriesExceeded:count 0
 attr recordingmode count
 attr source org_car2x_veins_modules_mac_sigRetriesExceeded
 scalar scenario.node[1].nic.mac1609_4 sentAcks:count 0
 attr recordingmode count
 attr source org_car2x_veins_modules_mac_sigSentAck
-scalar scenario.node[1].nic.mac1609_4 sentPackets:count 1
+scalar scenario.node[1].nic.mac1609_4 sentPackets:count 3
 attr recordingmode count
 attr source org_car2x_veins_modules_mac_sigSentPacket
 scalar scenario.node[1].nic.mac1609_4 collisions:count 0
 attr recordingmode count
 attr source org_car2x_veins_modules_mac_sigCollision
-scalar scenario.node[1].nic.mac1609_4 channelBusy:timeavg 0.0001188769010262
+scalar scenario.node[1].nic.mac1609_4 channelBusy:timeavg 0.00020294056822641
 attr recordingmode timeavg
 attr source org_car2x_veins_modules_mac_sigChannelBusy
 par scenario.node[1].nic typename "\"org.car2x.veins.modules.nic.Nic80211p\""
@@ -419,23 +419,171 @@ par scenario.node[1].veinsmobility hostPositionOffset 0m
 attr unit m
 par scenario.node[1].veinsmobility setHostSpeed true
 par scenario.node[1].veinsmobility accidentCount 0
-par scenario.node[1].veinsmobility accidentStart 49.3768s
+par scenario.node[1].veinsmobility accidentStart 57.7679s
 attr unit s
 par scenario.node[1].veinsmobility accidentDuration "uniform(30s, 60s)"
 attr unit s
 par scenario.node[1].veinsmobility accidentInterval "uniform(30s, 60s)"
 attr unit s
-scalar scenario.node[1].veinsmobility startTime 1
-scalar scenario.node[1].veinsmobility totalTime 1
-scalar scenario.node[1].veinsmobility stopTime 2.623571722798
-scalar scenario.node[1].veinsmobility minSpeed 21.331222047588
-scalar scenario.node[1].veinsmobility maxSpeed 21.331222047588
-scalar scenario.node[1].veinsmobility totalDistance 21.331222047588
-scalar scenario.node[1].veinsmobility totalCO2Emission 0
+scalar scenario.node[1].veinsmobility startTime 3
+scalar scenario.node[1].veinsmobility totalTime 2
+scalar scenario.node[1].veinsmobility stopTime 5.222325501212
+scalar scenario.node[1].veinsmobility minSpeed 1.8354299662868
+scalar scenario.node[1].veinsmobility maxSpeed 3.2817947501084
+scalar scenario.node[1].veinsmobility totalDistance 5.1172247163952
+scalar scenario.node[1].veinsmobility totalCO2Emission 2.4155269947203
 par scenario.node[1] typename "\"org.car2x.veins.nodes.Car\""
 par scenario.node[1] applType "\"test.myveins.TraCI\""
 par scenario.node[1] nicType "\"Nic80211p\""
 par scenario.node[1] veinsmobilityType "\"org.car2x.veins.modules.mobility.traci.TraCIMobility\""
+par scenario.node[2].appl typename "\"test.myveins.TraCI\""
+par scenario.node[2].appl headerLength 80bit
+attr unit bit
+par scenario.node[2].appl sendBeacons true
+par scenario.node[2].appl beaconLengthBits 256bit
+attr unit bit
+par scenario.node[2].appl beaconUserPriority 7
+par scenario.node[2].appl beaconInterval 1s
+attr unit s
+par scenario.node[2].appl dataLengthBits 1024bit
+attr unit bit
+par scenario.node[2].appl dataOnSch false
+par scenario.node[2].appl dataUserPriority 7
+par scenario.node[2].appl avoidBeaconSynchronization true
+par scenario.node[2].appl sendWSA false
+par scenario.node[2].appl wsaLengthBits 250bit
+attr unit bit
+par scenario.node[2].appl wsaInterval 1s
+attr unit s
+par scenario.node[2].appl appName "\"My first Veins App!\""
+scalar scenario.node[2].appl generatedWSMs 0
+scalar scenario.node[2].appl receivedWSMs 0
+scalar scenario.node[2].appl generatedBSMs 1
+scalar scenario.node[2].appl receivedBSMs 1
+scalar scenario.node[2].appl generatedWSAs 0
+scalar scenario.node[2].appl receivedWSAs 0
+par scenario.node[2].nic.phy80211p typename "\"org.car2x.veins.modules.phy.PhyLayer80211p\""
+par scenario.node[2].nic.phy80211p recordStats false
+par scenario.node[2].nic.phy80211p usePropagationDelay true
+par scenario.node[2].nic.phy80211p noiseFloor -98dBm
+attr unit dBm
+par scenario.node[2].nic.phy80211p useNoiseFloor true
+par scenario.node[2].nic.phy80211p antenna "<root>...</root> at content:1"
+par scenario.node[2].nic.phy80211p antennaOffsetX 0m
+attr unit m
+par scenario.node[2].nic.phy80211p antennaOffsetY 0m
+attr unit m
+par scenario.node[2].nic.phy80211p antennaOffsetZ 1.895m
+attr unit m
+par scenario.node[2].nic.phy80211p antennaOffsetYaw 0rad
+attr unit rad
+par scenario.node[2].nic.phy80211p analogueModels "<root>...</root> at /home/mike/Documents/dsrc_cv2x/omnetpp-6.0/samples/test/simulations/traci//config.xml:34"
+par scenario.node[2].nic.phy80211p decider "<root>...</root> at /home/mike/Documents/dsrc_cv2x/omnetpp-6.0/samples/test/simulations/traci//config.xml:34"
+par scenario.node[2].nic.phy80211p minPowerLevel -110dBm
+attr unit dBm
+par scenario.node[2].nic.phy80211p timeRXToTX 0s
+attr unit s
+par scenario.node[2].nic.phy80211p timeRXToSleep 0s
+attr unit s
+par scenario.node[2].nic.phy80211p timeTXToRX 0s
+attr unit s
+par scenario.node[2].nic.phy80211p timeTXToSleep 0s
+attr unit s
+par scenario.node[2].nic.phy80211p timeSleepToRX 0s
+attr unit s
+par scenario.node[2].nic.phy80211p timeSleepToTX 0s
+attr unit s
+par scenario.node[2].nic.phy80211p initialRadioState 0
+par scenario.node[2].nic.phy80211p radioMinAtt 1
+par scenario.node[2].nic.phy80211p radioMaxAtt 0
+par scenario.node[2].nic.phy80211p nbRadioChannels 1
+par scenario.node[2].nic.phy80211p initialRadioChannel 0
+par scenario.node[2].nic.phy80211p ccaThreshold -65dBm
+attr unit dBm
+par scenario.node[2].nic.phy80211p collectCollisionStatistics false
+par scenario.node[2].nic.phy80211p allowTxDuringRx false
+scalar scenario.node[2].nic.phy80211p busyTime 0.00028786621260767
+par scenario.node[2].nic.mac1609_4 typename "\"org.car2x.veins.modules.mac.ieee80211p.Mac1609_4\""
+par scenario.node[2].nic.mac1609_4 notAffectedByHostState false
+par scenario.node[2].nic.mac1609_4 headerLength 0bit
+attr unit bit
+par scenario.node[2].nic.mac1609_4 address "\"auto\""
+par scenario.node[2].nic.mac1609_4 useServiceChannel false
+par scenario.node[2].nic.mac1609_4 serviceChannel 1
+par scenario.node[2].nic.mac1609_4 bitrate 18000000bps
+attr unit bps
+par scenario.node[2].nic.mac1609_4 syncOffset 0.0003s
+attr unit s
+par scenario.node[2].nic.mac1609_4 txPower 20mW
+attr unit mW
+par scenario.node[2].nic.mac1609_4 queueSize 0
+par scenario.node[2].nic.mac1609_4 dot11RTSThreshold 12000bit
+attr unit bit
+par scenario.node[2].nic.mac1609_4 dot11ShortRetryLimit 7
+par scenario.node[2].nic.mac1609_4 dot11LongRetryLimit 4
+par scenario.node[2].nic.mac1609_4 ackLength 112bit
+attr unit bit
+par scenario.node[2].nic.mac1609_4 useAcks false
+par scenario.node[2].nic.mac1609_4 frameErrorRate 0
+par scenario.node[2].nic.mac1609_4 ackErrorRate 0
+scalar scenario.node[2].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar scenario.node[2].nic.mac1609_4 ReceivedBroadcasts 1
+scalar scenario.node[2].nic.mac1609_4 SentPackets 1
+scalar scenario.node[2].nic.mac1609_4 SentAcknowledgements 0
+scalar scenario.node[2].nic.mac1609_4 RetriesExceeded 0
+scalar scenario.node[2].nic.mac1609_4 SNIRLostPackets 0
+scalar scenario.node[2].nic.mac1609_4 RXTXLostPackets 0
+scalar scenario.node[2].nic.mac1609_4 TotalLostPackets 0
+scalar scenario.node[2].nic.mac1609_4 DroppedPacketsInMac 0
+scalar scenario.node[2].nic.mac1609_4 TooLittleTime 0
+scalar scenario.node[2].nic.mac1609_4 TimesIntoBackoff 0
+scalar scenario.node[2].nic.mac1609_4 SlotsBackoff 0
+scalar scenario.node[2].nic.mac1609_4 NumInternalContention 0
+scalar scenario.node[2].nic.mac1609_4 totalBusyTime 6.4e-05
+scalar scenario.node[2].nic.mac1609_4 retriesExceeded:count 0
+attr recordingmode count
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar scenario.node[2].nic.mac1609_4 sentAcks:count 0
+attr recordingmode count
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar scenario.node[2].nic.mac1609_4 sentPackets:count 1
+attr recordingmode count
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar scenario.node[2].nic.mac1609_4 collisions:count 0
+attr recordingmode count
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar scenario.node[2].nic.mac1609_4 channelBusy:timeavg 0.00029251791470375
+attr recordingmode timeavg
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+par scenario.node[2].nic typename "\"org.car2x.veins.modules.nic.Nic80211p\""
+par scenario.node[2].nic connectionManagerName "\"connectionManager\""
+par scenario.node[2].veinsmobility typename "\"org.car2x.veins.modules.mobility.traci.TraCIMobility\""
+par scenario.node[2].veinsmobility notAffectedByHostState true
+par scenario.node[2].veinsmobility x 0
+par scenario.node[2].veinsmobility y 0
+par scenario.node[2].veinsmobility z 0
+par scenario.node[2].veinsmobility xOrientation 1
+par scenario.node[2].veinsmobility yOrientation 0
+par scenario.node[2].veinsmobility zOrientation 0
+par scenario.node[2].veinsmobility hostPositionOffset 0m
+attr unit m
+par scenario.node[2].veinsmobility setHostSpeed true
+par scenario.node[2].veinsmobility accidentCount 0
+par scenario.node[2].veinsmobility accidentStart 39.7242s
+attr unit s
+par scenario.node[2].veinsmobility accidentDuration "uniform(30s, 60s)"
+attr unit s
+par scenario.node[2].veinsmobility accidentInterval "uniform(30s, 60s)"
+attr unit s
+scalar scenario.node[2].veinsmobility startTime 5
+scalar scenario.node[2].veinsmobility totalTime 0
+scalar scenario.node[2].veinsmobility stopTime 5.222325501212
+scalar scenario.node[2].veinsmobility totalDistance 0
+scalar scenario.node[2].veinsmobility totalCO2Emission 0
+par scenario.node[2] typename "\"org.car2x.veins.nodes.Car\""
+par scenario.node[2] applType "\"test.myveins.TraCI\""
+par scenario.node[2] nicType "\"Nic80211p\""
+par scenario.node[2] veinsmobilityType "\"org.car2x.veins.modules.mobility.traci.TraCIMobility\""
 par scenario.trafficLight[0].appl typename "\"test.myveins.TrafficLightApp\""
 par scenario.trafficLight[0].appl headerLength 80bit
 attr unit bit
@@ -459,8 +607,8 @@ par scenario.trafficLight[0].appl aggregationInterval 1s
 attr unit s
 scalar scenario.trafficLight[0].appl generatedWSMs 0
 scalar scenario.trafficLight[0].appl receivedWSMs 0
-scalar scenario.trafficLight[0].appl generatedBSMs 2
-scalar scenario.trafficLight[0].appl receivedBSMs 1
+scalar scenario.trafficLight[0].appl generatedBSMs 5
+scalar scenario.trafficLight[0].appl receivedBSMs 7
 scalar scenario.trafficLight[0].appl generatedWSAs 0
 scalar scenario.trafficLight[0].appl receivedWSAs 0
 par scenario.trafficLight[0].nic.phy80211p typename "\"org.car2x.veins.modules.phy.PhyLayer80211p\""
@@ -503,7 +651,7 @@ par scenario.trafficLight[0].nic.phy80211p ccaThreshold -65dBm
 attr unit dBm
 par scenario.trafficLight[0].nic.phy80211p collectCollisionStatistics false
 par scenario.trafficLight[0].nic.phy80211p allowTxDuringRx false
-scalar scenario.trafficLight[0].nic.phy80211p busyTime 7.3182676246882e-05
+scalar scenario.trafficLight[0].nic.phy80211p busyTime 8.5785537476748e-05
 par scenario.trafficLight[0].nic.mac1609_4 typename "\"org.car2x.veins.modules.mac.ieee80211p.Mac1609_4\""
 par scenario.trafficLight[0].nic.mac1609_4 notAffectedByHostState false
 par scenario.trafficLight[0].nic.mac1609_4 headerLength 0bit
@@ -528,32 +676,32 @@ par scenario.trafficLight[0].nic.mac1609_4 useAcks false
 par scenario.trafficLight[0].nic.mac1609_4 frameErrorRate 0
 par scenario.trafficLight[0].nic.mac1609_4 ackErrorRate 0
 scalar scenario.trafficLight[0].nic.mac1609_4 ReceivedUnicastPackets 0
-scalar scenario.trafficLight[0].nic.mac1609_4 ReceivedBroadcasts 1
-scalar scenario.trafficLight[0].nic.mac1609_4 SentPackets 2
+scalar scenario.trafficLight[0].nic.mac1609_4 ReceivedBroadcasts 7
+scalar scenario.trafficLight[0].nic.mac1609_4 SentPackets 5
 scalar scenario.trafficLight[0].nic.mac1609_4 SentAcknowledgements 0
 scalar scenario.trafficLight[0].nic.mac1609_4 RetriesExceeded 0
-scalar scenario.trafficLight[0].nic.mac1609_4 SNIRLostPackets 1
+scalar scenario.trafficLight[0].nic.mac1609_4 SNIRLostPackets 0
 scalar scenario.trafficLight[0].nic.mac1609_4 RXTXLostPackets 0
-scalar scenario.trafficLight[0].nic.mac1609_4 TotalLostPackets 1
+scalar scenario.trafficLight[0].nic.mac1609_4 TotalLostPackets 0
 scalar scenario.trafficLight[0].nic.mac1609_4 DroppedPacketsInMac 0
 scalar scenario.trafficLight[0].nic.mac1609_4 TooLittleTime 0
-scalar scenario.trafficLight[0].nic.mac1609_4 TimesIntoBackoff 2
-scalar scenario.trafficLight[0].nic.mac1609_4 SlotsBackoff 5
+scalar scenario.trafficLight[0].nic.mac1609_4 TimesIntoBackoff 5
+scalar scenario.trafficLight[0].nic.mac1609_4 SlotsBackoff 12
 scalar scenario.trafficLight[0].nic.mac1609_4 NumInternalContention 0
-scalar scenario.trafficLight[0].nic.mac1609_4 totalBusyTime 0.000258
+scalar scenario.trafficLight[0].nic.mac1609_4 totalBusyTime 0.000773
 scalar scenario.trafficLight[0].nic.mac1609_4 retriesExceeded:count 0
 attr recordingmode count
 attr source org_car2x_veins_modules_mac_sigRetriesExceeded
 scalar scenario.trafficLight[0].nic.mac1609_4 sentAcks:count 0
 attr recordingmode count
 attr source org_car2x_veins_modules_mac_sigSentAck
-scalar scenario.trafficLight[0].nic.mac1609_4 sentPackets:count 2
+scalar scenario.trafficLight[0].nic.mac1609_4 sentPackets:count 5
 attr recordingmode count
 attr source org_car2x_veins_modules_mac_sigSentPacket
 scalar scenario.trafficLight[0].nic.mac1609_4 collisions:count 0
 attr recordingmode count
 attr source org_car2x_veins_modules_mac_sigCollision
-scalar scenario.trafficLight[0].nic.mac1609_4 channelBusy:timeavg 9.8339221206747e-05
+scalar scenario.trafficLight[0].nic.mac1609_4 channelBusy:timeavg 0.00014801834926234
 attr recordingmode timeavg
 attr source org_car2x_veins_modules_mac_sigChannelBusy
 par scenario.trafficLight[0].nic typename "\"org.car2x.veins.modules.nic.Nic80211p\""

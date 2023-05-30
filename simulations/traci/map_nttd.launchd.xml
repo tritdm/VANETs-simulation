@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<!-- caotoc.launchd.xml -->
+
+<launch>
+    <copy file="map_nttd.net.xml" />
+    <copy file="map_nttd.rou.xml" />
+    <copy file="map_nttd.sumo.cfg" type="config" />
+</launch>

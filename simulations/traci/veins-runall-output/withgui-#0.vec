@@ -1,8 +1,8 @@
 version 3
-run withgui-0-20230417-17:07:49-22325
+run withgui-0-20230530-15:56:32-10663
 attr configname withgui
-attr datetime 20230417-17:07:49
-attr datetimef 20230417-170749
+attr datetime 20230530-15:56:32
+attr datetimef 20230530-155632
 attr experiment withgui
 attr inifile omnetpp.ini
 attr iterationvars ""
@@ -10,7 +10,7 @@ attr iterationvarsd ""
 attr iterationvarsf ""
 attr measurement ""
 attr network scenario
-attr processid 22325
+attr processid 10663
 attr repetition 0
 attr replication #0
 attr resultdir veins-runall-output
@@ -83,18 +83,46 @@ config *.node[*].veinsmobility.setHostSpeed true
 
 vector 0 scenario.node[0].veinsmobility posx ETV
 vector 1 scenario.node[0].veinsmobility posy ETV
-vector 2 scenario.node[1].veinsmobility posx ETV
-vector 3 scenario.node[1].veinsmobility posy ETV
-vector 4 scenario.node[0].veinsmobility speed ETV
-vector 5 scenario.node[1].veinsmobility speed ETV
-0	11	1	27.6
-0	72	2	57.868911527549
-1	11	1	76.65
-1	72	2	76.65
-2	11	1	323.35
-2	72	2	323.35
-3	11	1	34.85
-3	72	2	56.181222047588
-4	72	2	30.268911527549
-5	72	2	21.331222047588
+vector 2 scenario.node[0].veinsmobility speed ETV
+vector 3 scenario.node[1].veinsmobility posx ETV
+vector 4 scenario.node[1].veinsmobility posy ETV
+vector 5 scenario.node[0].veinsmobility acceleration ETV
+vector 6 scenario.node[0].veinsmobility co2emission ETV
+vector 7 scenario.node[1].veinsmobility speed ETV
+vector 8 scenario.node[2].veinsmobility posx ETV
+vector 9 scenario.node[2].veinsmobility posy ETV
+vector 10 scenario.node[1].veinsmobility acceleration ETV
+vector 11 scenario.node[1].veinsmobility co2emission ETV
+0	11	1	131.03
+0	43	2	131.03
+0	75	3	131.03
+0	138	4	131.03
+0	201	5	131.03
+1	11	1	203.02
+1	43	2	201.43101313331
+1	75	3	198.03156999627
+1	138	4	192.34093043998
+1	201	5	185.16755509971
+2	43	2	1.5889868666884
+2	75	3	3.3994431370404
+2	138	4	5.6906395562924
+2	201	5	7.1733753402717
+3	75	3	427.73
+3	138	4	427.73
+3	201	5	427.73
+4	75	3	124.45
+4	138	4	126.28542996629
+4	201	5	129.5672247164
+5	75	3	1.810456270352
+5	138	4	2.2911964192521
+5	201	5	1.4827357839793
+6	75	3	2.7608631102024
+6	138	4	4.5437881163169
+6	201	5	4.0534718556122
+7	138	4	1.8354299662868
+7	201	5	3.2817947501084
+8	201	5	541.73
+9	201	5	163.75
+10	201	5	1.4463647838216
+11	201	5	2.4155269947203
 

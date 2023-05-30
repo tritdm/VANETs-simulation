@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2023-05-28 22:11:45 by Eclipse SUMO duarouter Version 1.16.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/duarouterConfiguration.xsd">
+
+    <input>
+        <net-file value="map_nttd.net.xml"/>
+        <route-files value="map_nttd.trips.xml"/>
+    </input>
+
+    <output>
+        <output-file value="map_nttd.rou.xml"/>
+    </output>
+
+</configuration>
+-->
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <vehicle id="0" depart="0.00">
+        <route edges="-995149094 224456766#2 224456766#3 -1007861095 771564456#0 771564458#0"/>
+    </vehicle>
+    <vehicle id="1" depart="0.00">
+        <route edges="224456768 -224456768 224456766#3 224456766#4 224456766#1 1107051509 32577232 608169580 409071185#0 409071185#1 -32575820#0"/>
+    </vehicle>
+    <vehicle id="2" depart="0.00">
+        <route edges="1015442479#0 1015442479#0-AddedOffRampEdge 1015442479#4 1007861094 1007861095 224456766#4 224456766#1 1107051509 408229568 1057552170#0 1057552170#1 1073706930#0 408250489 802338945 330532340#1 191937850#1 191937830 606240979 218227253#2 606240976 722058130-AddedOnRampEdge 722058130 722058129 722059135"/>
+    </vehicle>
+    <vehicle id="3" depart="0.00">
+        <route edges="330532348 719482082#0 719482082#1 503156448 722554728#1 720360985 722556035#0 722556035#1 720360986#0 723249849#3 1137128326 719482084#2 719482084#3 719482084#4-AddedOnRampEdge 719482084#4 719462303 719462304 404368568"/>
+    </vehicle>
+    <vehicle id="4" depart="0.00">
+        <route edges="722051476 722051475 32899405 211835012 722058130-AddedOnRampEdge 722058130 722058129 722059135"/>
+    </vehicle>
+    <vehicle id="5" depart="0.00">
+        <route edges="191937846 -191937846 -722357075 723249849#0 723249849#1 723249849#2 723249849#3 1137128326 720361263 191937819#1 191937819#2 -330532340#1 -330532340#0 802338943#0 -1073706930#1 -1057552170#1 -1057552170#0 -408229568 -995149094 224456766#2 224456766#3 -1007861095 771564456#0 771564458#0"/>
+    </vehicle>
+</routes>
