@@ -1,8 +1,8 @@
-../out/gcc-release/src/myveins/TraCI.o: myveins/TraCI.cc myveins/TraCI.h \
+../out/gcc-release/src/myveins/DemoBaseApplLayer.o: \
+ myveins/DemoBaseApplLayer.cc myveins/DemoBaseApplLayer.h \
+ /home/mike/Documents/dsrc_cv2x/veins-veins-5.2/src/veins/base/modules/BaseApplLayer.h \
  /home/mike/Documents/dsrc_cv2x/veins-veins-5.2/src/veins/veins.h \
  /home/mike/Documents/dsrc_cv2x/omnetpp-6.0/include/omnetpp.h \
- myveins/DemoBaseApplLayer.h \
- /home/mike/Documents/dsrc_cv2x/veins-veins-5.2/src/veins/base/modules/BaseApplLayer.h \
  /home/mike/Documents/dsrc_cv2x/veins-veins-5.2/src/veins/base/modules/BaseLayer.h \
  /home/mike/Documents/dsrc_cv2x/veins-veins-5.2/src/veins/base/modules/BatteryAccess.h \
  /home/mike/Documents/dsrc_cv2x/veins-veins-5.2/src/veins/base/modules/BaseModule.h \
@@ -52,15 +52,13 @@
  /home/mike/Documents/dsrc_cv2x/veins-veins-5.2/src/veins/modules/mobility/traci/TraCICommandInterface.h \
  /home/mike/Documents/dsrc_cv2x/veins-veins-5.2/src/veins/modules/world/traci/trafficLight/TraCITrafficLightProgram.h
 
-myveins/TraCI.h:
+myveins/DemoBaseApplLayer.h:
+
+/home/mike/Documents/dsrc_cv2x/veins-veins-5.2/src/veins/base/modules/BaseApplLayer.h:
 
 /home/mike/Documents/dsrc_cv2x/veins-veins-5.2/src/veins/veins.h:
 
 /home/mike/Documents/dsrc_cv2x/omnetpp-6.0/include/omnetpp.h:
-
-myveins/DemoBaseApplLayer.h:
-
-/home/mike/Documents/dsrc_cv2x/veins-veins-5.2/src/veins/base/modules/BaseApplLayer.h:
 
 /home/mike/Documents/dsrc_cv2x/veins-veins-5.2/src/veins/base/modules/BaseLayer.h:
 

@@ -22,7 +22,7 @@
 
 #include "TrafficLightApp.h"
 
-#include "veins/modules/messages/DemoSafetyMessage_m.h"
+#include "DemoSafetyMessage_m.h"
 
 #include "veins/modules/application/traci/TraCIDemo11pMessage_m.h"
 
@@ -32,14 +32,27 @@ Define_Module(TrafficLightApp);
 
 void TrafficLightApp::onBSM(DemoSafetyMessage* bsm)
 {
-    EV << bsm->getSenderPos() << " " << bsm->getSenderSpeed().length() << endl;
+    simtime_t currTime = simTime();
+    avrSpeed += bsm->getSenderSpeedInDouble();
+    vehNum ++;
+    EV << currTime - lastTime << endl;
+    EV << "Speed of " << "bsm->getSenderID()" << " is: " << bsm->getSenderSpeedInDouble() << endl;
+    EV << "Position of " << bsm->getSenderPos().x << " " << bsm->getSenderPos().y << endl;
+    EV << "Direction of " << bsm->getSenderSpeed().x << " " << bsm->getSenderSpeed().y << endl;
+    if (currTime - lastTime >= 0.99)
+    {
+        avrSpeed /= vehNum;
+        EV << "Average speed in last 1s: " << avrSpeed << endl;
+        avrSpeed = 0;
+        vehNum = 0;
+        lastTime = currTime;
+    }
     // Your application has received a beacon message from another car or RSU
     // code for handling the message goes here
 }
 
 void TrafficLightApp::onWSA(DemoServiceAdvertisment* wsa)
 {
-    EV << "5555";
     // if this RSU receives a WSA for service 42, it will tune to the chan
     if (wsa->getPsid() == 42) {
         mac->changeServiceChannel(static_cast<Channel>(wsa->getTargetChannel()));
@@ -48,7 +61,6 @@ void TrafficLightApp::onWSA(DemoServiceAdvertisment* wsa)
 
 void TrafficLightApp::onWSM(BaseFrame1609_4* frame)
 {
-    EV << "6666";
     TraCIDemo11pMessage* wsm = check_and_cast<TraCIDemo11pMessage*>(frame);
     // this rsu repeats the received traffic update in 2 seconds plus some random delay
     sendDelayedDown(wsm->dup(), 2 + uniform(0.01, 0.2));

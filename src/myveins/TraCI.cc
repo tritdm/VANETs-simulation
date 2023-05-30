@@ -22,7 +22,7 @@
 
 #include "TraCI.h"
 
-#include "veins/modules/application/traci/TraCIDemo11pMessage_m.h"
+//#include "veins/modules/application/traci/TraCIDemo11pMessage_m.h"
 
 using namespace veins;
 
@@ -51,7 +51,8 @@ void TraCI::finish()
 
 void TraCI::onBSM(DemoSafetyMessage* bsm)
 {
-    veins::Coord myPosition = mobility->getPositionAt(simTime());
+    //EV << bsm->getSenderSpeedInDouble();
+    /*veins::Coord myPosition = mobility->getPositionAt(simTime());
             EV << myPosition << endl;
         std::map<std::string, cModule*> allNodes = mobility->getManager()->getManagedHosts();
         EV << "num: " <<  allNodes.size() << endl;
@@ -66,7 +67,7 @@ void TraCI::onBSM(DemoSafetyMessage* bsm)
                 //returns distance in meters
                 double dist = myPosition.distance(receiverPosition);
                 EV << "Distance: " << dist << endl;
-            }
+            }*/
     // Your application has received a beacon message from another car or RSU
     // code for handling the message goes here
 }

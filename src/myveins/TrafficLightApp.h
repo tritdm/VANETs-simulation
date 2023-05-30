@@ -24,7 +24,7 @@
 
 #include "veins/veins.h"
 
-#include "veins/modules/application/ieee80211p/DemoBaseApplLayer.h"
+#include "DemoBaseApplLayer.h"
 #include "veins/modules/mobility/traci/TraCIMobility.h"
 #include "veins/modules/mobility/traci/TraCICommandInterface.h"
 #include "veins/modules/mobility/traci/TraCIScenarioManager.h"
@@ -39,6 +39,9 @@ class TrafficLightApp : public DemoBaseApplLayer {
 protected:
     cMessage* TLMessage;
     TraCIScenarioManager *manager = new TraCIScenarioManager;
+    simtime_t lastTime = 0;
+    float avrSpeed;
+    int vehNum = 0;
 
 protected:
     //virtual void onBSM(DemoSafetyMessage* bsm) override;

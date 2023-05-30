@@ -1,5 +1,5 @@
 //
-// Copyright (C) 2016 David Eckhoff <david.eckhoff@fau.de>
+// Copyright (C) 2011 David Eckhoff <eckhoff@cs.fau.de>
 //
 // Documentation for these modules is at http://veins.car2x.org/
 //
@@ -20,41 +20,13 @@
 // Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 //
 
-#pragma once
+import veins.base.utils.Coord;
+import veins.modules.messages.BaseFrame1609_4;
+import veins.base.utils.SimpleAddress;
 
-#include "veins/veins.h"
+namespace veins;
 
-#include "DemoBaseApplLayer.h"
-
-using namespace omnetpp;
-
-namespace veins {
-
-/**
- * @brief
- * This is a stub for a typical Veins application layer.
- * Most common functions are overloaded.
- * See MyVeinsApp.cc for hints
- *
- * @author David Eckhoff
- *
- */
-
-class VEINS_API TraCI : public DemoBaseApplLayer {
-public:
-    //void initialize(int stage) override;
-    //void finish() override;
-
-protected:
-    cMessage* VMessage;
-
-protected:
-    void onBSM(DemoSafetyMessage* bsm) override;
-    void onWSM(BaseFrame1609_4* frame) override;
-    void onWSA(DemoServiceAdvertisment* wsa) override;
-
-    void handleSelfMsg(cMessage* msg) override;
-    void handlePositionUpdate(cObject* obj) override;
-};
-
-} // namespace veins
+packet DemoSafetyMessage extends BaseFrame1609_4 {
+    Coord senderPos;
+    Coord senderSpeed;
+}

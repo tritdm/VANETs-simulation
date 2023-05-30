@@ -2,7 +2,7 @@
  myveins/TrafficLightApp.cc myveins/TrafficLightApp.h \
  /home/mike/Documents/dsrc_cv2x/veins-veins-5.2/src/veins/veins.h \
  /home/mike/Documents/dsrc_cv2x/omnetpp-6.0/include/omnetpp.h \
- /home/mike/Documents/dsrc_cv2x/veins-veins-5.2/src/veins/modules/application/ieee80211p/DemoBaseApplLayer.h \
+ myveins/DemoBaseApplLayer.h \
  /home/mike/Documents/dsrc_cv2x/veins-veins-5.2/src/veins/base/modules/BaseApplLayer.h \
  /home/mike/Documents/dsrc_cv2x/veins-veins-5.2/src/veins/base/modules/BaseLayer.h \
  /home/mike/Documents/dsrc_cv2x/veins-veins-5.2/src/veins/base/modules/BatteryAccess.h \
@@ -20,7 +20,7 @@
  /home/mike/Documents/dsrc_cv2x/veins-veins-5.2/src/veins/base/utils/Coord_m.h \
  /home/mike/Documents/dsrc_cv2x/veins-veins-5.2/src/veins/base/utils/Coord.h \
  /home/mike/Documents/dsrc_cv2x/veins-veins-5.2/src/veins/base/utils/FWMath.h \
- /home/mike/Documents/dsrc_cv2x/veins-veins-5.2/src/veins/modules/messages/DemoSafetyMessage_m.h \
+ myveins/DemoSafetyMessage_m.h \
  /home/mike/Documents/dsrc_cv2x/veins-veins-5.2/src/veins/base/connectionManager/ChannelAccess.h \
  /home/mike/Documents/dsrc_cv2x/veins-veins-5.2/src/veins/base/utils/AntennaPosition.h \
  /home/mike/Documents/dsrc_cv2x/veins-veins-5.2/src/veins/base/utils/FindModule.h \
@@ -60,7 +60,7 @@ myveins/TrafficLightApp.h:
 
 /home/mike/Documents/dsrc_cv2x/omnetpp-6.0/include/omnetpp.h:
 
-/home/mike/Documents/dsrc_cv2x/veins-veins-5.2/src/veins/modules/application/ieee80211p/DemoBaseApplLayer.h:
+myveins/DemoBaseApplLayer.h:
 
 /home/mike/Documents/dsrc_cv2x/veins-veins-5.2/src/veins/base/modules/BaseApplLayer.h:
 
@@ -96,7 +96,7 @@ myveins/TrafficLightApp.h:
 
 /home/mike/Documents/dsrc_cv2x/veins-veins-5.2/src/veins/base/utils/FWMath.h:
 
-/home/mike/Documents/dsrc_cv2x/veins-veins-5.2/src/veins/modules/messages/DemoSafetyMessage_m.h:
+myveins/DemoSafetyMessage_m.h:
 
 /home/mike/Documents/dsrc_cv2x/veins-veins-5.2/src/veins/base/connectionManager/ChannelAccess.h:
 
