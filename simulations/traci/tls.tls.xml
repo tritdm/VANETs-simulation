@@ -49,5 +49,17 @@
         <phase duration="1"   state="GggGGgrrr"/>
         <phase duration="1"   state="GggGGgrrr"/>
     </tlLogic>
+        <tlLogic id="10" type="static" programID="jam" offset="0">
+        <phase duration="999" state="GggGGgGGG"/>
+        <phase duration="1"   state="GggGGgrrr"/>
+        <phase duration="1"   state="GggGGgrrr"/>
+        <phase duration="1"   state="GggGGgrrr"/>
+    </tlLogic>
+        <tlLogic id="10" type="static" programID="non-jam" offset="0">
+        <phase duration="999" state="GggGGgGGG"/>
+        <phase duration="1"   state="GggGGgrrr"/>
+        <phase duration="1"   state="GggGGgrrr"/>
+        <phase duration="1"   state="GggGGgrrr"/>
+    </tlLogic>
 
 </tls>

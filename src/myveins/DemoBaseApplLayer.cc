@@ -27,11 +27,7 @@ using namespace veins;
 void DemoBaseApplLayer::initialize(int stage)
 {
     BaseApplLayer::initialize(stage);
-
-
-
     if (stage == 0) {
-
         // initialize pointers to other modules
         if (FindModule<TraCIMobility*>::findSubModule(getParentModule())) {
             mobility = TraCIMobilityAccess().get(getParentModule());
@@ -159,7 +155,12 @@ void DemoBaseApplLayer::populateWSM(BaseFrame1609_4* wsm, LAddress::L2Type rcvId
 
     if (DemoSafetyMessage* bsm = dynamic_cast<DemoSafetyMessage*>(wsm)) {
         bsm->setSenderPos(curPosition);
+        EV << bsm->getSenderPos() << endl;
         bsm->setSenderSpeed(curSpeed);
+        EV << bsm->getSenderSpeed() << endl;
+        EV << traciVehicle->getRoadId() << endl;
+        bsm->setSenderRoadId(traciVehicle->getRoadId());
+        EV << bsm->getSenderRoadId() << endl;
         bsm->setPsid(-1);
         bsm->setChannelNumber(static_cast<int>(Channel::cch));
         bsm->addBitLength(beaconLengthBits);
@@ -293,6 +294,10 @@ void DemoBaseApplLayer::stopService()
 void DemoBaseApplLayer::sendDown(cMessage* msg)
 {
     checkAndTrackPacket(msg);
+    if (DemoSafetyMessage* bsm = dynamic_cast<DemoSafetyMessage*>(msg))
+    {
+        //EV << bsm->getSenderRoadId() << endl;
+    }
     BaseApplLayer::sendDown(msg);
 }
 

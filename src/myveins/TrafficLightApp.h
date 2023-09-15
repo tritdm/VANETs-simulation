@@ -35,7 +35,6 @@ using veins::TraCIMobility;
 namespace veins {
 
 class TrafficLightApp : public DemoBaseApplLayer {
-
 protected:
     cMessage* TLMessage;
     TraCIScenarioManager *manager = new TraCIScenarioManager;
@@ -50,6 +49,8 @@ protected:
     void onWSM(BaseFrame1609_4* wsm) override;
     void onWSA(DemoServiceAdvertisment* wsa) override;
     void onBSM(DemoSafetyMessage* bsm) override;
+    TraCIMobility* mobility;
+    TraCICommandInterface* traci;
 };
 
 } // namespace veins

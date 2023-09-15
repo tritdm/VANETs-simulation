@@ -32,20 +32,40 @@ Define_Module(TrafficLightApp);
 
 void TrafficLightApp::onBSM(DemoSafetyMessage* bsm)
 {
+    manager = TraCIScenarioManagerAccess().get();
+    traci = manager->getCommandInterface();
+
     simtime_t currTime = simTime();
     avrSpeed += bsm->getSenderSpeedInDouble();
     vehNum ++;
+    double posy = bsm->getSenderPos().y;
+    double posx = bsm->getSenderPos().x;
+    // time between 2 times send data
     EV << currTime - lastTime << endl;
-    EV << "Speed of " << "bsm->getSenderID()" << " is: " << bsm->getSenderSpeedInDouble() << endl;
-    EV << "Position of " << bsm->getSenderPos().x << " " << bsm->getSenderPos().y << endl;
+    // speed, pos and direction
+    EV << "Speed is: " << bsm->getSenderSpeedInDouble() << endl;
+    EV << "Position of " << posx << " " << posy << endl;
     EV << "Direction of " << bsm->getSenderSpeed().x << " " << bsm->getSenderSpeed().y << endl;
-    if (currTime - lastTime >= 0.99)
+    // junction position
+    TraCICommandInterface::Junction traciJunction = traci->junction("10");
+    Coord tlPos = traciJunction.getPosition();
+    // roadId
+    EV << "Road " << bsm->getSenderRoadId().length() << endl;
+    //distance
+    EV << "Distance between vehicle and traffic light: " << sqrt((tlPos.x - posx)*(tlPos.x - posx) + (tlPos.y - posy)*(tlPos.y - posy));
+    //traciJunction
+    if (currTime - lastTime >= 9.99)
     {
         avrSpeed /= vehNum;
-        EV << "Average speed in last 1s: " << avrSpeed << endl;
+        EV << "Average speed in last 1s around: " << avrSpeed << endl;
+        if (avrSpeed < 5){
+             traci->trafficlight("10").setProgram("jam");
+        }
+        recordScalar("avrspeed", avrSpeed);
         avrSpeed = 0;
         vehNum = 0;
         lastTime = currTime;
+        //EV << traci->trafficlight("10").getCurrentProgramID() << "\n";
     }
     // Your application has received a beacon message from another car or RSU
     // code for handling the message goes here

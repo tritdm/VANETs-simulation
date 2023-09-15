@@ -1,9 +1,8 @@
-../out/gcc-release/src/myveins/TrafficLightApp.o: \
- myveins/TrafficLightApp.cc myveins/TrafficLightApp.h \
+../out/gcc-debug/src/myveins/DemoBaseApplLayer.o: \
+ myveins/DemoBaseApplLayer.cc myveins/DemoBaseApplLayer.h \
+ /home/mike/Documents/dsrc_cv2x/veins-veins-5.2/src/veins/base/modules/BaseApplLayer.h \
  /home/mike/Documents/dsrc_cv2x/veins-veins-5.2/src/veins/veins.h \
  /home/mike/Documents/dsrc_cv2x/omnetpp-6.0/include/omnetpp.h \
- myveins/DemoBaseApplLayer.h \
- /home/mike/Documents/dsrc_cv2x/veins-veins-5.2/src/veins/base/modules/BaseApplLayer.h \
  /home/mike/Documents/dsrc_cv2x/veins-veins-5.2/src/veins/base/modules/BaseLayer.h \
  /home/mike/Documents/dsrc_cv2x/veins-veins-5.2/src/veins/base/modules/BatteryAccess.h \
  /home/mike/Documents/dsrc_cv2x/veins-veins-5.2/src/veins/base/modules/BaseModule.h \
@@ -51,18 +50,15 @@
  /home/mike/Documents/dsrc_cv2x/veins-veins-5.2/src/veins/modules/world/traci/trafficLight/TraCITrafficLightProgram.h \
  /home/mike/Documents/dsrc_cv2x/veins-veins-5.2/src/veins/base/connectionManager/ChannelAccess.h \
  /home/mike/Documents/dsrc_cv2x/veins-veins-5.2/src/veins/modules/mac/ieee80211p/DemoBaseApplLayerToMac1609_4Interface.h \
- /home/mike/Documents/dsrc_cv2x/veins-veins-5.2/src/veins/base/utils/NetwToMacControlInfo.h \
- /home/mike/Documents/dsrc_cv2x/veins-veins-5.2/src/veins/modules/application/traci/TraCIDemo11pMessage_m.h
-
-myveins/TrafficLightApp.h:
-
-/home/mike/Documents/dsrc_cv2x/veins-veins-5.2/src/veins/veins.h:
-
-/home/mike/Documents/dsrc_cv2x/omnetpp-6.0/include/omnetpp.h:
+ /home/mike/Documents/dsrc_cv2x/veins-veins-5.2/src/veins/base/utils/NetwToMacControlInfo.h
 
 myveins/DemoBaseApplLayer.h:
 
 /home/mike/Documents/dsrc_cv2x/veins-veins-5.2/src/veins/base/modules/BaseApplLayer.h:
+
+/home/mike/Documents/dsrc_cv2x/veins-veins-5.2/src/veins/veins.h:
+
+/home/mike/Documents/dsrc_cv2x/omnetpp-6.0/include/omnetpp.h:
 
 /home/mike/Documents/dsrc_cv2x/veins-veins-5.2/src/veins/base/modules/BaseLayer.h:
 
@@ -159,5 +155,3 @@ myveins/DemoSafetyMessage_m.h:
 /home/mike/Documents/dsrc_cv2x/veins-veins-5.2/src/veins/modules/mac/ieee80211p/DemoBaseApplLayerToMac1609_4Interface.h:
 
 /home/mike/Documents/dsrc_cv2x/veins-veins-5.2/src/veins/base/utils/NetwToMacControlInfo.h:
-
-/home/mike/Documents/dsrc_cv2x/veins-veins-5.2/src/veins/modules/application/traci/TraCIDemo11pMessage_m.h:

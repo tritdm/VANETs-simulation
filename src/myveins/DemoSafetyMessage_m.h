@@ -40,6 +40,9 @@ class DemoSafetyMessage;
 
 #include "veins/base/utils/SimpleAddress_m.h" // import veins.base.utils.SimpleAddress
 
+#include "veins/modules/mobility/traci/TraCIMobility.h"
+#include "veins/modules/mobility/traci/TraCICommandInterface.h"
+#include "veins/modules/mobility/traci/TraCIScenarioManager.h"
 
 namespace veins {
 
@@ -58,7 +61,8 @@ class VEINS_API DemoSafetyMessage : public ::veins::BaseFrame1609_4
   protected:
     Coord senderPos;
     Coord senderSpeed;
-    int senderID;
+    //std::string senderRoadId;
+    char* senderRoadId;
 
   private:
     void copy(const DemoSafetyMessage& other);
@@ -81,8 +85,8 @@ class VEINS_API DemoSafetyMessage : public ::veins::BaseFrame1609_4
 
     double getSenderSpeedInDouble();
 
-    /*std::string getSenderID();
-    void setSenderID(std::string senderID);*/
+    void setSenderRoadId(std::string roadId);
+    std::string getSenderRoadId();
 
     virtual const Coord& getSenderSpeed() const;
     virtual Coord& getSenderSpeedForUpdate() { return const_cast<Coord&>(const_cast<DemoSafetyMessage*>(this)->getSenderSpeed());}

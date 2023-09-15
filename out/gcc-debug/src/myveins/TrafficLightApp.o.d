@@ -1,4 +1,4 @@
-../out/gcc-release/src/myveins/TrafficLightApp.o: \
+../out/gcc-debug/src/myveins/TrafficLightApp.o: \
  myveins/TrafficLightApp.cc myveins/TrafficLightApp.h \
  /home/mike/Documents/dsrc_cv2x/veins-veins-5.2/src/veins/veins.h \
  /home/mike/Documents/dsrc_cv2x/omnetpp-6.0/include/omnetpp.h \

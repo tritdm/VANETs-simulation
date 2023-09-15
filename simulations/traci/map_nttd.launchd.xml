@@ -4,5 +4,6 @@
 <launch>
     <copy file="map_nttd.net.xml" />
     <copy file="map_nttd.rou.xml" />
+    <copy file="map_nttd.tls.xml" />
     <copy file="map_nttd.sumo.cfg" type="config" />
 </launch>

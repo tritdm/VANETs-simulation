@@ -221,15 +221,36 @@ double DemoSafetyMessage::getSenderSpeedInDouble()
     return (this->senderSpeed.length());
 }
 
-/*std::string DemoSafetyMessage::getSenderID()
+/*
+void DemoSafetyMessage::setSenderRoadId(std::string roadId)
 {
-    return (this->senderID);
+    this->senderRoadId = roadId;
+}
+std::string DemoSafetyMessage::getSenderRoadId()
+{
+    EV << "hello";
+    return (this->senderRoadId);
+}
+*/
+
+void DemoSafetyMessage::setSenderRoadId(std::string roadId)
+{
+    int len = roadId.length();
+    char* Id;
+    Id = new char[len];
+    for (int i = 0; i < len; ++i)
+        Id[i] = roadId[i];
+    this->senderRoadId = Id;
 }
 
-void DemoSafetyMessage::setSenderID(std::string senderID)
+std::string DemoSafetyMessage::getSenderRoadId()
 {
-    this->senderID = senderID;
-}*/
+    int len = strlen(this->senderRoadId);
+    std::string Id = "";
+    for (int i = 0; i < len; ++i)
+        Id = Id + this->senderRoadId[i];
+    return Id;
+}
 
 class DemoSafetyMessageDescriptor : public omnetpp::cClassDescriptor
 {

@@ -166,6 +166,7 @@ protected:
     /* state of the vehicle */
     Coord curPosition;
     Coord curSpeed;
+    std::string curRoadId;
     LAddress::L2Type myId = 0;
     int mySCH;
 
