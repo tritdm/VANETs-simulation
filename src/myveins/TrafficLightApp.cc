@@ -50,7 +50,7 @@ void TrafficLightApp::onBSM(DemoSafetyMessage* bsm)
     TraCICommandInterface::Junction traciJunction = traci->junction("10");
     Coord tlPos = traciJunction.getPosition();
     // roadId
-    EV << "Road " << bsm->getSenderRoadId().length() << endl;
+    EV << "Road " << bsm->getSenderRoadIdForUpdate() << endl;
     //distance
     EV << "Distance between vehicle and traffic light: " << sqrt((tlPos.x - posx)*(tlPos.x - posx) + (tlPos.y - posy)*(tlPos.y - posy));
     //traciJunction

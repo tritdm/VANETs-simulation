@@ -179,6 +179,7 @@ void DemoSafetyMessage::copy(const DemoSafetyMessage& other)
 {
     this->senderPos = other.senderPos;
     this->senderSpeed = other.senderSpeed;
+    this->senderRoadId = other.senderRoadId;
 }
 
 void DemoSafetyMessage::parsimPack(omnetpp::cCommBuffer *b) const
@@ -186,6 +187,7 @@ void DemoSafetyMessage::parsimPack(omnetpp::cCommBuffer *b) const
     ::veins::BaseFrame1609_4::parsimPack(b);
     doParsimPacking(b,this->senderPos);
     doParsimPacking(b,this->senderSpeed);
+    doParsimPacking(b,this->senderRoadId);
 }
 
 void DemoSafetyMessage::parsimUnpack(omnetpp::cCommBuffer *b)
@@ -193,6 +195,7 @@ void DemoSafetyMessage::parsimUnpack(omnetpp::cCommBuffer *b)
     ::veins::BaseFrame1609_4::parsimUnpack(b);
     doParsimUnpacking(b,this->senderPos);
     doParsimUnpacking(b,this->senderSpeed);
+    doParsimUnpacking(b,this->senderRoadId);
 }
 
 const Coord& DemoSafetyMessage::getSenderPos() const
@@ -221,26 +224,20 @@ double DemoSafetyMessage::getSenderSpeedInDouble()
     return (this->senderSpeed.length());
 }
 
-/*
-void DemoSafetyMessage::setSenderRoadId(std::string roadId)
+
+void DemoSafetyMessage::setSenderRoadId(const std::string& senderroadId)
+{
+    this->senderRoadId = senderroadId;
+}
+const std::string& DemoSafetyMessage::getSenderRoadId() const
+{
+    return this->senderRoadId;
+}
+
+
+/*void DemoSafetyMessage::setSenderRoadId(std::string roadId)
 {
     this->senderRoadId = roadId;
-}
-std::string DemoSafetyMessage::getSenderRoadId()
-{
-    EV << "hello";
-    return (this->senderRoadId);
-}
-*/
-
-void DemoSafetyMessage::setSenderRoadId(std::string roadId)
-{
-    int len = roadId.length();
-    char* Id;
-    Id = new char[len];
-    for (int i = 0; i < len; ++i)
-        Id[i] = roadId[i];
-    this->senderRoadId = Id;
 }
 
 std::string DemoSafetyMessage::getSenderRoadId()
@@ -250,7 +247,7 @@ std::string DemoSafetyMessage::getSenderRoadId()
     for (int i = 0; i < len; ++i)
         Id = Id + this->senderRoadId[i];
     return Id;
-}
+}*/
 
 class DemoSafetyMessageDescriptor : public omnetpp::cClassDescriptor
 {
@@ -259,6 +256,7 @@ class DemoSafetyMessageDescriptor : public omnetpp::cClassDescriptor
     enum FieldConstants {
         FIELD_senderPos,
         FIELD_senderSpeed,
+        FIELD_senderRoadId,
     };
   public:
     DemoSafetyMessageDescriptor();
@@ -354,6 +352,7 @@ const char *DemoSafetyMessageDescriptor::getFieldName(int field) const
     static const char *fieldNames[] = {
         "senderPos",
         "senderSpeed",
+        "senderRoadId"
     };
     return (field >= 0 && field < 2) ? fieldNames[field] : nullptr;
 }
@@ -364,6 +363,7 @@ int DemoSafetyMessageDescriptor::findField(const char *fieldName) const
     int baseIndex = base ? base->getFieldCount() : 0;
     if (strcmp(fieldName, "senderPos") == 0) return baseIndex + 0;
     if (strcmp(fieldName, "senderSpeed") == 0) return baseIndex + 1;
+    if (strcmp(fieldName, "senderRoadId") == 0) return baseIndex + 2;
     return base ? base->findField(fieldName) : -1;
 }
 
@@ -378,6 +378,7 @@ const char *DemoSafetyMessageDescriptor::getFieldTypeString(int field) const
     static const char *fieldTypeStrings[] = {
         "veins::Coord",    // FIELD_senderPos
         "veins::Coord",    // FIELD_senderSpeed
+        "std::string",    // FIELD_senderRoadId
     };
     return (field >= 0 && field < 2) ? fieldTypeStrings[field] : nullptr;
 }
@@ -464,6 +465,7 @@ std::string DemoSafetyMessageDescriptor::getFieldValueAsString(omnetpp::any_ptr 
     switch (field) {
         case FIELD_senderPos: return "";
         case FIELD_senderSpeed: return "";
+        case FIELD_senderRoadId: return "";
         default: return "";
     }
 }
@@ -496,6 +498,7 @@ omnetpp::cValue DemoSafetyMessageDescriptor::getFieldValue(omnetpp::any_ptr obje
     switch (field) {
         case FIELD_senderPos: return omnetpp::toAnyPtr(&pp->getSenderPos()); break;
         case FIELD_senderSpeed: return omnetpp::toAnyPtr(&pp->getSenderSpeed()); break;
+        case FIELD_senderRoadId: return omnetpp::toAnyPtr(&pp->getSenderRoadId()); break;
         default: throw omnetpp::cRuntimeError("Cannot return field %d of class 'DemoSafetyMessage' as cValue -- field index out of range?", field);
     }
 }
@@ -541,6 +544,7 @@ omnetpp::any_ptr DemoSafetyMessageDescriptor::getFieldStructValuePointer(omnetpp
     switch (field) {
         case FIELD_senderPos: return omnetpp::toAnyPtr(&pp->getSenderPos()); break;
         case FIELD_senderSpeed: return omnetpp::toAnyPtr(&pp->getSenderSpeed()); break;
+        case FIELD_senderRoadId: return omnetpp::toAnyPtr(&pp->getSenderRoadId()); break;
         default: return omnetpp::any_ptr(nullptr);
     }
 }

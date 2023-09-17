@@ -61,8 +61,7 @@ class VEINS_API DemoSafetyMessage : public ::veins::BaseFrame1609_4
   protected:
     Coord senderPos;
     Coord senderSpeed;
-    //std::string senderRoadId;
-    char* senderRoadId;
+    std::string senderRoadId;
 
   private:
     void copy(const DemoSafetyMessage& other);
@@ -85,8 +84,9 @@ class VEINS_API DemoSafetyMessage : public ::veins::BaseFrame1609_4
 
     double getSenderSpeedInDouble();
 
-    void setSenderRoadId(std::string roadId);
-    std::string getSenderRoadId();
+    virtual const std::string& getSenderRoadId() const;
+    virtual std::string& getSenderRoadIdForUpdate() { return const_cast<std::string&>(const_cast<DemoSafetyMessage*>(this)->getSenderRoadId());}
+    virtual void setSenderRoadId(const std::string& senderroadId);
 
     virtual const Coord& getSenderSpeed() const;
     virtual Coord& getSenderSpeedForUpdate() { return const_cast<Coord&>(const_cast<DemoSafetyMessage*>(this)->getSenderSpeed());}
@@ -103,6 +103,8 @@ inline void doParsimUnpacking(omnetpp::cCommBuffer *b, DemoSafetyMessage& obj) {
 namespace omnetpp {
 
 template<> inline veins::DemoSafetyMessage *fromAnyPtr(any_ptr ptr) { return check_and_cast<veins::DemoSafetyMessage*>(ptr.get<cObject>()); }
+
+inline any_ptr toAnyPtr(const std::string *p) {return any_ptr(p);}
 
 }  // namespace omnetpp
 
