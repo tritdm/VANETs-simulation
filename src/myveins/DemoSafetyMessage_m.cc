@@ -180,6 +180,7 @@ void DemoSafetyMessage::copy(const DemoSafetyMessage& other)
     this->senderPos = other.senderPos;
     this->senderSpeed = other.senderSpeed;
     this->senderRoadId = other.senderRoadId;
+    this->senderTrafficLightId = other.senderTrafficLightId;
 }
 
 void DemoSafetyMessage::parsimPack(omnetpp::cCommBuffer *b) const
@@ -188,6 +189,7 @@ void DemoSafetyMessage::parsimPack(omnetpp::cCommBuffer *b) const
     doParsimPacking(b,this->senderPos);
     doParsimPacking(b,this->senderSpeed);
     doParsimPacking(b,this->senderRoadId);
+    doParsimPacking(b,this->senderTrafficLightId);
 }
 
 void DemoSafetyMessage::parsimUnpack(omnetpp::cCommBuffer *b)
@@ -196,6 +198,7 @@ void DemoSafetyMessage::parsimUnpack(omnetpp::cCommBuffer *b)
     doParsimUnpacking(b,this->senderPos);
     doParsimUnpacking(b,this->senderSpeed);
     doParsimUnpacking(b,this->senderRoadId);
+    doParsimUnpacking(b,this->senderTrafficLightId);
 }
 
 const Coord& DemoSafetyMessage::getSenderPos() const
@@ -221,33 +224,31 @@ void DemoSafetyMessage::setSenderSpeed(const Coord& senderSpeed)
 
 double DemoSafetyMessage::getSenderSpeedInDouble()
 {
+    if (this->senderSpeed == Coord(-999, -999, -999))
+        return -1;
     return (this->senderSpeed.length());
 }
 
 
-void DemoSafetyMessage::setSenderRoadId(const std::string& senderroadId)
+void DemoSafetyMessage::setSenderRoadId(const std::string& senderRoadId)
 {
-    this->senderRoadId = senderroadId;
+    this->senderRoadId = senderRoadId;
 }
+
 const std::string& DemoSafetyMessage::getSenderRoadId() const
 {
     return this->senderRoadId;
 }
 
-
-/*void DemoSafetyMessage::setSenderRoadId(std::string roadId)
+void DemoSafetyMessage::setSenderTrafficLightId(const std::string& senderTrafficLightId)
 {
-    this->senderRoadId = roadId;
+    this->senderTrafficLightId = senderTrafficLightId;
 }
 
-std::string DemoSafetyMessage::getSenderRoadId()
+const std::string& DemoSafetyMessage::getSenderTrafficLightId() const
 {
-    int len = strlen(this->senderRoadId);
-    std::string Id = "";
-    for (int i = 0; i < len; ++i)
-        Id = Id + this->senderRoadId[i];
-    return Id;
-}*/
+    return this->senderTrafficLightId;
+}
 
 class DemoSafetyMessageDescriptor : public omnetpp::cClassDescriptor
 {
@@ -257,6 +258,7 @@ class DemoSafetyMessageDescriptor : public omnetpp::cClassDescriptor
         FIELD_senderPos,
         FIELD_senderSpeed,
         FIELD_senderRoadId,
+        FIELD_senderTrafficLightId,
     };
   public:
     DemoSafetyMessageDescriptor();
@@ -323,7 +325,7 @@ const char *DemoSafetyMessageDescriptor::getProperty(const char *propertyName) c
 int DemoSafetyMessageDescriptor::getFieldCount() const
 {
     omnetpp::cClassDescriptor *base = getBaseClassDescriptor();
-    return base ? 2+base->getFieldCount() : 2;
+    return base ? 4+base->getFieldCount() : 4;
 }
 
 unsigned int DemoSafetyMessageDescriptor::getFieldTypeFlags(int field) const
@@ -337,8 +339,10 @@ unsigned int DemoSafetyMessageDescriptor::getFieldTypeFlags(int field) const
     static unsigned int fieldTypeFlags[] = {
         0,    // FIELD_senderPos
         0,    // FIELD_senderSpeed
+        0,    // FIELD_senderRoadId
+        0,    // FIELD_senderTrafficLightId
     };
-    return (field >= 0 && field < 2) ? fieldTypeFlags[field] : 0;
+    return (field >= 0 && field < 4) ? fieldTypeFlags[field] : 0;
 }
 
 const char *DemoSafetyMessageDescriptor::getFieldName(int field) const
@@ -352,9 +356,10 @@ const char *DemoSafetyMessageDescriptor::getFieldName(int field) const
     static const char *fieldNames[] = {
         "senderPos",
         "senderSpeed",
-        "senderRoadId"
+        "senderRoadId",
+        "senderTrafficLightId"
     };
-    return (field >= 0 && field < 2) ? fieldNames[field] : nullptr;
+    return (field >= 0 && field < 4) ? fieldNames[field] : nullptr;
 }
 
 int DemoSafetyMessageDescriptor::findField(const char *fieldName) const
@@ -364,6 +369,7 @@ int DemoSafetyMessageDescriptor::findField(const char *fieldName) const
     if (strcmp(fieldName, "senderPos") == 0) return baseIndex + 0;
     if (strcmp(fieldName, "senderSpeed") == 0) return baseIndex + 1;
     if (strcmp(fieldName, "senderRoadId") == 0) return baseIndex + 2;
+    if (strcmp(fieldName, "senderTrafficLightId") == 0) return baseIndex + 3;
     return base ? base->findField(fieldName) : -1;
 }
 
@@ -378,9 +384,10 @@ const char *DemoSafetyMessageDescriptor::getFieldTypeString(int field) const
     static const char *fieldTypeStrings[] = {
         "veins::Coord",    // FIELD_senderPos
         "veins::Coord",    // FIELD_senderSpeed
-        "std::string",    // FIELD_senderRoadId
+        "std::string",     // FIELD_senderRoadId
+        "std::string",     // FIELD_senderTrafficLightId
     };
-    return (field >= 0 && field < 2) ? fieldTypeStrings[field] : nullptr;
+    return (field >= 0 && field < 4) ? fieldTypeStrings[field] : nullptr;
 }
 
 const char **DemoSafetyMessageDescriptor::getFieldPropertyNames(int field) const
@@ -466,6 +473,7 @@ std::string DemoSafetyMessageDescriptor::getFieldValueAsString(omnetpp::any_ptr 
         case FIELD_senderPos: return "";
         case FIELD_senderSpeed: return "";
         case FIELD_senderRoadId: return "";
+        case FIELD_senderTrafficLightId: return "";
         default: return "";
     }
 }
@@ -499,6 +507,7 @@ omnetpp::cValue DemoSafetyMessageDescriptor::getFieldValue(omnetpp::any_ptr obje
         case FIELD_senderPos: return omnetpp::toAnyPtr(&pp->getSenderPos()); break;
         case FIELD_senderSpeed: return omnetpp::toAnyPtr(&pp->getSenderSpeed()); break;
         case FIELD_senderRoadId: return omnetpp::toAnyPtr(&pp->getSenderRoadId()); break;
+        case FIELD_senderTrafficLightId: return omnetpp::toAnyPtr(&pp->getSenderTrafficLightId()); break;
         default: throw omnetpp::cRuntimeError("Cannot return field %d of class 'DemoSafetyMessage' as cValue -- field index out of range?", field);
     }
 }
@@ -545,6 +554,7 @@ omnetpp::any_ptr DemoSafetyMessageDescriptor::getFieldStructValuePointer(omnetpp
         case FIELD_senderPos: return omnetpp::toAnyPtr(&pp->getSenderPos()); break;
         case FIELD_senderSpeed: return omnetpp::toAnyPtr(&pp->getSenderSpeed()); break;
         case FIELD_senderRoadId: return omnetpp::toAnyPtr(&pp->getSenderRoadId()); break;
+        case FIELD_senderTrafficLightId: return omnetpp::toAnyPtr(&pp->getSenderTrafficLightId()); break;
         default: return omnetpp::any_ptr(nullptr);
     }
 }

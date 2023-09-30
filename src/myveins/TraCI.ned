@@ -21,7 +21,7 @@
 //
 
 package test.myveins;
-import org.car2x.veins.modules.application.ieee80211p.DemoBaseApplLayer;
+import test.myveins.DemoBaseApplLayer;
 
 //
 // network description file for your Veins Application. Add parameters here

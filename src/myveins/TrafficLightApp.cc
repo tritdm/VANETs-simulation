@@ -30,43 +30,57 @@ using veins::TrafficLightApp;
 
 Define_Module(TrafficLightApp);
 
+void TrafficLightApp::autoChangeDuration()
+{
+    avrSpeed /= vehNum;
+    EV << "Average speed in last 1s around: " << avrSpeed << endl;
+    if (avrSpeed < 5) {
+        EV << "jam" << endl;
+        //traci->trafficlight("10").setProgram("jam");
+    }
+    recordScalar("avrspeed", avrSpeed);
+    avrSpeed = 0;
+    vehNum = 0;
+    lastTime = currTime;
+    //EV << traci->trafficlight("10").getCurrentProgramID() << "\n";
+}
+
 void TrafficLightApp::onBSM(DemoSafetyMessage* bsm)
 {
     manager = TraCIScenarioManagerAccess().get();
     traci = manager->getCommandInterface();
 
-    simtime_t currTime = simTime();
+    currTime = simTime();
     avrSpeed += bsm->getSenderSpeedInDouble();
     vehNum ++;
     double posy = bsm->getSenderPos().y;
     double posx = bsm->getSenderPos().x;
-    // time between 2 times send data
+
+    /* time between 2 times send data */
     EV << currTime - lastTime << endl;
-    // speed, pos and direction
+
+    /* speed, pos and direction */
     EV << "Speed is: " << bsm->getSenderSpeedInDouble() << endl;
     EV << "Position of " << posx << " " << posy << endl;
     EV << "Direction of " << bsm->getSenderSpeed().x << " " << bsm->getSenderSpeed().y << endl;
-    // junction position
-    TraCICommandInterface::Junction traciJunction = traci->junction("10");
+
+    /* get junction position */
+    TraCICommandInterface::Junction traciJunction = traci->junction(trafficLightID);
     Coord tlPos = traciJunction.getPosition();
-    // roadId
+
+    /* get vehicle roadId */
     EV << "Road " << bsm->getSenderRoadIdForUpdate() << endl;
-    //distance
-    EV << "Distance between vehicle and traffic light: " << sqrt((tlPos.x - posx)*(tlPos.x - posx) + (tlPos.y - posy)*(tlPos.y - posy));
+
+    /* get distance between vehicles and tfl */
+    EV << "Distance between vehicle and traffic light: " << sqrt((tlPos.x - posx)*(tlPos.x - posx) + (tlPos.y - posy)*(tlPos.y - posy)) << endl;
+
     //traciJunction
-    if (currTime - lastTime >= 9.99)
+    if (currTime - lastTime >= this->beaconInterval)
     {
-        avrSpeed /= vehNum;
-        EV << "Average speed in last 1s around: " << avrSpeed << endl;
-        if (avrSpeed < 5){
-             traci->trafficlight("10").setProgram("jam");
-        }
-        recordScalar("avrspeed", avrSpeed);
-        avrSpeed = 0;
-        vehNum = 0;
-        lastTime = currTime;
-        //EV << traci->trafficlight("10").getCurrentProgramID() << "\n";
+        EV << "new update";
+        autoChangeDuration();
     }
+
     // Your application has received a beacon message from another car or RSU
     // code for handling the message goes here
 }

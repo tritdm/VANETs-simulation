@@ -39,6 +39,7 @@ protected:
     cMessage* TLMessage;
     TraCIScenarioManager *manager = new TraCIScenarioManager;
     simtime_t lastTime = 0;
+    simtime_t currTime = 0;
     float avrSpeed;
     int vehNum = 0;
 
@@ -49,6 +50,7 @@ protected:
     void onWSM(BaseFrame1609_4* wsm) override;
     void onWSA(DemoServiceAdvertisment* wsa) override;
     void onBSM(DemoSafetyMessage* bsm) override;
+    void autoChangeDuration();
     TraCIMobility* mobility;
     TraCICommandInterface* traci;
 };

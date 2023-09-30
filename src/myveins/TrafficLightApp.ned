@@ -22,7 +22,7 @@
 
 package test.myveins;
 
-import org.car2x.veins.modules.application.ieee80211p.DemoBaseApplLayer;
+import test.myveins.DemoBaseApplLayer;
 import org.car2x.veins.base.modules.ITrafficLightApplLayer;
 
 

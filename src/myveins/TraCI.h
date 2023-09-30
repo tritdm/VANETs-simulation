@@ -47,6 +47,7 @@ public:
 
 protected:
     cMessage* VMessage;
+    TraCIScenarioManager *manager = new TraCIScenarioManager;
 
 protected:
     void onBSM(DemoSafetyMessage* bsm) override;
@@ -55,6 +56,8 @@ protected:
 
     void handleSelfMsg(cMessage* msg) override;
     void handlePositionUpdate(cObject* obj) override;
+    TraCIMobility* mobility;
+    TraCICommandInterface* traci;
 };
 
 } // namespace veins

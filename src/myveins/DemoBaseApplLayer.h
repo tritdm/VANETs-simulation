@@ -143,6 +143,10 @@ protected:
     AnnotationManager* annotations;
     DemoBaseApplLayerToMac1609_4Interface* mac;
 
+    /* discriminate tfs and vehicles */
+    bool isVehicle;
+    std::string trafficLightID;
+
     /* support for parking currently only works with TraCI */
     bool isParked;
 

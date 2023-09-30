@@ -62,6 +62,7 @@ class VEINS_API DemoSafetyMessage : public ::veins::BaseFrame1609_4
     Coord senderPos;
     Coord senderSpeed;
     std::string senderRoadId;
+    std::string senderTrafficLightId;
 
   private:
     void copy(const DemoSafetyMessage& other);
@@ -86,7 +87,11 @@ class VEINS_API DemoSafetyMessage : public ::veins::BaseFrame1609_4
 
     virtual const std::string& getSenderRoadId() const;
     virtual std::string& getSenderRoadIdForUpdate() { return const_cast<std::string&>(const_cast<DemoSafetyMessage*>(this)->getSenderRoadId());}
-    virtual void setSenderRoadId(const std::string& senderroadId);
+    virtual void setSenderRoadId(const std::string& senderRoadId);
+
+    virtual const std::string& getSenderTrafficLightId() const;
+    virtual std::string& getSenderTrafficLightIdForUpdate() { return const_cast<std::string&>(const_cast<DemoSafetyMessage*>(this)->getSenderTrafficLightId());}
+    virtual void setSenderTrafficLightId(const std::string& senderTrafficLightId);
 
     virtual const Coord& getSenderSpeed() const;
     virtual Coord& getSenderSpeedForUpdate() { return const_cast<Coord&>(const_cast<DemoSafetyMessage*>(this)->getSenderSpeed());}

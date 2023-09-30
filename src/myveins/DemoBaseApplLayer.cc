@@ -61,6 +61,8 @@ void DemoBaseApplLayer::initialize(int stage)
         currentOfferedServiceId = -1;
 
         isParked = false;
+        isVehicle = par("isVehicle").boolValue();
+        trafficLightID = par("trafficLightID").stringValue();
 
         findHost()->subscribe(BaseMobility::mobilityStateChangedSignal, this);
         findHost()->subscribe(TraCIMobility::parkingStateChangedSignal, this);
@@ -155,12 +157,16 @@ void DemoBaseApplLayer::populateWSM(BaseFrame1609_4* wsm, LAddress::L2Type rcvId
 
     if (DemoSafetyMessage* bsm = dynamic_cast<DemoSafetyMessage*>(wsm)) {
         bsm->setSenderPos(curPosition);
-        EV << bsm->getSenderPos() << endl;
-        bsm->setSenderSpeed(curSpeed);
-        EV << bsm->getSenderSpeed() << endl;
-        EV << traciVehicle->getRoadId() << endl;
-        bsm->setSenderRoadId(traciVehicle->getRoadId());
-        EV << bsm->getSenderRoadId() << endl;
+        if (isVehicle)
+        {
+            bsm->setSenderSpeed(curSpeed);
+            bsm->setSenderRoadId(traciVehicle->getRoadId());
+        }
+        else
+        {
+            bsm->setSenderSpeed(Coord(-999, -999, -999));
+            bsm->setSenderTrafficLightId(trafficLightID);
+        }
         bsm->setPsid(-1);
         bsm->setChannelNumber(static_cast<int>(Channel::cch));
         bsm->addBitLength(beaconLengthBits);

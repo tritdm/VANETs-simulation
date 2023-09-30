@@ -51,6 +51,28 @@ void TraCI::finish()
 
 void TraCI::onBSM(DemoSafetyMessage* bsm)
 {
+    manager = TraCIScenarioManagerAccess().get();
+    traci = manager->getCommandInterface();
+
+    EV << "Sender position: " << bsm->getSenderPos() << endl;
+    EV << "Sender speed: " << bsm->getSenderSpeedInDouble() << endl;
+
+    /* traffic light */
+    if (bsm->getSenderSpeedInDouble() == -1)
+    {
+        std::string trafficLightId = bsm->getSenderTrafficLightId();
+        TraCICommandInterface::Trafficlight traciTrafficLight = traci->trafficlight(trafficLightId);
+        EV << "Traffic Light Id: " << trafficLightId << endl;
+        EV << "Traffic Light current state: " << traciTrafficLight.getCurrentState() << endl;
+        EV << "Traffic Light current phase duration: " << traciTrafficLight.getDefaultCurrentPhaseDuration() << endl;
+        EV << "List of lanes controlled by traffic light: " << endl;
+        std::list <std::string> lanes = traciTrafficLight.getControlledLanes();
+        for (std::string lane : lanes)
+            EV << lane << endl;
+        EV << "Traffic Light current phase index: " << traciTrafficLight.getCurrentPhaseIndex() << endl;
+        EV << "Traffic Light current program id: " << traciTrafficLight.getCurrentProgramID() << endl;
+        EV << "Traffic Light next switch time: " << traciTrafficLight.getAssumedNextSwitchTime() << endl;
+    }
     //EV << bsm->getSenderSpeedInDouble();
     /*veins::Coord myPosition = mobility->getPositionAt(simTime());
             EV << myPosition << endl;

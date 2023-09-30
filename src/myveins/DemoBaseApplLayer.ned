@@ -37,6 +37,8 @@ simple DemoBaseApplLayer like IBaseApplLayer
 {
     parameters:
         @class(veins::DemoBaseApplLayer);
+        
+        bool isVehicle = default(true);				// why 
         int headerLength = default(4096bit) @unit(bit); //header length of the application
 
         bool sendBeacons = default(true); //tell the applayer to periodically send beacons
@@ -53,6 +55,9 @@ simple DemoBaseApplLayer like IBaseApplLayer
         bool sendWSA = default(false);
         int wsaLengthBits = default(4096bit) @unit(bit);
         double wsaInterval =  default(1s) @unit(s);
+        
+        string trafficLightID = default("");
+        
 
     gates:
         input lowerLayerIn; // from mac layer
