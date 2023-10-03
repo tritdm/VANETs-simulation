@@ -57,6 +57,9 @@ void TraCI::onBSM(DemoSafetyMessage* bsm)
     EV << "Sender position: " << bsm->getSenderPos() << endl;
     EV << "Sender speed: " << bsm->getSenderSpeedInDouble() << endl;
 
+	
+	/* traffic light */
+	
     /* traffic light */
     if (bsm->getSenderSpeedInDouble() == -1)
     {
