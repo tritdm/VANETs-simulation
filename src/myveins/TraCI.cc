@@ -49,6 +49,22 @@ void TraCI::finish()
     // statistics recording goes here
 }*/
 
+std::string show_list_string(std::list<std::string> a){
+    std::string ss = "";
+    for (std::string s : a){
+        ss += (s + "- -- ");
+    }
+    return ss;
+}
+bool is_match(std::list<std::string> planned, std::string sender, std::string receiver){
+    int tmp = 0;
+    for (std::string s : planned){
+        if (s == receiver) tmp = 1;
+        else if (s == sender && tmp == 1) return true;
+    }
+    return false;
+}
+
 void TraCI::onBSM(DemoSafetyMessage* bsm)
 {
     manager = TraCIScenarioManagerAccess().get();
@@ -57,6 +73,25 @@ void TraCI::onBSM(DemoSafetyMessage* bsm)
     EV << "Sender position: " << bsm->getSenderPos() << endl;
     EV << "Sender speed: " << bsm->getSenderSpeedInDouble() << endl;
 
+	
+	/* vehicle speed */
+	
+	    EV << "Vehicle ID " <<traciVehicle->getLaneId();
+    EV << "\nPlanned Road ID " <<show_list_string((traciVehicle->getPlannedRoadIds()));
+    EV << "\nCurrent Road ID " << traciVehicle->getRoadId();
+    EV << "\nSender Road ID " << bsm->getSenderRoadId() << endl;
+    EV << "\nCurrent speed " <<traciVehicle->getMaxSpeed();
+    EV << "\nSender speed " << bsm->getSenderSpeedInDouble();
+    if (is_match(traciVehicle->getPlannedRoadIds(), bsm->getSenderRoadId(), traciVehicle->getRoadId())){
+        if (bsm->getSenderSpeedInDouble() < 9.99){
+            traciVehicle->setMaxSpeed(5);
+            EV << "\changed speed " <<traciVehicle->getMaxSpeed();
+        }
+        else{
+            traciVehicle->setMaxSpeed(30);
+            EV << "\nchanged speed " <<traciVehicle->getMaxSpeed();
+        }
+    }
     /* traffic light */
     if (bsm->getSenderSpeedInDouble() == -1)
     {
