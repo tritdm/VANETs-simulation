@@ -60,53 +60,105 @@ bool is_match(std::list<std::string> planned, std::string sender, std::string re
     int tmp = 0;
     for (std::string s : planned){
         if (s == receiver) tmp = 1;
-        else if (s == sender && tmp == 1) return true;
+        if (s == sender && tmp == 1) return true;
     }
     return false;
+}
+int is_match(std::list<std::string> planned, std::list<std::string> sender, std::string receiver)
+{
+//    EV << receiver << endl << endl << endl;
+    int tmp = 0;
+    for (std::string s : planned)
+    {
+        int i = 0;
+//        EV << s << endl << endl;
+        if (s == receiver) tmp = 1;
+        for (std::string r : sender)
+        {
+//            EV << r << endl;
+            int length = r.size();
+            if (r[length - 2] == '_')
+            {
+//                EV << i << endl;
+                if (r.compare(0, length - 2, s) == 0 && tmp == 1) return i;
+//                EV << i << endl;
+            }
+            else
+            {
+                if (s.compare(r) == 0 && tmp == 1) return i;
+            }
+            i ++;
+//            EV << i << endl;
+        }
+//        EV << endl;
+    }
+    return 0;
 }
 
 void TraCI::onBSM(DemoSafetyMessage* bsm)
 {
     manager = TraCIScenarioManagerAccess().get();
     traci = manager->getCommandInterface();
+    mobility = TraCIMobilityAccess().get(getParentModule());
 
     EV << "Sender position: " << bsm->getSenderPos() << endl;
     EV << "Sender speed: " << bsm->getSenderSpeedInDouble() << endl;
-
-	
-	/* vehicle speed */
-	
-	    EV << "Vehicle ID " <<traciVehicle->getLaneId();
-    EV << "\nPlanned Road ID " <<show_list_string((traciVehicle->getPlannedRoadIds()));
-    EV << "\nCurrent Road ID " << traciVehicle->getRoadId();
-    EV << "\nSender Road ID " << bsm->getSenderRoadId() << endl;
-    EV << "\nCurrent speed " <<traciVehicle->getMaxSpeed();
-    EV << "\nSender speed " << bsm->getSenderSpeedInDouble();
-    if (is_match(traciVehicle->getPlannedRoadIds(), bsm->getSenderRoadId(), traciVehicle->getRoadId())){
-        if (bsm->getSenderSpeedInDouble() < 9.99){
-            traciVehicle->setMaxSpeed(5);
-            EV << "\changed speed " <<traciVehicle->getMaxSpeed();
-        }
-        else{
-            traciVehicle->setMaxSpeed(30);
-            EV << "\nchanged speed " <<traciVehicle->getMaxSpeed();
-        }
-    }
+    EV << mobility->getPositionAt(simTime()) << endl;
+    double distance = traci->getDistance(mobility->getPositionAt(simTime()), bsm->getSenderPos(), false);
+    EV << "Distance: " << distance << endl;
     /* traffic light */
+
     if (bsm->getSenderSpeedInDouble() == -1)
     {
         std::string trafficLightId = bsm->getSenderTrafficLightId();
-        TraCICommandInterface::Trafficlight traciTrafficLight = traci->trafficlight(trafficLightId);
         EV << "Traffic Light Id: " << trafficLightId << endl;
-        EV << "Traffic Light current state: " << traciTrafficLight.getCurrentState() << endl;
-        EV << "Traffic Light current phase duration: " << traciTrafficLight.getDefaultCurrentPhaseDuration() << endl;
-        EV << "List of lanes controlled by traffic light: " << endl;
+        TraCICommandInterface::Trafficlight traciTrafficLight = traci->trafficlight(trafficLightId);
         std::list <std::string> lanes = traciTrafficLight.getControlledLanes();
-        for (std::string lane : lanes)
-            EV << lane << endl;
-        EV << "Traffic Light current phase index: " << traciTrafficLight.getCurrentPhaseIndex() << endl;
-        EV << "Traffic Light current program id: " << traciTrafficLight.getCurrentProgramID() << endl;
-        EV << "Traffic Light next switch time: " << traciTrafficLight.getAssumedNextSwitchTime() << endl;
+        std::string tfLCurrState = traciTrafficLight.getCurrentState();
+        int laneth = 0;
+        laneth = is_match(traciVehicle->getPlannedRoadIds(), traciTrafficLight.getControlledLanes(), traciVehicle->getRoadId());
+        if (laneth != 0)
+        {
+            switch (tfLCurrState[laneth])
+            {
+            case 'r':
+                EV << "Red light";
+                break;
+            case 'g':
+                EV << "Green light";
+                break;
+            case 'y':
+                EV << "Yellow light";
+                break;
+            default:
+                break;
+            }
+            SimTime leftTime = traciTrafficLight.getAssumedNextSwitchTime() - simTime();
+            EV << ", left time: " << leftTime << endl;
+            EV << "Necessary speed (air way): " <<  distance / leftTime;
+        }
+//        EV << "Traffic Light current phase index: " << traciTrafficLight.getCurrentPhaseIndex() << endl;
+//        EV << "Traffic Light current program id: " << traciTrafficLight.getCurrentProgramID() << endl;
+    }
+        /* vehicle speed */
+    else
+    {
+        EV << "Vehicle ID " <<traciVehicle->getLaneId();
+        EV << "\nPlanned Road ID " <<show_list_string((traciVehicle->getPlannedRoadIds()));
+        EV << "\nCurrent Road ID " << traciVehicle->getRoadId();
+        EV << "\nSender Road ID " << bsm->getSenderRoadId() << endl;
+        EV << "\nCurrent speed " <<traciVehicle->getMaxSpeed();
+        EV << "\nSender speed " << bsm->getSenderSpeedInDouble();
+        if (is_match(traciVehicle->getPlannedRoadIds(), bsm->getSenderRoadId(), traciVehicle->getRoadId())){
+            if (bsm->getSenderSpeedInDouble() < 9.99){
+                traciVehicle->setMaxSpeed(5);
+                EV << "\nchanged speed " <<traciVehicle->getMaxSpeed();
+            }
+            else{
+                traciVehicle->setMaxSpeed(30);
+                EV << "\nchanged speed " <<traciVehicle->getMaxSpeed();
+            }
+        }
     }
     //EV << bsm->getSenderSpeedInDouble();
     /*veins::Coord myPosition = mobility->getPositionAt(simTime());
